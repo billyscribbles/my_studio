@@ -28,16 +28,53 @@ export default function AboutPage() {
       <section className="about-page__hero">
         <div className="about-page__hero-inner">
           <motion.div
+            className="about-page__hero-left"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
             <Link to="/" className="about-page__back">← Back to home</Link>
-            <h1 className="about-page__title">About Onrai Studio</h1>
+            <div className="about-page__location">
+              <span className="about-page__location-dot" />
+              Melbourne, Australia
+            </div>
+            <h1 className="about-page__title">We build websites<br />for real businesses.</h1>
             <p className="about-page__lead">
-              We're a small Australian web studio that builds websites for the businesses that keep
-              communities running — tradies, café owners, shop keepers, and service providers.
+              Tradies, café owners, shop keepers, service providers — the businesses that keep
+              communities running deserve a proper online presence. That's what we do.
             </p>
+            <div className="about-page__pills">
+              <span className="about-page__pill">Fast delivery</span>
+              <span className="about-page__pill">No lock-in</span>
+              <span className="about-page__pill">AU-based team</span>
+              <span className="about-page__pill">Since 2022</span>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="about-page__hero-right"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+          >
+            <div className="about-page__art">
+              <div className="about-page__art-ring about-page__art-ring--1" />
+              <div className="about-page__art-ring about-page__art-ring--2" />
+              <div className="about-page__art-ring about-page__art-ring--3" />
+              <div className="about-page__art-core">
+                <span className="about-page__art-label">Onrai</span>
+                <span className="about-page__art-sub">Studio</span>
+              </div>
+              <div className="about-page__art-orbit about-page__art-orbit--1">
+                <div className="about-page__art-node">⚡</div>
+              </div>
+              <div className="about-page__art-orbit about-page__art-orbit--2">
+                <div className="about-page__art-node">🎯</div>
+              </div>
+              <div className="about-page__art-orbit about-page__art-orbit--3">
+                <div className="about-page__art-node">🇦🇺</div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
