@@ -1,7 +1,26 @@
+# Dependencies
 node_modules
+
+# Build output
 dist
 dist-ssr
-*.local
+
+# Environment variables
 .env
 .env.local
+*.local
+
+# Yarn 4 PnP artifacts
+.pnp.cjs
+.pnp.loader.mjs
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# npm lockfile (project uses yarn)
+package-lock.json
+
+# OS
 .DS_Store
+Thumbs.db
