@@ -9,18 +9,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "framer-motion": "^11.0.0",
-    "lucide-react": "^0.400.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.7.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "react-helmet-async": "^3.0.0",
     "react-router-dom": "^7.14.0"
   },
   "devDependencies": {
-    "@types/react": "^18.3.1",
-    "@types/react-dom": "^18.3.1",
-    "@vitejs/plugin-react": "^4.3.1",
-    "vite": "^5.4.0"
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "vite": "^8.0.7"
   },
   "packageManager": "yarn@4.12.0+sha512.f45ab632439a67f8bc759bf32ead036a1f413287b9042726b7cc4818b7b49e14e9423ba49b18f9e06ea4941c1ad062385b1d8760a8d5091a1a31e5f6219afca8"
 }
