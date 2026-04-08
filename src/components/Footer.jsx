@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // Replace with your Calendly link when ready: https://calendly.com/your-name
-const CALENDLY_URL = null;
+const CALENDLY_URL = 'https://calendly.com/billyhuynh01/30min';
 import LegalModal from "./LegalModal";
 import "./Footer.css";
 
