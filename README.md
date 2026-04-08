@@ -48,13 +48,22 @@ cp .env.example .env.local
 
 | Variable | Where to get it |
 |----------|----------------|
-| `VITE_FORMSPREE_ID` | Create a free form at [formspree.io](https://formspree.io) → copy the form ID from the endpoint URL |
+| `VITE_FORMSPREE_ID` | See Formspree section below |
 
-Then update `src/components/Contact.jsx` — replace `YOUR_FORM_ID` with your actual ID:
+### Formspree (Contact Form)
 
-```js
-const FORMSPREE_ENDPOINT = `https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_ID}`
+- **Account:** billyhuynh01@gmail.com at [formspree.io](https://formspree.io)
+- **Form endpoint:** `https://formspree.io/f/xgopbern`
+- **Form ID:** `xgopbern`
+- **Submissions go to:** billyhuynh01@gmail.com
+
+Set in `.env.local`:
+
 ```
+VITE_FORMSPREE_ID=xgopbern
+```
+
+Also add `VITE_FORMSPREE_ID=xgopbern` as an environment variable in the Railway dashboard.
 
 ---
 
