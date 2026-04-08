@@ -1,3 +1,5 @@
+import { useState } from "react";
+import LegalModal from "./LegalModal";
 import "./Footer.css";
 
 const navLinks = [
@@ -9,6 +11,8 @@ const navLinks = [
 ];
 
 export default function Footer() {
+  const [legal, setLegal] = useState(null)
+
   return (
     <footer className="footer">
       <div className="footer__cta-strip">
@@ -83,10 +87,12 @@ export default function Footer() {
           © 2025 Onrai Studio. Built in Australia. All rights reserved.
         </span>
         <div className="footer__legal">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms</a>
+          <button onClick={() => setLegal('privacy')} className="footer__legal-btn">Privacy Policy</button>
+          <button onClick={() => setLegal('terms')} className="footer__legal-btn">Terms</button>
         </div>
       </div>
+
+      {legal && <LegalModal type={legal} onClose={() => setLegal(null)} />}
     </footer>
   );
 }

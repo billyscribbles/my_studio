@@ -161,15 +161,21 @@
   gap: 16px;
 }
 
-.footer__legal a {
+.footer__legal a,
+.footer__legal-btn {
   font-family: var(--font-body);
   font-size: 13px;
   font-optical-sizing: auto;
   color: rgba(255, 255, 255, 0.35);
   transition: color var(--transition-fast);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
-.footer__legal a:hover {
+.footer__legal a:hover,
+.footer__legal-btn:hover {
   color: rgba(255, 255, 255, 0.6);
 }
 

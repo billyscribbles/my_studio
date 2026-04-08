@@ -1,0 +1,129 @@
+.legal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1rem;
+  animation: overlay-in 0.2s ease;
+}
+
+@keyframes overlay-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.legal-modal {
+  background: #fff;
+  border-radius: 16px 16px 0 0;
+  width: 100%;
+  max-width: 760px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  animation: modal-in 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  overflow: hidden;
+}
+
+@keyframes modal-in {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.legal-modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.75rem 2rem 1.25rem;
+  border-bottom: 1px solid #e8e4df;
+  flex-shrink: 0;
+}
+
+.legal-modal__title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-optical-sizing: auto;
+  margin: 0 0 0.2rem;
+}
+
+.legal-modal__updated {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: #888;
+  margin: 0;
+}
+
+.legal-modal__close {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid #e2ddd8;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #555;
+  flex-shrink: 0;
+  transition: background 0.15s, color 0.15s;
+}
+
+.legal-modal__close:hover {
+  background: #f4f1ee;
+  color: #1a1a1a;
+}
+
+.legal-modal__body {
+  overflow-y: auto;
+  padding: 1.5rem 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.legal-modal__section-heading {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.legal-modal__section-body p {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: #444;
+  margin: 0 0 0.75rem;
+}
+
+.legal-modal__section-body p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .legal-overlay {
+    padding: 0;
+  }
+
+  .legal-modal {
+    border-radius: 20px 20px 0 0;
+    max-height: 92vh;
+  }
+
+  .legal-modal__header {
+    padding: 1.25rem 1.25rem 1rem;
+  }
+
+  .legal-modal__body {
+    padding: 1.25rem 1.25rem 3rem;
+  }
+}
