@@ -1,6 +1,7 @@
 .techstack {
   background: var(--color-bg);
-  padding: 80px 32px;
+  padding: 80px 0;
+  overflow: hidden;
 }
 
 .techstack__inner {
@@ -10,83 +11,97 @@
 
 .techstack__header {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 56px;
+  padding: 0 32px;
 }
 
-/* Desktop: static row */
-.techstack__row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px 24px;
-}
-
-.techstack__item {
-  font-family: var(--font-body);
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  color: var(--color-text);
-  filter: grayscale(1);
-  opacity: 0.35;
-  transition: filter var(--transition-base), opacity var(--transition-base), color var(--transition-base);
-  cursor: default;
-  padding: 8px 4px;
-}
-
-.techstack__item:hover {
-  filter: grayscale(0);
-  opacity: 1;
-  color: var(--color-accent);
-}
-
-/* Mobile: marquee */
-.techstack__marquee-wrap {
-  display: none;
-  overflow: hidden;
+/* Runway wrapper — fades edges */
+.techstack__runway-wrap {
   position: relative;
+  overflow: hidden;
 }
 
-.techstack__marquee-wrap::before,
-.techstack__marquee-wrap::after {
+.techstack__runway-wrap::before,
+.techstack__runway-wrap::after {
   content: '';
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 60px;
-  z-index: 1;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
 }
 
-.techstack__marquee-wrap::before {
+.techstack__runway-wrap::before {
   left: 0;
-  background: linear-gradient(to right, var(--color-bg), transparent);
+  background: linear-gradient(to right, var(--color-bg) 0%, transparent 100%);
 }
 
-.techstack__marquee-wrap::after {
+.techstack__runway-wrap::after {
   right: 0;
-  background: linear-gradient(to left, var(--color-bg), transparent);
+  background: linear-gradient(to left, var(--color-bg) 0%, transparent 100%);
 }
 
-.techstack__marquee {
+/* Scrolling track */
+.techstack__runway {
   display: flex;
-  gap: 32px;
-  animation: marquee 20s linear infinite;
+  align-items: center;
+  gap: 64px;
   width: max-content;
+  animation: runway 40s linear infinite;
+  padding: 8px 0;
 }
 
-.techstack__marquee-item {
-  font-family: var(--font-display);
-  font-size: 16px;
-  font-weight: 700;
-  font-optical-sizing: auto;
-  color: var(--color-text);
-  opacity: 0.35;
-  white-space: nowrap;
+.techstack__runway:hover {
+  animation-play-state: paused;
 }
 
-@keyframes marquee {
+@keyframes runway {
   from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Individual logo item */
+.techstack__logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  cursor: default;
+  transition: transform 0.3s ease;
+}
+
+.techstack__logo-item:hover {
+  transform: translateY(-4px);
+}
+
+.techstack__logo-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  user-select: none;
+}
+
+.techstack__logo-item:hover .techstack__logo-img {
+  opacity: 1;
+}
+
+.techstack__logo-name {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+  opacity: 0.4;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+}
+
+.techstack__logo-item:hover .techstack__logo-name {
+  opacity: 0.9;
 }
 
 @media (max-width: 768px) {
@@ -94,15 +109,22 @@
     padding: 64px 0;
   }
 
-  .techstack__header {
-    padding: 0 20px;
+  .techstack__runway-wrap::before,
+  .techstack__runway-wrap::after {
+    width: 60px;
   }
 
-  .techstack__row {
-    display: none;
+  .techstack__runway {
+    gap: 48px;
+    animation-duration: 30s;
   }
 
-  .techstack__marquee-wrap {
-    display: block;
+  .techstack__logo-img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .techstack__logo-name {
+    font-size: 11px;
   }
 }
