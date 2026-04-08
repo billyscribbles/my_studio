@@ -60,20 +60,6 @@
   padding-left: 56px;
 }
 
-.how__step-number {
-  position: absolute;
-  top: -24px;
-  left: -8px;
-  font-family: var(--font-display);
-  font-size: 120px;
-  font-weight: 800;
-  color: var(--color-accent);
-  opacity: 0.08;
-  line-height: 1;
-  pointer-events: none;
-  user-select: none;
-}
-
 .how__step-icon {
   position: absolute;
   left: 0;
@@ -276,8 +262,4 @@
     font-size: 36px;
   }
 
-  .how__step-number {
-    font-size: 80px;
-    font-optical-sizing: auto;
-  }
 }

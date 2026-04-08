@@ -51,7 +51,6 @@ export default function HowItWorks() {
                   transition={{ duration: 0.5, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
                 >
                   <div className="how__step-inner">
-                    <span className="how__step-number" aria-hidden="true">{step.number}</span>
                     <div className="how__step-icon">
                       <Icon size={18} strokeWidth={2} />
                     </div>
