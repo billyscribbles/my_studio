@@ -14,7 +14,7 @@ const navLinks = [
 ];
 
 export default function Footer() {
-  const [legal, setLegal] = useState(null)
+  const [legal, setLegal] = useState(null);
 
   return (
     <footer className="footer">
@@ -27,7 +27,12 @@ export default function Footer() {
           conversation.
         </p>
         {CALENDLY_URL ? (
-          <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="footer__cta-btn">
+          <a
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer__cta-btn"
+          >
             Book a Free Call →
           </a>
         ) : (
@@ -40,7 +45,7 @@ export default function Footer() {
       <div className="footer__main">
         <div>
           <div className="footer__logo">
-            ONRAISTUDIO
+            ONRAI STUDIO
             <span className="footer__logo-dot" aria-hidden="true" />
           </div>
           <p className="footer__tagline">
@@ -96,8 +101,18 @@ export default function Footer() {
           © 2025 Onrai Studio. Built in Australia. All rights reserved.
         </span>
         <div className="footer__legal">
-          <button onClick={() => setLegal('privacy')} className="footer__legal-btn">Privacy Policy</button>
-          <button onClick={() => setLegal('terms')} className="footer__legal-btn">Terms</button>
+          <button
+            onClick={() => setLegal("privacy")}
+            className="footer__legal-btn"
+          >
+            Privacy Policy
+          </button>
+          <button
+            onClick={() => setLegal("terms")}
+            className="footer__legal-btn"
+          >
+            Terms
+          </button>
         </div>
       </div>
 
