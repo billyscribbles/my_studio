@@ -163,6 +163,107 @@
   margin: 0;
 }
 
+/* ── Tool widget (e.g. index checker) ──────────────────────────────────── */
+
+.climb-entry__tool {
+  margin: 1.25rem 0 0;
+  padding: 1.4rem 1.5rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.climb-entry__tool-label {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.climb-entry__tool-row {
+  display: flex;
+  align-items: stretch;
+  gap: 0.6rem;
+}
+
+.climb-entry__tool-field {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0 0.85rem;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.climb-entry__tool-field:focus-within {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-glow);
+}
+
+.climb-entry__tool-prefix {
+  font-family: 'Fira Code', 'Cascadia Code', 'Menlo', monospace;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  padding-right: 0.35rem;
+  user-select: none;
+}
+
+.climb-entry__tool-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: 'Fira Code', 'Cascadia Code', 'Menlo', monospace;
+  font-size: 0.92rem;
+  color: var(--color-text);
+  padding: 0.75rem 0;
+}
+
+.climb-entry__tool-input::placeholder {
+  color: var(--color-muted);
+  opacity: 0.7;
+}
+
+.climb-entry__tool-button {
+  flex-shrink: 0;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--color-accent);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0 1.25rem;
+  cursor: pointer;
+  transition: background var(--transition-base), transform var(--transition-base);
+}
+
+.climb-entry__tool-button:hover {
+  background: var(--color-accent-dark);
+}
+
+.climb-entry__tool-button:active {
+  transform: translateY(1px);
+}
+
+.climb-entry__tool-hint {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
 /* ── Baseline screenshot ───────────────────────────────────────────────── */
 
 .climb-entry__baseline {
@@ -369,5 +470,18 @@
 
   .climb-entry__step-title {
     flex-basis: 100%;
+  }
+
+  .climb-entry__tool {
+    padding: 1.2rem 1.1rem;
+  }
+
+  .climb-entry__tool-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .climb-entry__tool-button {
+    padding: 0.75rem 1.25rem;
   }
 }

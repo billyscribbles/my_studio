@@ -185,4 +185,4 @@ The Climb is a journey, not a news feed. Do not display `entry.date` in the UI. 
 
 ### Page location
 
-All entries live in the `entries` array in `src/pages/TheClimbPage.jsx`. New section types (beyond `text`, `steps`, `baseline`, `next`) should be added to the render switch in that same file and styled in `src/pages/TheClimbPage.css` using BEM `.climb-entry__*` classes.
+All entries live in the `entries` array in `src/pages/TheClimbPage.jsx`. Existing section types: `text`, `steps`, `baseline` (screenshot + caption), `tool` (interactive widget like the `IndexCheckWidget`), `next`. New section types should be added to the render switch in that same file and styled in `src/pages/TheClimbPage.css` using BEM `.climb-entry__*` classes.

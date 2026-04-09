@@ -1,12 +1,126 @@
+import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
 import Contact from '../components/Contact'
 import './TheClimbPage.css'
 
+function IndexCheckWidget({ placeholder, buttonLabel }) {
+  const [value, setValue] = useState('')
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const raw = value.trim()
+    if (!raw) return
+    const clean = raw
+      .replace(/^https?:\/\//i, '')
+      .replace(/^www\./i, '')
+      .split('/')[0]
+    window.open(
+      `https://www.google.com/search?q=site:${encodeURIComponent(clean)}`,
+      '_blank',
+      'noopener,noreferrer'
+    )
+  }
+
+  return (
+    <form className="climb-entry__tool" onSubmit={handleSubmit}>
+      <label className="climb-entry__tool-label" htmlFor="climb-indexcheck-input">
+        Am I indexed?
+      </label>
+      <div className="climb-entry__tool-row">
+        <div className="climb-entry__tool-field">
+          <span className="climb-entry__tool-prefix">site:</span>
+          <input
+            id="climb-indexcheck-input"
+            type="text"
+            className="climb-entry__tool-input"
+            placeholder={placeholder}
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            autoComplete="off"
+            spellCheck="false"
+          />
+        </div>
+        <button type="submit" className="climb-entry__tool-button">
+          {buttonLabel}
+        </button>
+      </div>
+      <p className="climb-entry__tool-hint">
+        Opens Google in a new tab with the search pre-filled. If you see pages, you're indexed.
+        If Google says "no results", you're not — yet.
+      </p>
+    </form>
+  )
+}
+
 const entries = [
   {
     id: 1,
     step: 1,
+    title: 'Getting on Google in the First Place',
+    summary: `The single most common problem new businesses face: you Google your own name and nothing comes up. Not a bad ranking — literally nothing. Before you can rank, Google has to know you exist.`,
+    sections: [
+      {
+        type: 'text',
+        heading: 'Why this matters',
+        body: `When you build a new website, it sits invisible until Google "finds" it. This can take weeks or months on its own. Most small business owners assume that because their site is live, Google will find it — but that's not how it works. You have to actually tell Google. The good news: the whole process takes one afternoon, and once it's done, your business name will start showing up in search.`,
+      },
+      {
+        type: 'steps',
+        heading: 'The steps we took',
+        items: [
+          {
+            title: 'Pick a business name Google can recognise',
+            description: `Choose something distinct. We went with "Onrai" because it's unusual enough that Google has nothing to confuse it with. If you name your shop "Blue Studio", you'll spend years fighting thousands of other Blue Studios for attention. Unique name = instant advantage.`,
+            difficulty: 'easy',
+            time: '~10 min',
+          },
+          {
+            title: 'Buy your own domain name',
+            description: `If your URL still looks like "my-app-v3.up.railway.app" or "yoursite.vercel.app", you're telling both customers and Google that you're not a real business. Buy a proper domain from a registrar (Namecheap, Cloudflare, or GoDaddy). It costs about $15 a year. Pick ".com.au" if you serve Australia, ".com" otherwise.`,
+            difficulty: 'easy',
+            time: '~15 min',
+          },
+          {
+            title: 'Point your new domain at your website',
+            description: `This is the DNS step — you copy a few values from your hosting provider (Railway in our case) into your domain registrar's settings. Once it kicks in (usually minutes, sometimes a few hours), typing yourdomain.com loads your site instead of the ugly default URL. Every hosting provider has a step-by-step guide for this.`,
+            difficulty: 'medium',
+            time: '~20 min',
+          },
+          {
+            title: 'Tell Google your site exists',
+            description: `Go to Google Search Console, add your domain, verify ownership using the DNS method (most reliable), then paste your homepage URL into the bar at the top and click "Request Indexing". This is the most important step of the lot — it can get you indexed in hours instead of months.`,
+            difficulty: 'medium',
+            time: '~15 min',
+          },
+        ],
+      },
+      {
+        type: 'tool',
+        heading: 'Check if you\'re indexed right now',
+        body: `Want to know if Google has found your site yet? Type your domain below and hit the button. It'll run a "site:" search — a special query that only returns pages Google knows about on that domain. It's the fastest way to tell if you exist in Google's eyes.`,
+        placeholder: 'yourdomain.com',
+        buttonLabel: 'Check on Google',
+      },
+      {
+        type: 'text',
+        heading: 'What changes after this',
+        body: `Once Google has indexed your site, your business name will start appearing in search results. This is the absolute floor of SEO — the bare minimum for being findable. From here on, every step is about getting Google to trust you, understand you, and recommend you over competitors. Without this step, nothing else matters.`,
+      },
+      {
+        type: 'next',
+        heading: 'Next on the climb',
+        items: [
+          `In the next step, we tackle the "Did you mean?" problem — when Google finds your site but still thinks your brand name is a typo for something else.`,
+          `Set a reminder to come back in a few days and run the indexing check again — it can take anywhere from a few hours to a week.`,
+          `If nothing shows up after a week, double-check that Search Console shows your sitemap as "Success" and that your homepage isn't accidentally set to "noindex".`,
+        ],
+      },
+    ],
+  },
+  {
+    id: 2,
+    step: 2,
     title: 'Getting Google to Recognise Your Brand',
     summary: `When Google doesn't trust your brand name, it shows a "Did you mean?" suggestion and sends people to your competitors. Here's how we told Google, in no uncertain terms, who we are.`,
     sections: [
@@ -137,6 +251,16 @@ export default function TheClimbPage() {
 
                       {section.type === 'text' && (
                         <p className="climb-entry__section-body">{section.body}</p>
+                      )}
+
+                      {section.type === 'tool' && (
+                        <>
+                          <p className="climb-entry__section-body">{section.body}</p>
+                          <IndexCheckWidget
+                            placeholder={section.placeholder}
+                            buttonLabel={section.buttonLabel}
+                          />
+                        </>
                       )}
 
                       {section.type === 'baseline' && (
