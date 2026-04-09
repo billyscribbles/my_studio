@@ -31,6 +31,7 @@ export default function TheClimbPage() {
         <section className="climb-page__hero">
           <div className="climb-page__hero-inner">
             <motion.div
+              className="climb-page__hero-copy"
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -63,6 +64,82 @@ export default function TheClimbPage() {
                   <span>No jargon</span>
                   <span className="climb-page__reassurance-dot" aria-hidden="true">•</span>
                   <span>Free</span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="climb-page__hero-visual"
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+              aria-hidden="true"
+            >
+              <div className="cmp__mock">
+                <div className="cmp__mock-bar">
+                  <span className="cmp__mock-dot--r" />
+                  <span className="cmp__mock-dot--y" />
+                  <span className="cmp__mock-dot--g" />
+                  <span className="cmp__mock-url" />
+                </div>
+
+                <div className="cmp__mock-body">
+                  <div className="cmp__mock-search">
+                    <span className="cmp__mock-search-icon" />
+                    <span className="cmp__mock-search-text" />
+                    <span className="cmp__mock-search-clear" />
+                  </div>
+
+                  <div className="cmp__mock-tabs">
+                    <div className="cmp__mock-tab cmp__mock-tab--active" />
+                    <div className="cmp__mock-tab" />
+                    <div className="cmp__mock-tab" />
+                    <div className="cmp__mock-tab" />
+                    <div className="cmp__mock-tab" />
+                  </div>
+
+                  <div className="cmp__mock-results">
+                    <div className="cmp__mock-result cmp__mock-result--top">
+                      <div className="cmp__mock-result-head">
+                        <div className="cmp__mock-favicon" />
+                        <div className="cmp__mock-result-meta">
+                          <div className="cmp__mock-result-site" />
+                          <div className="cmp__mock-result-url" />
+                        </div>
+                        <div className="cmp__mock-rank-badge">
+                          <span className="cmp__mock-rank-arrow">↑</span>
+                          <span className="cmp__mock-rank-num">#1</span>
+                        </div>
+                      </div>
+                      <div className="cmp__mock-result-title" />
+                      <div className="cmp__mock-result-desc" />
+                      <div className="cmp__mock-result-desc cmp__mock-result-desc--short" />
+                    </div>
+
+                    <div className="cmp__mock-result cmp__mock-result--dim">
+                      <div className="cmp__mock-result-head">
+                        <div className="cmp__mock-favicon cmp__mock-favicon--dim" />
+                        <div className="cmp__mock-result-meta">
+                          <div className="cmp__mock-result-site cmp__mock-result-site--dim" />
+                          <div className="cmp__mock-result-url cmp__mock-result-url--dim" />
+                        </div>
+                      </div>
+                      <div className="cmp__mock-result-title cmp__mock-result-title--dim" />
+                      <div className="cmp__mock-result-desc cmp__mock-result-desc--dim" />
+                    </div>
+
+                    <div className="cmp__mock-result cmp__mock-result--dim">
+                      <div className="cmp__mock-result-head">
+                        <div className="cmp__mock-favicon cmp__mock-favicon--dim" />
+                        <div className="cmp__mock-result-meta">
+                          <div className="cmp__mock-result-site cmp__mock-result-site--dim" />
+                          <div className="cmp__mock-result-url cmp__mock-result-url--dim" />
+                        </div>
+                      </div>
+                      <div className="cmp__mock-result-title cmp__mock-result-title--dim cmp__mock-result-title--short" />
+                      <div className="cmp__mock-result-desc cmp__mock-result-desc--dim" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>

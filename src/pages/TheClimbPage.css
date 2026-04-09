@@ -4,11 +4,20 @@
   background: var(--color-text);
   padding: 5rem 2rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
 }
 
 .climb-page__hero-inner {
-  max-width: 780px;
+  max-width: 1200px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.climb-page__hero-copy {
+  max-width: 560px;
 }
 
 .climb-page__eyebrow {
@@ -126,6 +135,354 @@
 .climb-page__reassurance-dot {
   color: rgba(255, 255, 255, 0.25);
   user-select: none;
+}
+
+/* ── Hero illustration: Google SERP skeleton mockup ────────────────────── */
+
+.climb-page__hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cmp__mock {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+/* ── Browser chrome ────────────────────────────────────────────────────── */
+
+.cmp__mock-bar {
+  height: 38px;
+  background: #f0eeec;
+  border-bottom: 1px solid rgba(13, 17, 23, 0.08);
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  gap: 7px;
+}
+
+.cmp__mock-dot--r,
+.cmp__mock-dot--y,
+.cmp__mock-dot--g {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.cmp__mock-dot--r { background: #ff5f57; }
+.cmp__mock-dot--y { background: #febc2e; }
+.cmp__mock-dot--g { background: #28c840; }
+
+.cmp__mock-url {
+  flex: 1;
+  height: 18px;
+  margin-left: 12px;
+  background: #fff;
+  border-radius: 9px;
+  border: 1px solid rgba(13, 17, 23, 0.08);
+}
+
+/* ── Body ──────────────────────────────────────────────────────────────── */
+
+.cmp__mock-body {
+  padding: 18px 20px 20px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ── Search bar ────────────────────────────────────────────────────────── */
+
+.cmp__mock-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 36px;
+  padding: 0 14px;
+  background: #fff;
+  border: 1px solid rgba(13, 17, 23, 0.12);
+  border-radius: 18px;
+  box-shadow: 0 1px 3px rgba(13, 17, 23, 0.04);
+}
+
+.cmp__mock-search-icon {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(13, 17, 23, 0.4);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.cmp__mock-search-icon::after {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 9px;
+  width: 5px;
+  height: 1.5px;
+  background: rgba(13, 17, 23, 0.4);
+  transform: rotate(45deg);
+  transform-origin: left center;
+}
+
+.cmp__mock-search-text {
+  flex: 1;
+  height: 8px;
+  background: rgba(13, 17, 23, 0.15);
+  border-radius: 4px;
+  max-width: 110px;
+}
+
+.cmp__mock-search-clear {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(13, 17, 23, 0.1);
+  flex-shrink: 0;
+}
+
+/* ── Tabs row ──────────────────────────────────────────────────────────── */
+
+.cmp__mock-tabs {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(13, 17, 23, 0.08);
+}
+
+.cmp__mock-tab {
+  width: 28px;
+  height: 7px;
+  background: rgba(13, 17, 23, 0.1);
+  border-radius: 3px;
+  position: relative;
+}
+
+.cmp__mock-tab--active {
+  background: rgba(13, 17, 23, 0.25);
+}
+
+.cmp__mock-tab--active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -11px;
+  height: 2px;
+  background: #1a73e8;
+  border-radius: 2px;
+}
+
+/* ── Results list ──────────────────────────────────────────────────────── */
+
+.cmp__mock-results {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cmp__mock-result {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  position: relative;
+  transition: transform var(--transition-base);
+}
+
+/* Top (highlighted) result — your site */
+.cmp__mock-result--top {
+  background: var(--color-accent-light);
+  border: 1px solid rgba(12, 140, 129, 0.3);
+  box-shadow: 0 6px 20px rgba(12, 140, 129, 0.15);
+  position: relative;
+  z-index: 2;
+  animation: cmp-climb-teal 6.5s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  will-change: transform;
+}
+
+@keyframes cmp-climb-teal {
+  0%, 5% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  12%, 20% {
+    transform: translateY(150px);
+    opacity: 1;
+  }
+  55%, 88% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+/* Dimmer subsequent results — competitors */
+.cmp__mock-result--dim {
+  padding: 10px 14px;
+  gap: 6px;
+  opacity: 0.55;
+  position: relative;
+  z-index: 1;
+  animation: cmp-climb-dim 6.5s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  will-change: transform;
+}
+
+@keyframes cmp-climb-dim {
+  0%, 5% {
+    transform: translateY(-99px);
+    opacity: 0;
+  }
+  12%, 20% {
+    transform: translateY(-99px);
+    opacity: 0.55;
+  }
+  55%, 88% {
+    transform: translateY(0);
+    opacity: 0.55;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cmp__mock-result--top,
+  .cmp__mock-result--dim {
+    animation: none;
+  }
+}
+
+.cmp__mock-result-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cmp__mock-favicon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.cmp__mock-favicon--dim {
+  background: rgba(13, 17, 23, 0.15);
+  width: 14px;
+  height: 14px;
+}
+
+.cmp__mock-result-meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.cmp__mock-result-site {
+  width: 60px;
+  height: 7px;
+  background: rgba(13, 17, 23, 0.55);
+  border-radius: 3px;
+}
+
+.cmp__mock-result-site--dim {
+  width: 50px;
+  height: 6px;
+  background: rgba(13, 17, 23, 0.3);
+}
+
+.cmp__mock-result-url {
+  width: 100px;
+  height: 5px;
+  background: rgba(13, 17, 23, 0.2);
+  border-radius: 3px;
+}
+
+.cmp__mock-result-url--dim {
+  width: 85px;
+  background: rgba(13, 17, 23, 0.12);
+}
+
+.cmp__mock-rank-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px 7px;
+  background: var(--color-accent);
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(12, 140, 129, 0.4);
+  flex-shrink: 0;
+  animation: cmp-badge-pulse 2.8s ease-in-out infinite;
+}
+
+@keyframes cmp-badge-pulse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+.cmp__mock-rank-arrow {
+  font-size: 0.65rem;
+  line-height: 1;
+  color: #fff;
+  font-weight: 700;
+}
+
+.cmp__mock-rank-num {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.cmp__mock-result-title {
+  width: 85%;
+  height: 10px;
+  background: #1a73e8;
+  border-radius: 3px;
+  margin-top: 2px;
+}
+
+.cmp__mock-result-title--dim {
+  background: rgba(26, 115, 232, 0.35);
+  height: 9px;
+}
+
+.cmp__mock-result-title--short {
+  width: 65%;
+}
+
+.cmp__mock-result-desc {
+  width: 100%;
+  height: 6px;
+  background: rgba(13, 17, 23, 0.18);
+  border-radius: 3px;
+}
+
+.cmp__mock-result-desc--short {
+  width: 75%;
+}
+
+.cmp__mock-result-desc--dim {
+  background: rgba(13, 17, 23, 0.1);
 }
 
 /* ── Trail map (overview) ──────────────────────────────────────────────── */
@@ -840,6 +1197,15 @@
   .climb-page__hero,
   .climb-step__hero {
     padding: 4rem 1.5rem;
+  }
+
+  .climb-page__hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .climb-page__hero-visual {
+    display: none;
   }
 
   .climb-page__map {
