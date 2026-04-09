@@ -1,7 +1,7 @@
 .about-page__hero {
   background: var(--color-text);
   padding: 5rem 2rem 5rem;
-  border-bottom: 1px solid #e8e4df;
+  border-bottom: 1px solid var(--color-border);
   overflow: hidden;
 }
 
@@ -21,7 +21,7 @@
 
 .about-page__back {
   display: inline-block;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 0.85rem;
   color: rgba(255,255,255,0.5);
   text-decoration: none;
@@ -37,7 +37,7 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.07em;
@@ -60,7 +60,7 @@
 }
 
 .about-page__title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(2.5rem, 4.5vw, 3.75rem);
   font-weight: 600;
   color: #fff;
@@ -70,7 +70,7 @@
 }
 
 .about-page__lead {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 1.05rem;
   line-height: 1.75;
   color: rgba(255,255,255,0.6);
@@ -84,7 +84,7 @@
 }
 
 .about-page__pill {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -140,7 +140,7 @@
 }
 
 .about-page__art-label {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1rem;
   font-weight: 700;
   color: #fff;
@@ -148,7 +148,7 @@
 }
 
 .about-page__art-sub {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 0.6rem;
   font-weight: 600;
   color: rgba(255,255,255,0.7);
@@ -186,7 +186,7 @@
 .about-page__timeline {
   padding: 5rem 1.5rem;
   background: var(--color-bg-alt);
-  border-top: 1px solid #e8e4df;
+  border-top: 1px solid var(--color-border);
 }
 
 .about-page__timeline-inner {
@@ -195,10 +195,10 @@
 }
 
 .about-page__timeline-heading {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(1.75rem, 3vw, 2.25rem);
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--color-text);
   font-optical-sizing: auto;
   margin: 0 0 2.5rem;
 }
@@ -235,7 +235,7 @@
 
 .about-page__milestone-year {
   display: block;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -245,7 +245,7 @@
 }
 
 .about-page__milestone-text {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.65;
   color: #444;

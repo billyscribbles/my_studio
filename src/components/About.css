@@ -1,7 +1,7 @@
 .about {
   padding: 6rem 2rem;
   background: #fff;
-  border-top: 1px solid #e8e4df;
+  border-top: 1px solid var(--color-border);
 }
 
 .about__inner {
@@ -27,7 +27,7 @@
 
 .about__eyebrow {
   display: block;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -37,20 +37,20 @@
 }
 
 .about__heading {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(1.75rem, 3vw, 2.6rem);
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--color-text);
   line-height: 1.2;
   font-optical-sizing: auto;
   margin: 0 0 1.5rem;
 }
 
 .about__bio {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.8;
-  color: #555;
+  color: var(--color-text-soft);
   margin: 0 0 0.9rem;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .about__dash-title {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 11px;
   font-weight: 600;
   color: #999;
@@ -104,7 +104,7 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 11px;
   font-weight: 600;
   color: #22c55e;
@@ -128,7 +128,7 @@
 }
 
 .about__dash-section-label {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -157,7 +157,7 @@
 }
 
 .about__dash-avatar span {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 12px;
   font-weight: 700;
   color: #fff;
@@ -196,7 +196,7 @@
 .about__dash-project-top {
   display: flex;
   justify-content: space-between;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 11px;
   font-weight: 600;
   color: #444;
@@ -242,7 +242,7 @@
 .about__dash-feed-dot--amber  { background: #f59e0b; }
 
 .about__dash-feed-label {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 11px;
   font-weight: 600;
   color: #333;
@@ -250,7 +250,7 @@
 }
 
 .about__dash-feed-sub {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 10px;
   color: #aaa;
   margin-top: 1px;
@@ -261,8 +261,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
-  background: #e8e4df;
-  border: 1px solid #e8e4df;
+  background: var(--color-border);
+  border: 1px solid var(--color-border);
   border-radius: 14px;
   overflow: hidden;
 }
@@ -281,7 +281,7 @@
 }
 
 .about__stat-value {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(1.75rem, 3vw, 2.25rem);
   font-weight: 700;
   color: var(--accent, #0d9488);
@@ -290,7 +290,7 @@
 }
 
 .about__stat-label {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 0.82rem;
   font-weight: 500;
   color: #777;
@@ -306,7 +306,7 @@
 
 .about__value {
   background: #fafaf8;
-  border: 1.5px solid #e8e4df;
+  border: 1.5px solid var(--color-border);
   border-radius: 12px;
   padding: 1.25rem;
   display: flex;
@@ -321,16 +321,16 @@
 }
 
 .about__value-label {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--color-text);
 }
 
 .about__value-desc {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 0.83rem;
-  color: #666;
+  color: var(--color-muted);
   line-height: 1.55;
 }
 

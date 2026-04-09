@@ -25,6 +25,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://onraistudio.com/ai</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://onraistudio.com/contact</loc>
     <lastmod>2026-04-09</lastmod>
     <changefreq>monthly</changefreq>

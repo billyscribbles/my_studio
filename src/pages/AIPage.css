@@ -1,34 +1,20 @@
-.services-page {
+.ai-page {
   padding-top: 0;
 }
 
 /* ── Hero ── */
-.sp__hero {
+.aip__hero {
   background: var(--color-text);
   padding: 5rem 2rem 5rem;
   overflow: hidden;
 }
 
-.sp__hero-inner {
+.aip__hero-inner {
   max-width: 900px;
   margin: 0 auto;
 }
 
-.sp__back {
-  display: inline-block;
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.45);
-  text-decoration: none;
-  margin-bottom: 1.75rem;
-  transition: color 0.15s;
-}
-
-.sp__back:hover {
-  color: rgba(255,255,255,0.9);
-}
-
-.sp__hero-eyebrow {
+.aip__hero-eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 7px;
@@ -41,20 +27,20 @@
   margin-bottom: 1.25rem;
 }
 
-.sp__hero-dot {
+.aip__hero-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
   background: #22c55e;
-  animation: sp-pulse 2s ease-in-out infinite;
+  animation: aip-pulse 2s ease-in-out infinite;
 }
 
-@keyframes sp-pulse {
+@keyframes aip-pulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.4; }
 }
 
-.sp__hero-heading {
+.aip__hero-heading {
   font-family: var(--font-display);
   font-size: clamp(2.25rem, 4.5vw, 3.75rem);
   font-weight: 600;
@@ -64,7 +50,7 @@
   margin: 0 0 1.25rem;
 }
 
-.sp__hero-lead {
+.aip__hero-lead {
   font-family: var(--font-body);
   font-size: 1.05rem;
   line-height: 1.75;
@@ -73,13 +59,13 @@
   margin: 0 0 2rem;
 }
 
-.sp__hero-pills {
+.aip__hero-pills {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.sp__hero-pill {
+.aip__hero-pill {
   font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 600;
@@ -90,28 +76,90 @@
   background: rgba(255,255,255,0.06);
 }
 
+/* ── Why AI ── */
+.aip__why {
+  padding: 5rem 2rem;
+  background: var(--color-bg-alt, #f7f4f1);
+  border-top: 1px solid var(--color-border);
+}
+
+.aip__why-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.aip__why-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  font-weight: 600;
+  color: var(--color-text);
+  font-optical-sizing: auto;
+  margin: 0 0 2.5rem;
+}
+
+.aip__why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.aip__why-card {
+  background: #fff;
+  border: 1.5px solid var(--color-border);
+  border-radius: 14px;
+  padding: 1.75rem;
+}
+
+.aip__why-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(13, 148, 136, 0.1);
+  color: #0d9488;
+  margin-bottom: 1rem;
+}
+
+.aip__why-card-heading {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 0.5rem;
+}
+
+.aip__why-card-body {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--color-text-soft);
+  margin: 0;
+}
+
 /* ── Category sections ── */
-.sp__category {
+.aip__category {
   padding: 5rem 2rem;
   background: #fff;
   border-top: 1px solid var(--color-border);
 }
 
-.sp__category--alt {
+.aip__category--alt {
   background: var(--color-bg-alt, #f7f4f1);
 }
 
-.sp__category-inner {
+.aip__category-inner {
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.sp__category-header {
+.aip__category-header {
   margin-bottom: 2.5rem;
   max-width: 680px;
 }
 
-.sp__category-icon {
+.aip__category-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -121,7 +169,7 @@
   margin-bottom: 1rem;
 }
 
-.sp__category-eyebrow {
+.aip__category-eyebrow {
   display: block;
   font-family: var(--font-body);
   font-size: 0.78rem;
@@ -131,7 +179,7 @@
   margin-bottom: 0.6rem;
 }
 
-.sp__category-heading {
+.aip__category-heading {
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 3vw, 2.25rem);
   font-weight: 600;
@@ -141,7 +189,7 @@
   margin: 0 0 0.9rem;
 }
 
-.sp__category-desc {
+.aip__category-desc {
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.75;
@@ -149,15 +197,14 @@
   margin: 0;
 }
 
-/* Services grid */
-.sp__services-grid {
+.aip__features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-bottom: 1.75rem;
 }
 
-.sp__service-card {
+.aip__feature-card {
   background: #fff;
   border: 1.5px solid var(--color-border);
   border-radius: 12px;
@@ -166,26 +213,25 @@
   flex-direction: column;
   gap: 0.5rem;
   transition: border-color 0.2s, box-shadow 0.2s;
-  position: relative;
 }
 
-.sp__category--alt .sp__service-card {
+.aip__category--alt .aip__feature-card {
   background: #fff;
 }
 
-.sp__service-card:hover {
+.aip__feature-card:hover {
   box-shadow: 0 4px 16px rgba(0,0,0,0.07);
   border-color: #ccc;
 }
 
-.sp__service-dot {
+.aip__feature-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   margin-bottom: 0.25rem;
 }
 
-.sp__service-name {
+.aip__feature-name {
   font-family: var(--font-body);
   font-size: 0.92rem;
   font-weight: 700;
@@ -193,7 +239,7 @@
   margin: 0;
 }
 
-.sp__service-desc {
+.aip__feature-desc {
   font-family: var(--font-body);
   font-size: 0.83rem;
   line-height: 1.55;
@@ -201,11 +247,11 @@
   margin: 0;
 }
 
-.sp__category-cta {
+.aip__category-cta {
   margin-top: 0.5rem;
 }
 
-.sp__category-link {
+.aip__category-link {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -216,22 +262,23 @@
   transition: gap 0.2s ease;
 }
 
-.sp__category-link:hover {
+.aip__category-link:hover {
   gap: 10px;
 }
 
-/* ── Why one studio ── */
-.sp__why {
+/* ── How it works ── */
+.aip__how {
   padding: 5rem 2rem;
   background: var(--color-text);
+  border-top: 1px solid var(--color-border);
 }
 
-.sp__why-inner {
+.aip__how-inner {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.sp__why-heading {
+.aip__how-heading {
   font-family: var(--font-display);
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 600;
@@ -241,7 +288,7 @@
   margin: 0 0 1rem;
 }
 
-.sp__why-sub {
+.aip__how-sub {
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.75;
@@ -249,52 +296,69 @@
   margin: 0 0 2.5rem;
 }
 
-.sp__why-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.aip__steps {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
-.sp__why-item {
+.aip__step {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  line-height: 1.5;
-  color: rgba(255,255,255,0.8);
+  gap: 1.25rem;
 }
 
-.sp__why-check {
+.aip__step-number {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
   color: #0d9488;
+  font-optical-sizing: auto;
+  line-height: 1;
   flex-shrink: 0;
-  margin-top: 2px;
+  width: 2.5rem;
+}
+
+.aip__step-title {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.35rem;
+}
+
+.aip__step-body {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.55);
+  margin: 0;
 }
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
-  .sp__services-grid {
+  .aip__why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .aip__features-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 600px) {
-  .sp__hero {
+  .aip__hero {
     padding: 3.5rem 1rem 3.5rem;
   }
 
-  .sp__category {
+  .aip__why,
+  .aip__category,
+  .aip__how {
     padding: 3.5rem 1rem;
   }
 
-  .sp__services-grid {
+  .aip__why-grid,
+  .aip__features-grid {
     grid-template-columns: 1fr;
-  }
-
-  .sp__why {
-    padding: 3.5rem 1rem;
   }
 }
