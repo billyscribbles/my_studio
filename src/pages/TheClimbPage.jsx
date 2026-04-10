@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import Contact from '../components/Contact'
-import { chapters, entries, getChapterEntries, getEntryStats } from '../data/climbEntries'
+import { chapters, entries, getChapterEntries } from '../data/climbEntries'
 import './TheClimbPage.css'
 
 export default function TheClimbPage() {
@@ -167,7 +167,6 @@ export default function TheClimbPage() {
 
                 <ol className="climb-chapter__trail">
                   {chapter.entries.map((entry, ei) => {
-                    const stats = getEntryStats(entry)
                     return (
                       <motion.li
                         key={entry.id}
@@ -197,20 +196,11 @@ export default function TheClimbPage() {
                           <h3 className="climb-marker__title">{entry.title}</h3>
                           <p className="climb-marker__summary">{entry.summary}</p>
                           <div className="climb-marker__meta">
-                            <span className="climb-marker__stat">
-                              <span className="climb-marker__stat-value">{stats.actionCount}</span>
-                              <span className="climb-marker__stat-label">actions</span>
+                            <span
+                              className={`climb-marker__pill climb-marker__pill--${entry.overallDifficulty}`}
+                            >
+                              {entry.overallDifficulty}
                             </span>
-                            <div className="climb-marker__difficulties">
-                              {stats.difficulties.map((d) => (
-                                <span
-                                  key={d}
-                                  className={`climb-marker__pill climb-marker__pill--${d}`}
-                                >
-                                  {d}
-                                </span>
-                              ))}
-                            </div>
                           </div>
                           <span className="climb-marker__cta">
                             Read step

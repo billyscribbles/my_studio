@@ -51,13 +51,14 @@ export const entries = [
     step: 1,
     slug: '01-getting-on-google',
     chapter: 'foundations',
+    overallDifficulty: 'medium',
     title: 'Getting on Google in the First Place',
-    summary: `The single most common problem new businesses face: you Google your own name and nothing comes up. Not a bad ranking — literally nothing. Before you can rank, Google has to know you exist.`,
+    summary: `You Google your own name and nothing comes up. Not a bad ranking — literally nothing. Before you can rank, Google has to know you exist.`,
     sections: [
       {
         type: 'text',
         heading: 'Why this matters',
-        body: `When you build a new website, it sits invisible until Google "finds" it. This can take weeks or months on its own. Most small business owners assume that because their site is live, Google will find it — but that's not how it works. You have to actually tell Google. The good news: the whole process takes one afternoon, and once it's done, your business name will start showing up in search.`,
+        body: `A new website sits invisible until Google "finds" it — which can take months on its own. Most owners assume a live site means Google knows about it. It doesn't. You have to tell Google yourself. The whole process takes one afternoon.`,
       },
       {
         type: 'steps',
@@ -65,26 +66,30 @@ export const entries = [
         items: [
           {
             title: 'Pick a business name Google can recognise',
-            description: `Choose something distinct. We went with "Onrai" because it's unusual enough that Google has nothing to confuse it with. If you name your shop "Blue Studio", you'll spend years fighting thousands of other Blue Studios for attention. Unique name = instant advantage.`,
+            description: `Choose something distinct. "Onrai" works because Google has nothing to confuse it with. Name your shop "Blue Studio" and you'll fight thousands of others for attention. Unique name = instant advantage.`,
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~10 min',
           },
           {
             title: 'Buy your own domain name',
-            description: `If your URL still looks like "my-app-v3.up.railway.app" or "yoursite.vercel.app", you're telling both customers and Google that you're not a real business. Buy a proper domain from a registrar (Namecheap, Cloudflare, or GoDaddy). It costs about $15 a year. Pick ".com.au" if you serve Australia, ".com" otherwise.`,
+            description: `If your URL still looks like "yoursite.vercel.app", customers and Google both think you're not a real business. Buy a proper domain from a registrar (Namecheap, Cloudflare, or GoDaddy) — about $15/year. Pick ".com.au" for Australia, ".com" otherwise.`,
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~15 min',
           },
           {
             title: 'Point your new domain at your website',
-            description: `This is the DNS step — you copy a few values from your hosting provider (Railway in our case) into your domain registrar's settings. Once it kicks in (usually minutes, sometimes a few hours), typing yourdomain.com loads your site instead of the ugly default URL. Every hosting provider has a step-by-step guide for this.`,
+            description: `Copy a few DNS values from your hosting provider into your domain registrar's settings. Once it kicks in (minutes to a few hours), your domain loads your site instead of the ugly default URL. Every hosting provider has a guide for this.`,
             difficulty: 'medium',
+            audience: 'developer',
             time: '~20 min',
           },
           {
             title: 'Tell Google your site exists',
-            description: `Go to Google Search Console, add your domain, verify ownership using the DNS method (most reliable), then paste your homepage URL into the bar at the top and click "Request Indexing". This is the most important step of the lot — it can get you indexed in hours instead of months.`,
+            description: `Go to Google Search Console, add your domain, verify ownership via DNS, then paste your homepage URL and click "Request Indexing". Most important step — it gets you indexed in hours instead of months.`,
             difficulty: 'medium',
+            audience: 'developer',
             time: '~15 min',
           },
         ],
@@ -92,14 +97,14 @@ export const entries = [
       {
         type: 'tool',
         heading: `Check if you're indexed right now`,
-        body: `Want to know if Google has found your site yet? Type your domain below and hit the button. It'll run a "site:" search — a special query that only returns pages Google knows about on that domain. It's the fastest way to tell if you exist in Google's eyes.`,
+        body: `Type your domain below to run a "site:" search — a special query that only returns pages Google knows about on your domain. Fastest way to check if you exist in Google's eyes.`,
         placeholder: 'yourdomain.com',
         buttonLabel: 'Check on Google',
       },
       {
         type: 'text',
         heading: 'What changes after this',
-        body: `Once Google has indexed your site, your business name will start appearing in search results. This is the absolute floor of SEO — the bare minimum for being findable. From here on, every step is about getting Google to trust you, understand you, and recommend you over competitors. Without this step, nothing else matters.`,
+        body: `Your business name starts appearing in search results. This is the bare minimum for being findable. Every step from here is about getting Google to trust you, understand you, and recommend you over competitors. Without this step, nothing else matters.`,
       },
       {
         type: 'next',
@@ -117,13 +122,14 @@ export const entries = [
     step: 2,
     slug: '02-brand-recognition',
     chapter: 'recognition',
+    overallDifficulty: 'medium',
     title: 'Getting Google to Recognise Your Brand',
-    summary: `When Google doesn't trust your brand name, it shows a "Did you mean?" suggestion and sends people to your competitors. Here's how we told Google, in no uncertain terms, who we are.`,
+    summary: `Google shows "Did you mean?" above your result and sends people to competitors. Here's how we told Google exactly who we are.`,
     sections: [
       {
         type: 'text',
         heading: 'Why this matters',
-        body: `Imagine a customer types your business name into Google and sees "Did you mean: [some other brand]?" right at the top. That tiny line costs real clicks. It plants doubt. It sends people who were looking for you to someone else. Until Google is confident your brand is a real business, you're leaking customers — even when you rank #1.`,
+        body: `A customer types your name into Google and sees "Did you mean: [some other brand]?" at the top. That tiny line plants doubt and sends people elsewhere. Until Google is confident your brand is real, you're leaking customers — even when you rank #1.`,
       },
       {
         type: 'baseline',
@@ -139,26 +145,30 @@ export const entries = [
         items: [
           {
             title: 'Spell your brand name the same way everywhere',
-            description: `Go through your website and check that your business name is written identically in every single place — header, footer, page titles, about page, contact page. One "Onrai studio" with a lowercase "s" can confuse Google. Consistency is the cheapest SEO win there is.`,
+            description: `Check that your business name is spelled identically everywhere — header, footer, page titles, about page, contact page. One lowercase "s" in "Onrai studio" can confuse Google. Consistency is the cheapest SEO win.`,
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~15 min',
           },
           {
             title: `Add a "business card" to your site that Google can read`,
-            description: `There's a hidden piece of code you can add to your homepage that tells Google exactly what your business is, where it's based, and how to contact you. It's called structured data, and Google reads it like a digital business card. We added one that lists our name, logo, location, email, and founder.`,
+            description: `Add a hidden piece of code to your homepage that tells Google exactly what your business is, where it's based, and how to contact you. It's called structured data — a digital business card with your name, logo, location, email, and founder.`,
             difficulty: 'medium',
+            audience: 'developer',
             time: '~30 min',
           },
           {
             title: 'Tell Google where you operate and who runs the show',
-            description: `Inside that business card, we listed the city, state, and country we serve, plus the founder's name. This gives Google a human and a location to attach the brand to — which is a huge trust signal when it's deciding whether you're a real business or a random word.`,
+            description: `List your city, state, country, and the founder's name in the business card. This gives Google a human and a location to attach your brand to — a huge trust signal when it's deciding if you're a real business or a random word.`,
             difficulty: 'medium',
+            audience: 'developer',
             time: '~20 min',
           },
           {
             title: `Check your work with Google's free testing tool`,
-            description: `Google has a free tool called the Rich Results Test that reads your business card and tells you if anything is broken. Paste your URL in, wait a few seconds, and you'll see green ticks (or a list of fixes). We ran ours and everything passed.`,
+            description: `Use Google's free Rich Results Test — paste your URL, wait a few seconds, and you'll see green ticks or a list of fixes. Quick way to confirm your business card is working.`,
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~5 min',
           },
         ],
@@ -166,7 +176,7 @@ export const entries = [
       {
         type: 'text',
         heading: 'What changes after this',
-        body: `Over the coming weeks, as Google re-crawls the site, the "Did you mean: Sonrai Studio" suggestion should start to fade and eventually disappear. Google will treat Onrai Studio as a real business entity, not a typo. That's a prerequisite for everything else — knowledge panels, map listings, being cited by AI models. You can't skip this step.`,
+        body: `Over the coming weeks, the "Did you mean: Sonrai Studio" suggestion should fade and disappear. Google will treat your brand as a real entity, not a typo. That's a prerequisite for knowledge panels, map listings, and being cited by AI models.`,
       },
       {
         type: 'next',
@@ -184,23 +194,24 @@ export const entries = [
     step: 3,
     slug: '03-local-relevance',
     chapter: 'relevance',
+    overallDifficulty: 'easy',
     title: `Speaking Your City's Language`,
-    summary: `This is the step we're working on for our own site right now — and it's a good template for yours. If you want Melbourne customers, Google needs to see Melbourne on the pages, not just in the hidden business card. The fix isn't ten new URLs. It's sharpening the ones you already have.`,
+    summary: `If you want Melbourne customers, Google needs to see "Melbourne" on your pages — not just in the hidden business card. The fix isn't ten new URLs. It's sharpening the ones you already have.`,
     sections: [
       {
         type: 'text',
         heading: `What we're doing (and why it works for your site too)`,
-        body: `This entry is a live walkthrough of what we're doing to Onrai Studio's own site this week. We exist in Google, Google trusts our name — but if someone in Richmond types "melbourne web agency", we're still not in the conversation, because nothing on our actual pages says "Melbourne". The word is hiding in a piece of code (the business card we added last step), and that's not enough. Google reads what a human reads. We're about to fix that on our site, and every move we make is one you can copy onto yours in an afternoon.`,
+        body: `Google trusts our name now — but if someone types "melbourne web agency", we're not in the conversation. Why? Nothing on our pages says "Melbourne". The word is hiding in the business card from last step, and that's not enough. Google reads what a human reads. Every edit below is one you can copy onto your own site in an afternoon.`,
       },
       {
         type: 'text',
         heading: `What Google means by "relevant"`,
-        body: `Relevance is just a fancy word for "matching what people actually typed". Someone searching "web agency" and someone searching "melbourne web agency" want different things, and Google picks different sites for each. When a page is generic — "we build websites" — it only shows up for the generic search, where it competes with the entire world. Add one word, "Melbourne", in the right places, and the same page starts competing only with the Melbourne web agencies. That's a fight a small business can actually win. It's the fight we're picking for ourselves here, and the exact one your site should be picking too.`,
+        body: `Relevance means matching what people actually typed. "Web agency" competes with the entire world. "Melbourne web agency" competes with local businesses. Add one word in the right places and you go from a global fight you can't win to a local one you can.`,
       },
       {
         type: 'text',
         heading: `The pages we already have (and so do you)`,
-        body: `Here's a trick a lot of SEO advice skips: before you build new pages, list the ones you already have. Ours are Home, About, Services, Portfolio, AI, Contact, and The Climb. Seven pages. That's enough. Your site probably has a similar handful. The temptation is to chase every keyword with a new URL — "Melbourne Web Design", "Melbourne AI Chatbots", "Melbourne SEO" — but on a small site that just creates ten thin pages Google ignores. One strong page with the right words beats ten weak copies. So instead of multiplying, we're sharpening what's already there. Walk through the same list on your own site as you read this — every page you've got is a page we're about to show you how to fix.`,
+        body: `Before building new pages, list the ones you already have. Ours: Home, About, Services, Portfolio, AI, Contact, The Climb. Seven pages — that's enough. The temptation is to chase every keyword with a new URL, but ten thin pages get ignored. One strong page with the right words beats ten weak copies. Sharpen what you've got.`,
       },
       {
         type: 'steps',
@@ -208,8 +219,9 @@ export const entries = [
         items: [
           {
             title: 'Home — put the city in the hero',
-            description: `The homepage is the one page Google looks at hardest. Our headline today says "Your Business, Found Online" — nice, but it could belong to any agency on Earth. We added "Melbourne" in three visible places: the eyebrow row above the headline, the lead sentence under it, and the <title> tag in the browser bar. We didn't rewrite the page — we just dropped one city name into three spots. Here's the actual edit we shipped:`,
+            description: `The homepage is the page Google looks at hardest. Add your city in three places: the eyebrow, the lead sentence, and the <title> tag. No rewrite needed — just one word in three spots:`,
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~10 min',
             example: {
               before: 'AI-Powered Web Studio · Australia',
@@ -218,8 +230,9 @@ export const entries = [
           },
           {
             title: 'Services — localise the promise',
-            description: `Our services page headline used to say "Everything your business needs to grow online." We changed it to "Everything your Melbourne business needs to grow online." That's it. One word. Same promise, but now it's pointed at a specific audience, and Google treats the page completely differently when someone searches for "Melbourne" + any service. Make the same one-word edit on your own services page — drop your city in front of "business":`,
+            description: `One word changes everything. Drop your city in front of "business" in your services headline. Same promise, but now Google treats the page differently when someone searches "Melbourne" + any service:`,
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~5 min',
             example: {
               before: 'Everything your business needs to grow online.',
@@ -228,8 +241,9 @@ export const entries = [
           },
           {
             title: `AI — swap "Australian" for the city name`,
-            description: `Our AI page used to say "AI Features — Smarter Websites for Australian Businesses". That's broad. We swapped in "Melbourne" and kept "& Australian" to signal range. Wherever your own site says "Australian" — or the name of your country — try the city instead. "Australian" is a country; "Melbourne" is a customer. Google can tell the difference. Here's our actual title-tag edit:`,
+            description: `Wherever your site says "Australian", try the city instead. "Australian" is a country; "Melbourne" is a customer. Google can tell the difference:`,
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~5 min',
             example: {
               before: 'AI Features — Smarter Websites for Australian Businesses',
@@ -238,8 +252,9 @@ export const entries = [
           },
           {
             title: 'Contact — name the city in the hero and the meta',
-            description: `We left our headline ("Let's build something together") alone — it's friendly. Underneath, we added one line: "Based in Melbourne. Working with businesses across Australia." We also fixed the meta description — it used to say "AU-based", which nobody types into Google. Now it says "Melbourne-based". On your own contact page, do both: add a location line under the headline, and make sure the meta description names the city. Here's the meta-description fix:`,
+            description: `Keep your friendly headline. Underneath, add one line: "Based in Melbourne. Working with businesses across Australia." Then fix the meta description — nobody searches "AU-based", but "Melbourne-based" matches real queries:`,
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~5 min',
             example: {
               before: 'AU-based web design studio specialising in local business websites.',
@@ -248,8 +263,9 @@ export const entries = [
           },
           {
             title: 'Portfolio — fix the meta description',
-            description: `Our portfolio page didn't mention Melbourne at all in its meta description — it just said "Australian businesses". We left the hero copy alone; the meta alone is a surprisingly cheap win. We changed "Australian businesses" to "Melbourne and Australian businesses". Go check your own portfolio page's meta description right now — if it's missing your city, that's a three-minute fix:`,
+            description: `Check your portfolio page's meta description. If it says "Australian businesses" but not your city, that's a three-minute fix:`,
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~3 min',
             example: {
               before: 'Browse our portfolio of websites built for local and small Australian businesses.',
@@ -258,8 +274,9 @@ export const entries = [
           },
           {
             title: `Audit every <title> tag for the city name`,
-            description: `Finally, we walked every page's <title> tag one by one and made sure each one includes "Melbourne" and "Onrai Studio". Google compares what your pages say about themselves, and if five titles mention the city and two don't, those two look like stragglers. Do the same sweep on your site: open every page, look at the browser tab, and ask "does this title tell Google who I am and where I am?" Here's the homepage title we shipped:`,
+            description: `Walk every page's <title> tag and make sure each includes your city and business name. If five titles mention the city and two don't, those two look like stragglers. Open every page, check the browser tab, and ask "does this tell Google who I am and where I am?"`,
             difficulty: 'medium',
+            audience: 'anyone',
             time: '~15 min',
             example: {
               before: 'Onrai Studio — Web Design & Development for Local Businesses in Australia',
@@ -271,7 +288,7 @@ export const entries = [
       {
         type: 'text',
         heading: 'What changes after this',
-        body: `None of these edits touch the design. None of them add pages. None of them change what the business does. They just tell Google the thing that was already true: we're a Melbourne business serving Melbourne customers — and, once you've done the same, so are you. Over the next couple of weeks, as Google re-crawls the site, we expect to start showing up for searches that include a city name. That's the part that actually converts. And the whole job takes about an hour, with no new URLs for Google to evaluate and no new content to maintain. When you copy this onto your own site, expect the same result on the same timeline.`,
+        body: `None of these edits touch the design or add pages. They just tell Google what was already true: you're a local business serving local customers. Over the next couple of weeks, you'll start showing up for searches that include your city. The whole job takes about an hour.`,
       },
       {
         type: 'next',
@@ -289,18 +306,19 @@ export const entries = [
     step: 4,
     slug: '04-location-signals-done-right',
     chapter: 'relevance',
+    overallDifficulty: 'easy',
     title: 'Putting Your City in the Right Places (Without Overdoing It)',
-    summary: `Step 03 got the city into your page copy. This step is the other half: the placements Google actually weights — title tags, footer, your business card, testimonials, case studies — and the line you shouldn't cross. Cramming "Melbourne" into every sentence will cost you ranking, not win it.`,
+    summary: `Step 03 got the city into your copy. This step covers the placements Google actually weights — title tags, footer, business card, testimonials — and the line you shouldn't cross.`,
     sections: [
       {
         type: 'text',
         heading: 'Why this matters',
-        body: `Last step we taught you to drop the city name into your page copy. Good start — but Google reads some places harder than body text. The browser-tab title, the footer that sits on every page, the hidden business card we built in Step 02, the names on your testimonials, the locations of the clients in your portfolio. Miss those and the copy work from Step 03 under-delivers. Worse, there's a ceiling: Google explicitly says cramming the same word in over and over makes pages rank lower, not higher. So before you go any further, you need to know where the city actually counts — and where to stop.`,
+        body: `Google reads some places harder than body text: title tags, footer, your business card, testimonials, portfolio tags. Miss those and the copy work from Step 03 under-delivers. But there's a ceiling — cramming the same word everywhere makes pages rank lower, not higher. You need to know where the city counts and where to stop.`,
       },
       {
         type: 'text',
         heading: 'The rule: meaningful places, not every place',
-        body: `Here's the pattern. Your homepage talks about your brand and your city at a high level — once or twice, in places a human would actually read. Your service pages pair the service with the city — "Melbourne web design", not "web design (Melbourne) for Melbourne businesses by a Melbourne studio in Melbourne". Your blog posts and case studies prove it with real local examples and real local names. That's it. Three layers, each carrying the city once or twice in the spots Google trusts. Anything more than that and you cross the line into stuffing — and Google's own help docs come right out and say stuffing hurts rankings. Less is more here, and "more" is genuinely worse.`,
+        body: `Homepage: your brand + city, once or twice. Service pages: pair the service with the city — "Melbourne web design", not "web design (Melbourne) for Melbourne businesses by a Melbourne studio." Blog posts and case studies: prove it with real local examples. Three layers, each mentioning the city once or twice. Anything more is stuffing, and Google says stuffing hurts rankings.`,
       },
       {
         type: 'steps',
@@ -308,8 +326,9 @@ export const entries = [
         items: [
           {
             title: 'The browser-tab title on every page',
-            description: `Open every page on your site and look at the browser tab. That little bit of text is your <title> tag, and it's the single strongest on-page signal Google uses. Each page should mention the city once, naturally — not five times. If even one page is missing it, that page is the weak link. Walk the list: home, services, about, portfolio, contact. Fix the gaps. Don't get cute — short and clear beats clever every time.`,
+            description: `The <title> tag is the single strongest on-page signal Google uses. Each page should mention the city once, naturally. Walk the list: home, services, about, portfolio, contact. Fix any gaps. Short and clear beats clever.`,
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~5 min',
             example: {
               before: 'Onrai Studio — Web Design & Development for Local Businesses in Australia',
@@ -318,14 +337,16 @@ export const entries = [
           },
           {
             title: 'One headline per page (not every headline)',
-            description: `Pick the main headline on each page — usually the big one at the top — and ask whether the city would fit naturally. If it would, add it. If forcing it makes the sentence clunky, leave it alone. The goal isn't to wedge "Melbourne" into every H1 and H2; the goal is one strong, honest mention per page. Friendly headlines like "Let's build something together" don't need a city — that's what the line underneath is for.`,
+            description: `Pick the main headline on each page. If the city fits naturally, add it. If it makes the sentence clunky, leave it alone. One honest mention per page. Friendly headlines like "Let's build something together" don't need a city — the line underneath handles that.`,
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~10 min',
           },
           {
             title: 'Your contact page deserves a real address line',
-            description: `On your contact page, under the friendly headline, add one short line that names your city and the area you serve. This is the most natural place on your whole site to be specific, because anyone visiting that page is already thinking about whether you're nearby. Don't overthink it — one sentence is plenty. While you're there, check your contact-page meta description in the page source. If it still says "AU-based" or "Australian", swap in the city name.`,
+            description: `Under your contact headline, add one line naming your city and service area. Anyone visiting this page is already wondering if you're nearby. Check the meta description too — swap "AU-based" for your city name.`,
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~5 min',
             example: {
               before: 'AU-based web design studio specialising in local business websites.',
@@ -334,8 +355,9 @@ export const entries = [
           },
           {
             title: 'The footer that sits on every page',
-            description: `The footer is special: it appears on every single page of your site, which means one mention of the city down there does more work than ten in body copy. If your footer currently says something vague like "AU-based" or just shows a country flag, that's a free win waiting to happen. Add the city. One line. Don't repeat it twice in the same footer — once is enough, and twice tips you back toward stuffing.`,
+            description: `The footer appears on every page, so one mention of the city there does more work than ten in body copy. If yours says "AU-based" or just shows a flag, swap in the city. Once is enough.`,
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~3 min',
             example: {
               before: '🇦🇺 AU Based Studio',
@@ -344,14 +366,16 @@ export const entries = [
           },
           {
             title: 'The hidden business card (your schema)',
-            description: `Remember the business card we added back in Step 02 — the invisible bit that tells Google your name, location, and contact details? Open it up and check that the city, state, and country are all named, and that the "areas you serve" list mentions the city too. Ours already did, so there was nothing to fix — but most templates leave this generic, so check yours. A two-minute edit here gives Google a strong signal that lives outside the noise of body copy.`,
+            description: `Open the hidden business card from Step 02. Check that city, state, and country are named, and the "areas you serve" list includes the city. Most templates leave this generic — a two-minute edit gives Google a strong signal outside body copy.`,
             difficulty: 'medium',
+            audience: 'developer',
             time: '~15 min',
           },
           {
             title: 'A local testimonial in the first slot',
-            description: `Look at the testimonials on your homepage. Is the first one a customer from your city? If not, reorder them so the local one comes first. People scan testimonials top to bottom and stop early — and the first name a reader sees sets the tone. Don't make up fake quotes to inflate the count, and don't relabel out-of-town clients as local. A genuine mix that leads with a local name is honest and effective. Here's the reorder we made:`,
+            description: `Is the first testimonial on your homepage from a local customer? If not, reorder so it is. People scan top to bottom and stop early. Don't fake quotes — a genuine mix that leads with a local name works:`,
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~10 min',
             example: {
               before: 'First card: Brisbane electrician. Melbourne café in slot two.',
@@ -360,8 +384,9 @@ export const entries = [
           },
           {
             title: 'Tag your portfolio projects with where the client was based',
-            description: `Walk through your portfolio or case-studies page and add a small location tag next to each project — "Melbourne", "Sydney", "Brisbane", "Remote". Two reasons. First, readers scan for "people like me" and a local tag stops them in their tracks. Second, the page quietly becomes a cluster of local proof without you having to write a word of new copy. While you're there, take one more pass at the portfolio hero line and drop the city in if it fits naturally:`,
+            description: `Add a small location tag next to each portfolio project — "Melbourne", "Sydney", "Remote". Readers scan for "people like me" and a local tag stops them. The page becomes a cluster of local proof without new copy:`,
             difficulty: 'medium',
+            audience: 'anyone',
             time: '~15 min',
             example: {
               before: 'From local tradies to SaaS startups — a selection of websites and digital experiences we\'ve built and shipped.',
@@ -373,12 +398,12 @@ export const entries = [
       {
         type: 'text',
         heading: `The thing you don't do`,
-        body: `Now the part most SEO advice skips. Don't stuff. Don't write "Melbourne web design for Melbourne businesses by a Melbourne team in Melbourne" — Google's own guidelines call that out by name and rank pages lower for it. Don't buy a domain like melbourne-web-design-melbourne.com.au expecting it to rank: Google has said for years that exact-match domains barely move the needle. Don't make a separate page for every suburb you serve unless each one has genuinely different content — ten thin "Richmond / Fitzroy / Carlton / Brunswick" pages will get treated as duplicates and ignored. The whole point of Step 03 and Step 04 together is this: a few strong signals, in the right places, beat dozens of weak ones. Stop when you've covered the seven placements above. Resist the urge to keep going.`,
+        body: `Don't write "Melbourne web design for Melbourne businesses by a Melbourne team in Melbourne" — Google calls that out and ranks pages lower for it. Don't buy exact-match domains. Don't make a separate page for every suburb unless each has genuinely different content. A few strong signals in the right places beat dozens of weak ones. Stop after the seven placements above.`,
       },
       {
         type: 'text',
         heading: 'What changes after this',
-        body: `Once your city sits in the placements that Google actually weights — title tags, footer, business card, testimonials, portfolio — your existing pages start competing for local searches without you adding a single new URL. Combined with the visible-copy work from Step 03, you've now done a full local-relevance pass on your site. No new pages to maintain. No keyword-stuffed paragraphs to embarrass you. Just a handful of small, deliberate edits in the right spots. Give Google a couple of weeks to re-crawl, then check whether searches with your city in them start surfacing your pages where they didn't before.`,
+        body: `Your existing pages now compete for local searches without a single new URL. Combined with Step 03, you've done a full local-relevance pass. Give Google a couple of weeks to re-crawl, then check if searches with your city start surfacing your pages.`,
       },
       {
         type: 'next',
@@ -396,13 +421,14 @@ export const entries = [
     step: 5,
     slug: '05-trust-signals',
     chapter: 'trust',
+    overallDifficulty: 'easy',
     title: 'Looking Like a Real Business (Because You Are One)',
-    summary: `Google's quality checkers — and every customer who lands on your site — ask the same question in the first three seconds: "is this a real business, or just a page?" The fix isn't to fake anything. It's to surface the things that are already true, in the places people actually look. Here's the checklist we ran on our own site, and the edits we're making because of it.`,
+    summary: `Google's quality checkers and every visitor ask the same thing: "is this a real business?" The fix isn't to fake anything — it's to surface what's already true, in the places people actually look.`,
     sections: [
       {
         type: 'text',
         heading: 'Why this matters',
-        body: `This one's personal. We didn't write this entry to teach you how to look legit — we wrote it because we want the fact that we are legit to show up on the page. That's the whole rule for this chapter: don't invent anything, just make the truth visible. Google's quality checkers and real customers run exactly the same mental checklist when they land on a small business website. Who runs this? Where are they? How do I contact them? Is there anyone else on the internet who corroborates that they exist? If the answers aren't visible in the first few seconds, both the human and the algorithm move on. The good news is that all the missing bits are usually already true in real life — they're just hiding off-page. This step is about pulling them out where they belong.`,
+        body: `Google's quality checkers and real customers run the same mental checklist. Who runs this? Where are they? How do I contact them? Does anyone else on the internet confirm they exist? If the answers aren't visible in seconds, both human and algorithm move on. The missing bits are usually already true — they're just hiding off-page.`,
       },
       {
         type: 'list',
@@ -428,8 +454,9 @@ export const entries = [
         items: [
           {
             title: 'Put your name on the About page',
-            description: `Our About page right now says "We build websites for real businesses." Nice line, but anonymous. The hidden business card we set up in Step 02 already tells Google who runs the studio — but the page a human actually reads doesn't say so out loud. That's a gap, because every visitor who gets to the About page is already looking for a face. We're fixing it by adding one short paragraph: a name, why the studio exists, one real story. A name is a trust signal. A face is a bigger one. On your own site, do the same: if there's a founder, put them on the page. One sentence is better than nothing.`,
+            description: `If your About page doesn't name who runs the business, that's a gap. Every visitor who gets there is looking for a face. Add one short paragraph: a name, why the business exists, one real story. A name is a trust signal. A face is a bigger one.`,
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~15 min',
             example: {
               before: 'We build websites for real businesses.',
@@ -438,8 +465,9 @@ export const entries = [
           },
           {
             title: 'Link your profiles in the hidden business card',
-            description: `Remember the hidden business card from Step 02 — the invisible piece of code that tells Google your name and location? It has a slot called "sameAs" that's just a list of links to your profiles on other sites. Google uses it to confirm the same business exists in more than one place on the internet. Ours was empty. It's the cheapest corroboration signal you can give yourself. Grab the URLs of every profile that actually represents your business and paste them in. Skip anything you don't plan to keep alive — a dead LinkedIn page is a worse signal than no LinkedIn page.`,
+            description: `The business card from Step 02 has a "sameAs" slot — a list of links to your profiles on other sites. Google uses it to confirm you exist in more than one place. Paste in URLs for every active profile. Skip anything you won't maintain — a dead page is worse than none.`,
             difficulty: 'medium',
+            audience: 'developer',
             time: '~10 min',
             example: {
               before: '"sameAs": []',
@@ -448,8 +476,9 @@ export const entries = [
           },
           {
             title: 'Show your ABN in the footer (if you have one)',
-            description: `In Australia, an ABN is the single clearest "I'm a registered business" badge there is. One small line under the copyright in your footer, and it's done — and because the footer appears on every page of your site, one mention down there is all you need. Don't have one? Skip this step entirely. Faking an ABN is fraud, and the whole point of this chapter is surfacing the truth, not inventing new versions of it. (The number in our example below is a placeholder — we'll swap it for the real one before it ships.)`,
+            description: `In Australia, an ABN is the clearest "I'm a registered business" badge. One line under the copyright in your footer — done. Don't have one? Skip this. Faking an ABN is fraud.`,
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~2 min',
             example: {
               before: '© 2025 Onrai Studio. Built in Australia. All rights reserved.',
@@ -458,8 +487,9 @@ export const entries = [
           },
           {
             title: 'Keep every number on your site current',
-            description: `Open your homepage and your About page and read every number out loud. Project counts. Team size. Years in business. Response times. For each one, ask yourself a simple question: is that still true this month? Numbers on a website drift — you launch with a figure, six months go by, and nobody ever goes back to update it. A visitor can feel the difference between a number that's current and a number that's stale, even if they can't articulate why. The rule is the same as the rest of this chapter: the truth is the strongest signal you have, so keep it current. If a stat is hard to keep fresh, use qualitative language instead — "a growing portfolio", "a small team", "fast turnarounds" — and you'll never have to remember to update it.`,
+            description: `Read every number on your site out loud. Project counts, team size, years in business. Is each one still true this month? Numbers drift. If a stat is hard to keep fresh, use qualitative language instead — "a growing portfolio", "a small team" — and you'll never have to update it.`,
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~10 min',
           },
         ],
@@ -467,7 +497,7 @@ export const entries = [
       {
         type: 'list',
         heading: 'The off-site half nobody mentions',
-        intro: `Here's the bit most SEO advice skips. Google doesn't just read your site — it reads the web around your site. When the same business name and details appear on LinkedIn, Instagram, a directory listing, and a Google Business Profile, all pointing back to the same domain, that's corroboration, and corroboration is trust. Four off-site things are worth having, in rough order of value:`,
+        intro: `Google doesn't just read your site — it reads the web around it. When the same name and details appear on LinkedIn, Instagram, and a directory, all pointing back to your domain, that's corroboration. Four things worth having:`,
         items: [
           `LinkedIn company page — the most credible business identity link on the internet.`,
           `Instagram profile — especially if your work is visual.`,
@@ -479,12 +509,12 @@ export const entries = [
       {
         type: 'text',
         heading: `The thing you don't do`,
-        body: `The counter-rule, same shape as last chapter. Don't fake reviews — buying them is against Google's rules and they're getting very good at spotting them. Don't invent an office address. Don't paste stock-photo headshots onto an anonymous About page. Don't claim years of experience you don't have. Don't inflate the team count. Don't buy followers. The problem isn't the lie itself — it's that the moment one customer catches it, the trust is gone permanently, and negative search results about your business outrank positive ones for years. The whole point of Step 05 is subtraction of fake polish and addition of real detail. If you're tempted to inflate a number, shrink it instead. The smaller, truer version does more work.`,
+        body: `Don't fake reviews. Don't invent an office address. Don't paste stock headshots onto an anonymous About page. Don't inflate team count or experience. The moment one customer catches a lie, trust is gone permanently. If you're tempted to inflate a number, shrink it instead. The smaller, truer version does more work.`,
       },
       {
         type: 'text',
         heading: 'What changes after this',
-        body: `Three things start happening, quietly, over the following few weeks. Google's schema corroboration kicks in — the business starts to look real across the whole web, not just on one domain, which is one of the strongest trust signals the algorithm has. The bounce rate on your homepage drops, because the humans who land there now find the trust cues they were already scanning for and stick around. And the AI search tools that are increasingly quoting small businesses in their answers now have enough structured, linked-up detail to actually cite you. None of this needed new pages, new copy, or new features. It was all surfacing the truth you already had.`,
+        body: `Three things happen over the next few weeks. Google sees your business corroborated across the web — one of its strongest trust signals. Your bounce rate drops because visitors find the trust cues they were scanning for. And AI search tools now have enough detail to actually cite you. No new pages needed — just truth surfaced.`,
       },
       {
         type: 'next',
@@ -502,18 +532,19 @@ export const entries = [
     step: 6,
     slug: '06-google-business-profile',
     chapter: 'trust',
+    overallDifficulty: 'medium',
     title: 'Set Up a Google Business Profile (Only If You Qualify)',
-    summary: `We've flagged Google Business Profile three times now. Here's the catch nobody mentions up front: it's not for every business. If you qualify, it's the single biggest local lever you'll ever pull. If you don't, forcing it can get you suspended. This step is the honest version — how to tell which side of the line you're on, and what to do once you're on it.`,
+    summary: `Google Business Profile isn't for every business. If you qualify, it's the biggest local lever you'll pull. If you don't, forcing it gets you suspended. Here's how to tell which side you're on.`,
     sections: [
       {
         type: 'text',
         heading: 'Why this matters',
-        body: `A Google Business Profile is the box that pops up on the right side of search results with your map pin, hours, photos, and reviews. It's also what feeds the local "map pack" — the three businesses Google shows above the regular results when someone types "near me" or names a city. For a small business that qualifies, nothing else on this list moves the needle as hard. For a business that doesn't qualify, trying to force one on is the fastest way to get a profile suspended and a domain flagged. So before any of the setup advice you'll read everywhere else, we have to do the part most guides skip: working out whether you should even be doing this.`,
+        body: `The Business Profile is the box on the right of search results with your map pin, hours, photos, and reviews. It feeds the local "map pack" — three businesses above regular results for "near me" searches. Nothing moves the needle as hard for a qualifying business. But forcing one when you don't qualify gets your profile suspended and domain flagged.`,
       },
       {
         type: 'text',
         heading: 'The eligibility question (read this before anything else)',
-        body: `Google's rule for Business Profile is short and strict. You qualify if you either meet customers face-to-face at a fixed address (a shop, a studio, a clinic), or if you travel to customers in a defined service area (a plumber, a mobile dog groomer, an in-home tutor). That's it. Purely remote businesses — agencies that only ever meet clients on Zoom, online stores with no pickup, software companies — do not qualify, full stop. The trap is that Google's setup wizard will happily let you create a profile anyway. It just gets suspended later, sometimes after you've already invested hours in it. So the first decision isn't "how do I set this up", it's "am I one of the two kinds of business this is for".`,
+        body: `Google's rule is strict. You qualify if you meet customers at a fixed address (shop, studio, clinic) or travel to them in a defined area (plumber, mobile groomer). That's it. Purely remote businesses do not qualify. The trap: Google's wizard lets you create a profile anyway — it just gets suspended later. First question isn't "how to set up", it's "should I?"`,
       },
       {
         type: 'list',
@@ -532,38 +563,44 @@ export const entries = [
         items: [
           {
             title: 'Create the profile from the right Google account',
-            description: `The single decision that haunts more business owners than any other: which email to sign up with. Don't use a personal Gmail you share with family. Don't use a brand-new throwaway you'll lose track of. Best option, if you have one, is a Workspace email at your own domain — hello@yourbusiness.com.au or similar — because it's a trust signal and it stays with the business when staff change. Second-best is a dedicated Gmail in the business name (yourbusiness.studio@gmail.com) that exists only for business admin. Whichever you pick, write the password down somewhere safe and add a recovery phone — losing access to a verified profile is a months-long nightmare. Then go to google.com/business, click "Manage now", and start the profile in your business name spelled exactly the way it appears on your website and invoices.`,
+            description: `Use a Workspace email at your own domain (best) or a dedicated Gmail in your business name (second-best). Don't use a personal Gmail. Write the password down and add a recovery phone — losing access is a months-long nightmare. Go to google.com/business, click "Manage now", and spell your business name exactly as it appears on your website.`,
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~15 min',
           },
           {
             title: 'Pick the primary category carefully',
-            description: `Google asks for one primary category and lets you add a few secondary ones. The primary category is the single biggest factor in which searches you show up for, so don't pick the broadest option you see — pick the one that best matches what you actually do. "Web designer" is more specific than "Marketing consultant" and will match better for the searches you actually want. You can change it later, but every change resets some local trust, so try to get it right the first time.`,
+            description: `The primary category is the biggest factor in which searches you appear for. Pick the most specific match — "Web designer" beats "Marketing consultant". You can change it later, but every change resets some trust, so try to get it right the first time.`,
             difficulty: 'medium',
+            audience: 'anyone',
             time: '~10 min',
           },
           {
             title: 'Handle the address question correctly',
-            description: `This is the bit that trips most people up. First thing to know: yes, Google asks for an address during the signup wizard, and there's no way to skip the field. The question isn't whether you enter one, it's whether the public sees it. If you have a public storefront customers visit, enter your real street address and let it show — that's the whole point of the profile. If you're a service-area business or you work from home, enter your real address (your home is fine) and tick the "I deliver goods and services to my customers" option, which hides the address from the public profile and switches you to listing service areas instead. The address you entered stays private and is only used for verification and Google's internal records. For the public service area, add the actual suburbs or cities you serve — for us that's Melbourne and the surrounding metro suburbs, not every postcode in Victoria. Google is smart enough to surface you for nearby searches inside your stated area, and over-listing looks like spam. The honest, narrow answer outranks the greedy one almost every time. What you absolutely cannot do: use a PO box (Google rejects them), a virtual office or coworking address you don't actually work from, or a friend's address. Faking the address is the fastest way to a permanent ban, and bans follow the domain after the profile is gone.`,
+            description: `Google asks for an address — the question is whether the public sees it. Storefront? Enter your address and show it. Service-area or work-from-home? Enter your real address (home is fine) and tick "I deliver goods and services to my customers" — this hides the address and lets you list service areas instead. List only the suburbs or cities you actually serve. Never use a PO box, virtual office, or fake address — that's a permanent ban.`,
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~10 min',
           },
           {
             title: 'Verify the profile (this is the gate)',
-            description: `Google will ask you to verify the business before the profile goes live. Depending on your category and country, that's a postcard to your address, a video call, or a video upload showing your workspace and any signage. Whichever method you get offered, do it properly the first time — failed verifications are the most common reason a profile sits in limbo for weeks. If you're a service-area business with no public address, expect a video verification, and have your laptop, your branded materials, and a calm five minutes ready.`,
+            description: `Google verifies via postcard, video call, or video upload depending on your category. Do it properly the first time — failed verifications leave profiles in limbo for weeks. Service-area businesses: expect video verification. Have your laptop and branded materials ready.`,
             difficulty: 'medium',
+            audience: 'anyone',
             time: '~20 min',
           },
           {
             title: 'Upload photos that look like the real business',
-            description: `The photos slot is the first thing a human sees when your knowledge panel pops up, and it's the part most owners under-invest in. You need three things, in this order. A square logo, at least 720×720, on a clean background — this becomes your tiny circular avatar everywhere. A cover photo, landscape, that represents the work you do (a project screenshot, your workspace, a finished build) — not a stock photo, not a generic skyline, not a quote on a beige background. And three to five "additional" photos that prove you're real: recent projects, your laptop on your desk, you at a client meeting if you have permission. Take them on a phone in good light. Real and slightly imperfect beats polished and generic every single time. Avoid stock photography entirely — Google's image-matching can spot it, and so can customers.`,
+            description: `You need three things. A square logo (720×720+, clean background). A landscape cover photo showing real work — not stock, not a skyline. And 3–5 additional photos proving you're real: recent projects, your workspace, a client meeting. Phone photos in good light beat stock photography every time.`,
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~20 min',
           },
           {
             title: 'Write a business description that sounds like a human',
-            description: `You get 750 characters. Use them. Cover four things, in plain English: what you do, who you do it for, where you do it, and one specific reason a customer would pick you. Skip the keyword soup — Google reads your whole website for keywords, and stuffing this field doesn't add to that signal, it just makes the description painful to read. Don't open with "We are a leading..." Don't list every service in a comma-separated wall. Don't use the word "synergy". Write it the way you'd describe the business to a stranger at a barbecue, then tighten it. Here's the description we wrote for our own profile — same rules apply to yours:`,
+            description: `750 characters. Cover four things: what you do, who for, where, and one reason to pick you. Skip keyword soup. Don't open with "We are a leading..." Write it how you'd describe your business to a stranger at a barbecue:`,
             difficulty: 'medium',
+            audience: 'anyone',
             time: '~20 min',
             example: {
               sample: `Onrai Studio is a Melbourne-based web design and development studio for small and local businesses. We build fast, modern websites that help you get found on Google, look credible to first-time visitors, and turn that traffic into real customers. Every project is handled by a small team — no account managers, no handoffs. The studio works with clients across Melbourne and Australia.`,
@@ -571,14 +608,16 @@ export const entries = [
           },
           {
             title: 'Add services and hours honestly',
-            description: `Google lets you list services as separate entries with their own one-sentence descriptions. Add the three or four you actually want to be known for — not every service you've ever done. Each service entry is another small surface where Google can match you to a search, so make them specific ("Local business websites", "AI chat assistants") rather than vague ("Consulting"). For hours, set the truth even if the truth is awkward. If you're appointment-only, set "by appointment" — Google supports it. If you don't work weekends, mark them closed. Customers trust a profile that says "Closed Sundays" more than one that claims 24/7 availability for a one-person studio. And the moment your hours change, update them. A profile that lies about being open at 9pm is a profile a customer remembers for the wrong reason.`,
+            description: `List 3–4 services you want to be known for — specific ("Local business websites") beats vague ("Consulting"). For hours, set the truth. Appointment-only? Google supports that. Closed Sundays? Say so. Customers trust honesty over 24/7 claims from a one-person studio.`,
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~15 min',
           },
           {
             title: 'Ask real customers for real reviews',
-            description: `Reviews are the part of the profile Google watches hardest, and the part most businesses get wrong by trying to game. The rule is the same as Step 05: don't fake anything. Send a short, friendly message to clients you've actually worked with, link them straight to your profile's review page, and ask them to share what the experience was like. Don't write the review for them. Don't offer a discount in exchange. Don't post a flood of reviews in the same week — that's the single most common pattern Google flags as fake. A handful of honest reviews trickling in over months beats twenty all at once.`,
+            description: `Send a friendly message to real clients with a direct link to your review page. Don't write reviews for them. Don't offer discounts for reviews. Don't flood them all in one week — Google flags that pattern. A handful of honest reviews over months beats twenty at once.`,
             difficulty: 'medium',
+            audience: 'anyone',
             time: '~20 min',
           },
         ],
@@ -594,12 +633,12 @@ export const entries = [
       {
         type: 'text',
         heading: `The thing you don't do`,
-        body: `Same shape as the last two chapters. Don't create a profile if you don't qualify — using a friend's address, your home address you don't actually meet clients at, or a virtual office is the fastest path to a permanent suspension, and once a profile is suspended the domain attached to it gets a black mark that's hard to clear. Don't stuff keywords into your business name field ("Onrai Studio Melbourne Web Design SEO") — Google's guidelines call it out by name and will strip the profile or suspend it. Don't buy reviews, don't trade reviews with other businesses, and don't ask staff or family to review you. The whole chapter has been about surfacing what's true. This step is the same: a real profile, for a real business, with real reviews from real customers, beats a polished fake every single time — and the fake gets caught.`,
+        body: `Don't create a profile if you don't qualify — fake addresses lead to permanent suspension, and the domain gets a black mark. Don't stuff keywords into your business name ("Onrai Studio Melbourne Web Design SEO"). Don't buy or trade reviews. A real profile with real reviews beats a polished fake every time — and the fake gets caught.`,
       },
       {
         type: 'text',
         heading: 'What changes after this',
-        body: `If you qualified and set the profile up properly, three things shift over the following weeks. You start showing up in the local map pack for searches that name your city or include "near me". Your knowledge panel — that box on the right of search results — fills out with your photos, hours, and reviews, which is a huge credibility cue for first-time visitors. And the schema work from Step 02 plus the off-site profiles from Step 05 plus this new Business Profile all start corroborating each other, which is exactly the cluster of signals Google's local algorithm is built to reward. If you didn't qualify and skipped this step, you didn't lose anything — you just avoided a trap most guides walk you straight into.`,
+        body: `You start showing up in the local map pack for "near me" searches. Your knowledge panel fills out with photos, hours, and reviews. The schema from Step 02, profiles from Step 05, and this Business Profile all corroborate each other — exactly the cluster of signals Google's local algorithm rewards.`,
       },
       {
         type: 'next',
@@ -617,6 +656,7 @@ export const entries = [
     step: 7,
     slug: '07-technical-seo-basics',
     chapter: 'performance',
+    overallDifficulty: 'medium',
     title: 'Get Your Technical SEO Basics Perfect',
     summary:
       'Google already knows you exist. Now we make sure nothing on your site is quietly blocking it — broken sitemaps, missing HTTPS, slow pages. This is the plumbing check every site needs and almost no one does.',
@@ -624,7 +664,7 @@ export const entries = [
       {
         type: 'text',
         heading: 'Why this matters',
-        body: `Everything we've done so far — the schema, the local keywords, the trust signals — is content work. It's the paint job. This step is the engine check underneath. If your site loads slowly, blocks Google's crawler, or accidentally tells it "don't look at this page," all that content work goes to waste. The good news: most of these fixes take five minutes each, and you only do them once.`,
+        body: `Everything so far has been content work — the paint job. This step is the engine check. If your site loads slowly, blocks Google's crawler, or tells it "don't look at this page," the content work goes to waste. Most of these fixes take five minutes and you only do them once.`,
       },
       {
         type: 'diagram',
@@ -663,6 +703,7 @@ export const entries = [
             description:
               'Log into your hosting dashboard (Cloudflare, Netlify, or whoever hosts your site) and look for "Always use HTTPS" or "Force SSL." Turn it on. Then decide: www.yoursite.com or just yoursite.com? Pick one and set up a redirect so the other version points to it. Having both live confuses Google into thinking you have two separate sites.',
             difficulty: 'medium',
+            audience: 'developer',
             time: '~15 min',
           },
           {
@@ -670,6 +711,7 @@ export const entries = [
             description:
               'If you use WordPress, install a plugin like Yoast or Rank Math — they create the sitemap automatically. If you built your site with a framework like React or Next.js, you may need to create the file manually (it\'s just a list of URLs in XML format). Once the file exists at yoursite.com/sitemap.xml, paste that URL into Google Search Console under "Sitemaps" in the left menu.',
             difficulty: 'medium',
+            audience: 'developer',
             time: '~20 min',
           },
           {
@@ -677,6 +719,7 @@ export const entries = [
             description:
               'Type yoursite.com/robots.txt into your browser. If the file says "Disallow: /" — that means you\'re blocking Google from your entire site. Remove that line. If the file is empty, missing, or just says "Allow: /" with a link to your sitemap, you\'re fine.',
             difficulty: 'easy',
+            audience: 'developer',
             time: '~5 min',
           },
           {
@@ -684,6 +727,7 @@ export const entries = [
             description:
               'Open each page of your site in a browser, right-click, and choose "View Page Source." Press Ctrl+F (or Cmd+F on Mac) and search for "noindex." If you find it, that page is invisible to Google on purpose — or by accident. If it\'s accidental, remove the tag and re-publish.',
             difficulty: 'medium',
+            audience: 'developer',
             time: '~10 min',
           },
           {
@@ -691,6 +735,7 @@ export const entries = [
             description:
               'Go to Google\'s PageSpeed Insights tool and paste your homepage URL. It gives you a score out of 100 and flags what\'s slow. Green (90+) is great, orange (50–89) is okay, red (under 50) needs work. It also shows your Core Web Vitals — three scores called LCP (how fast the main content appears), CLS (how much the page jumps around while loading), and INP (how fast buttons respond when tapped).',
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~5 min',
           },
           {
@@ -698,6 +743,7 @@ export const entries = [
             description:
               'Open each page and check the text that shows in the browser tab — that\'s the title tag. It should describe the page in under 60 characters and include your city if you\'re a local business. Then check the meta description (you set these in Step 03). Each one should be a unique, one-line pitch under 155 characters. No two pages should share the same title or description.',
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~20 min',
           },
           {
@@ -705,6 +751,7 @@ export const entries = [
             description:
               'Read through each page and look for places where you mention a topic that\'s covered on another page. Link those words to the other page. For example, if your About page mentions your services, link the word "services" to your Services page. This helps Google understand how your pages relate to each other and makes it easier for visitors to find what they need.',
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~15 min',
           },
           {
@@ -712,6 +759,7 @@ export const entries = [
             description:
               'Find every image on your site and make sure it has alt text — a short description of what the image shows. This helps Google understand your images, and it\'s also what screen readers use for visitors who can\'t see them. Keep it simple and descriptive.',
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~15 min',
             example: {
               before: '<img src="team-photo.jpg">',
@@ -731,7 +779,7 @@ export const entries = [
       {
         type: 'text',
         heading: 'What changes after this',
-        body: `Once the plumbing is clean, everything you've done in the previous steps compounds faster. Pages get indexed within hours instead of weeks. Your speed scores improve, which directly affects where Google ranks you on mobile. None of this is glamorous work, but it's the difference between a site that quietly stalls and one that keeps climbing.`,
+        body: `Clean plumbing makes everything compound faster. Pages get indexed in hours instead of weeks. Speed scores improve, directly affecting mobile rankings. Not glamorous, but it's the difference between stalling and climbing.`,
       },
       {
         type: 'next',
@@ -748,6 +796,7 @@ export const entries = [
     step: 8,
     slug: '08-search-console',
     chapter: 'performance',
+    overallDifficulty: 'easy',
     title: 'Learn to Use Google Search Console',
     summary:
       'Search Console is the free dashboard Google gives you to see exactly how your site appears in search. Most small businesses never open it. Here\'s how to use the five features that actually matter.',
@@ -755,7 +804,7 @@ export const entries = [
       {
         type: 'text',
         heading: 'Why this matters',
-        body: `Every fix you've made so far — the schema, the title tags, the sitemap — is invisible until you can confirm Google actually picked it up. Search Console is the only place that tells you directly. It shows which pages Google has indexed, which ones it's ignoring, what people search before they click your site, and whether anything is broken. Think of it as the dashboard for everything we've been building.`,
+        body: `Every fix so far is invisible until you confirm Google picked it up. Search Console is the only place that tells you directly — which pages are indexed, which are ignored, what people search before clicking your site, and whether anything is broken. It's the dashboard for everything we've built.`,
       },
       {
         type: 'text',
@@ -771,6 +820,7 @@ export const entries = [
             description:
               'The inspection bar sits at the top of every Search Console page. Paste any URL from your site and hit Enter. Google tells you three things: whether the page is in Google\'s index, whether there are any errors stopping it, and when Google last looked at it. If a page isn\'t indexed and you think it should be, this is where you start.',
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~2 min',
           },
           {
@@ -778,6 +828,7 @@ export const entries = [
             description:
               'Click "Sitemaps" in the left menu. Type your sitemap URL — usually yoursite.com/sitemap.xml — and click Submit. This hands Google your table of contents so it doesn\'t have to guess which pages exist. You only need to do this once. After that, Google re-reads it automatically whenever you add new pages.',
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~3 min',
           },
           {
@@ -785,6 +836,7 @@ export const entries = [
             description:
               'Click "Pages" under the Indexing section. You\'ll see two numbers: how many pages Google has indexed, and how many it excluded. Click the excluded list to see why — common reasons are accidental "noindex" tags, redirect chains, or duplicate content. If an important page is excluded, fix the cause and then use the URL inspection tool to request re-indexing.',
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~5 min',
           },
           {
@@ -792,6 +844,7 @@ export const entries = [
             description:
               'Click "Performance" in the left menu, then "Search Results." The Queries tab shows the exact words people typed into Google before your site appeared in their results. This is gold — it tells you what your audience actually looks for, in their own words. You can use those phrases in your page titles, headings, and content to match what real people are searching for.',
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~5 min',
           },
           {
@@ -799,6 +852,7 @@ export const entries = [
             description:
               'Whenever you make a meaningful change to a page — update the title tag, add alt text to images, rewrite a section — paste that page\'s URL into the inspection bar and click "Request Indexing." Google re-crawls it within hours instead of waiting days or weeks for the next scheduled visit. This is how you make your fixes show up fast.',
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~2 min',
           },
         ],
@@ -833,7 +887,7 @@ export const entries = [
       {
         type: 'text',
         heading: 'What changes after this',
-        body: `Search Console turns all the invisible work from the previous steps into something you can see. You'll know which pages Google has found, which ones it's ignoring, and what real people are typing to find businesses like yours. Instead of guessing whether your SEO changes are working, you check a dashboard once a week and make decisions based on real data. That's the shift — from hoping to knowing.`,
+        body: `Instead of guessing whether your SEO changes are working, you check a dashboard once a week and make decisions based on real data. That's the shift — from hoping to knowing.`,
       },
       {
         type: 'next',
@@ -851,6 +905,7 @@ export const entries = [
     step: 9,
     slug: '09-earn-backlinks',
     chapter: 'authority',
+    overallDifficulty: 'hard',
     title: 'Create Pages That Earn Backlinks Naturally',
     summary:
       'A backlink is another website linking to yours. Google treats each one like a vote of confidence. For a new agency, a few real, relevant links beat dozens of junk ones.',
@@ -858,12 +913,19 @@ export const entries = [
       {
         type: 'text',
         heading: 'Why this matters',
-        body: `Every step so far has been about things you control — your own site, your own schema, your own Search Console. Backlinks are different. A backlink is when someone else's website links to yours, and Google treats each one like a recommendation. The more relevant and trustworthy the site linking to you, the stronger the signal. For local service businesses, this is still one of the biggest ranking factors — and the one most small businesses never work on because it feels out of their control.`,
+        body: `Every step so far has been about things you control. Backlinks are different — someone else's website links to yours, and Google treats it like a recommendation. The more relevant the source, the stronger the signal. For local businesses, this is still one of the biggest ranking factors.`,
       },
       {
         type: 'text',
         heading: 'Why this blog exists',
-        body: `Here's the meta-moment: this blog — The Climb — is itself a backlink strategy. Every step we publish is a useful, niche page that someone might link to from their own site. A tradie reading "Best website setup for Melbourne tradies" might share it in a Facebook group. A clinic owner reading about AI chatbots might forward it to their web developer. That's not an accident. Writing genuinely useful content for a specific local audience is the most reliable way to earn links without asking for them. You're reading the strategy right now.`,
+        body: `This blog is itself a backlink strategy. Every step is a useful page someone might link to or share. A tradie shares it in a Facebook group. A clinic owner forwards it to their web developer. Writing genuinely useful content for a specific audience is the most reliable way to earn links. You're reading the strategy right now.`,
+      },
+      {
+        type: 'diagram',
+        heading: 'Where backlinks come from',
+        body: 'Each arrow below is a link from another site to yours. Google counts every one as a vote of confidence. The more relevant the source, the stronger the vote.',
+        component: 'BacklinkSourcesDiagram',
+        caption: 'Five realistic backlink sources for a local service business — no spam, no tricks.',
       },
       {
         type: 'steps',
@@ -874,6 +936,7 @@ export const entries = [
             description:
               'Write up real projects you\'ve completed. Include the problem, what you did, and the result. Case studies are some of the most linked-to pages on service business sites because they\'re proof of real work. Other businesses in the same industry often reference them when explaining what\'s possible.',
             difficulty: 'medium',
+            audience: 'anyone',
             time: '~2 hours each',
           },
           {
@@ -881,6 +944,7 @@ export const entries = [
             description:
               'Create pages that answer specific questions for your local market. "Best website setup for Melbourne tradies," "How Melbourne clinics can use AI chatbots," "What every Melbourne cafe needs on their website." These pages attract links from local forums, Facebook groups, and other blogs because they\'re useful to a specific audience that nobody else is writing for.',
             difficulty: 'medium',
+            audience: 'anyone',
             time: '~3 hours each',
           },
           {
@@ -888,6 +952,7 @@ export const entries = [
             description:
               'List your business on directories that are relevant to your industry and location. Yellow Pages, True Local, Hotfrog, and industry-specific directories all count. Each listing is a backlink from a trusted Australian domain. Make sure your business name, address, and phone number are consistent across all of them.',
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~30 min each',
           },
           {
@@ -895,6 +960,7 @@ export const entries = [
             description:
               'Sponsor a local event, sports club, or community group. Most will list sponsors on their website with a link back to you. You can also collaborate with local business groups, chambers of commerce, or networking events. These are real, relevant links from sites Google already trusts in your area.',
             difficulty: 'medium',
+            audience: 'anyone',
             time: 'varies',
           },
           {
@@ -902,6 +968,7 @@ export const entries = [
             description:
               'Reach out to complementary businesses — a web designer could write for an accountant\'s blog about why a good website saves money, or for a marketing agency\'s blog about technical SEO basics. You provide useful content, they get a free article, and you get a link back to your site from a relevant local business.',
             difficulty: 'hard',
+            audience: 'anyone',
             time: '~3 hours per post',
           },
           {
@@ -909,6 +976,7 @@ export const entries = [
             description:
               'Ask clients if you can add a small "Built by [Your Business]" link in their website footer, or ask them to write a short case study about working with you. This is one of the easiest backlinks to earn because the client already knows and trusts you — you just have to ask.',
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~10 min per client',
           },
           {
@@ -916,6 +984,7 @@ export const entries = [
             description:
               'Beyond general business directories, look for industry-specific ones. Web agencies can list on Clutch, DesignRush, or GoodFirms. Tradies can list on HiPages or ServiceSeeking. Find the directories where your potential customers actually look, and make sure your profile is complete.',
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~30 min each',
           },
         ],
@@ -935,12 +1004,12 @@ export const entries = [
       {
         type: 'text',
         heading: 'How this blog helps you right now',
-        body: `If you've been following The Climb and doing the steps, you've already built the foundation that makes backlinks work. Your site is indexed (Step 01), Google recognises your brand (Step 02), your content is locally relevant (Steps 03–04), you look like a real business (Steps 05–06), and your technical plumbing is clean (Steps 07–08). When someone links to your site now, Google actually notices — because it already trusts you. Without those foundations, backlinks land on a site Google barely knows exists, and they don't move the needle.`,
+        body: `If you've followed The Climb, you've already built the foundation that makes backlinks work: indexed, recognised, locally relevant, trusted, technically clean. When someone links to your site now, Google actually notices. Without those foundations, backlinks don't move the needle.`,
       },
       {
         type: 'text',
         heading: 'What changes after this',
-        body: `A few genuine backlinks from relevant local sites start shifting your domain authority — a score Google uses to decide how much to trust your entire site, not just individual pages. You begin appearing for competitive keywords that were out of reach before. The compounding effect kicks in: trust signals plus useful content plus real backlinks is the full picture Google uses to decide who deserves to rank. Most of your competitors never get past Step 01. You're at Step 09.`,
+        body: `Genuine backlinks shift your domain authority — how much Google trusts your entire site. You start appearing for competitive keywords that were out of reach. Trust signals + useful content + real backlinks is the full picture Google uses to rank. Most competitors never get past Step 01.`,
       },
       {
         type: 'next',
@@ -957,6 +1026,7 @@ export const entries = [
     step: 10,
     slug: '10-case-studies',
     chapter: 'authority',
+    overallDifficulty: 'medium',
     title: 'Add Case Studies Immediately',
     summary:
       'Case studies are the single highest-value pages you can add to a service business site. They prove you\'ve done real work, earn backlinks, and give potential clients the confidence to reach out.',
@@ -964,12 +1034,12 @@ export const entries = [
       {
         type: 'text',
         heading: 'Why this matters',
-        body: `Every competitor in your space says "we build great websites" or "we deliver results." A case study actually shows it. It's a page that tells the story of a real project — who the client was, what problem they had, what you built, and what happened after. Google loves these pages because they're full of specific, relevant keywords. Potential clients love them because they can see themselves in the story. And other sites link to them because they're useful proof that something actually works. Most small businesses have zero case studies. Publishing even three puts you ahead of almost everyone in your local market.`,
+        body: `Every competitor says "we deliver results." A case study actually shows it — real project, real problem, real outcome. Google loves them because they're full of specific keywords. Clients love them because they see themselves in the story. Other sites link to them as proof. Most small businesses have zero. Three puts you ahead of nearly everyone.`,
       },
       {
         type: 'text',
         heading: 'Why they help both SEO and conversion',
-        body: `Two audiences read the same case study page. Google sees fresh content full of keywords you'd never think to target — phrases like "website redesign for Melbourne physiotherapist" or "AI chatbot for local accounting firm." These are long-tail search queries that your competitors aren't writing pages for. Meanwhile, a potential client reading the same page sees proof you've solved a problem similar to theirs. They don't need to trust your marketing — they can see the work. That's why case studies convert better than any other page type on a service business site.`,
+        body: `Two audiences read the same page. Google sees keywords you'd never target — "website redesign for Melbourne physiotherapist." A potential client sees proof you've solved their problem before. They don't need to trust your marketing — they can see the work. Case studies convert better than any other page type.`,
       },
       {
         type: 'list',
@@ -986,6 +1056,13 @@ export const entries = [
         outro: 'You don\'t need fancy design. A simple page with a clear heading, these six sections, and a screenshot or two is more than enough to start.',
       },
       {
+        type: 'diagram',
+        heading: 'The template at a glance',
+        body: 'Every case study follows the same six-section structure. Here it is with example content so you can see what each section looks like.',
+        component: 'CaseStudyTemplateDiagram',
+        caption: 'Six sections, one page. Fill these in and your case study is done.',
+      },
+      {
         type: 'steps',
         heading: 'Writing your first three',
         items: [
@@ -994,6 +1071,7 @@ export const entries = [
             description:
               'Choose projects where the result was clear and the client would be happy for you to write about them. Ideally, pick projects in different industries or with different types of work (a redesign, a new build, an SEO project) so each case study targets different keywords.',
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~15 min',
           },
           {
@@ -1001,6 +1079,7 @@ export const entries = [
             description:
               'For each project, write down the six elements: client type, problem, what you built, tools used, before/after, and outcomes. If you can\'t remember exact numbers, ask the client or use rough estimates. "Enquiries roughly doubled in the first two months" is better than nothing.',
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~30 min each',
           },
           {
@@ -1008,6 +1087,7 @@ export const entries = [
             description:
               'Use a title that includes the type of work, the industry, and the location. This gives Google a clear keyword signal and tells potential clients exactly what they\'re about to read.',
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~10 min each',
             example: {
               sample: 'Website Redesign for Melbourne Physiotherapy Clinic',
@@ -1018,6 +1098,7 @@ export const entries = [
             description:
               'A before-and-after screenshot of the old vs new site is the easiest visual to include. If you have analytics access, add a graph showing traffic before and after launch. Even a simple "went from page 5 to page 1 for their main keyword" is powerful. Real evidence beats polished marketing copy every time.',
             difficulty: 'medium',
+            audience: 'anyone',
             time: '~30 min each',
           },
           {
@@ -1025,6 +1106,7 @@ export const entries = [
             description:
               'Add each case study to your portfolio page. Link to them from your services page where relevant — if a case study is about a website redesign, link to it from the section of your services page that talks about redesigns. These internal links help Google find the new pages and help visitors navigate to the proof they need.',
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~15 min',
           },
         ],
@@ -1045,7 +1127,7 @@ export const entries = [
       {
         type: 'text',
         heading: 'What changes after this',
-        body: `Each case study creates a new landing page for a long-tail search query that your competitors probably aren't targeting. Your portfolio page stops being a grid of screenshots and starts becoming a library of proof. Internal links between your services and case studies strengthen your site structure. And when someone considering hiring you lands on a case study about a business just like theirs, the sales conversation is half finished before they even reach out. Three case studies is the minimum. Five is better. Keep adding them as you complete projects.`,
+        body: `Each case study is a new landing page for a search query competitors aren't targeting. When someone lands on a case study about a business like theirs, the sales conversation is half done before they reach out. Three is the minimum. Five is better. Keep adding them.`,
       },
       {
         type: 'next',
@@ -1063,6 +1145,7 @@ export const entries = [
     step: 11,
     slug: '11-topical-authority',
     chapter: 'authority',
+    overallDifficulty: 'medium',
     title: 'Build Topical Authority Around Your Services',
     summary:
       'One mention of "AI" on your homepage doesn\'t make you an AI expert in Google\'s eyes. You need a cluster of related pages that prove you actually know the subject.',
@@ -1070,12 +1153,19 @@ export const entries = [
       {
         type: 'text',
         heading: 'Why this matters',
-        body: `If you want to rank for a competitive service keyword — like "AI chatbot for small business" — having one page that mentions it isn't enough. Google compares your site against competitors who have five, ten, or twenty pages about AI. It sees their site and thinks "this business clearly knows AI." It sees yours and thinks "this business mentioned AI once." That gap is called topical authority, and it's the reason some businesses rank for terms they've barely optimised while others can't crack page one despite doing everything else right. The fix isn't harder — it's just more pages about the same topic.`,
+        body: `To rank for "AI chatbot for small business," one page mentioning it isn't enough. Google compares you against competitors with ten pages about AI. They look like experts; you mentioned it once. That gap is topical authority. The fix isn't harder — it's just more pages about the same topic.`,
       },
       {
         type: 'text',
         heading: 'What a content cluster looks like',
-        body: `A content cluster is simple: one main service page (the "pillar") surrounded by three to five supporting articles that go deeper into specific angles. Every supporting article links back to the pillar page. The pillar links out to each supporting article. Google crawls the whole cluster and sees a web of connected content about one topic. It concludes you actually understand this subject — and starts ranking your pillar page higher for the main keyword. Without the cluster, your pillar page is alone, competing against sites that have built exactly this kind of depth.`,
+        body: `One main service page (the "pillar") surrounded by 3–5 supporting articles on specific angles. Every article links back to the pillar; the pillar links to each article. Google crawls the cluster and sees a web of connected content about one topic. It starts ranking your pillar page higher.`,
+      },
+      {
+        type: 'diagram',
+        heading: 'How a cluster connects',
+        body: 'Your pillar page sits at the centre. Supporting articles link back to it, and the pillar links out to each one. Google crawls the whole web of content and concludes you know this topic.',
+        component: 'ContentClusterDiagram',
+        caption: 'One pillar page, five supporting articles, all linked together.',
       },
       {
         type: 'list',
@@ -1099,6 +1189,7 @@ export const entries = [
             description:
               'This is the page you most want to rank for. It might be your AI services page, your web design page, or your SEO page. Whatever it is, this becomes the pillar — the centre of your cluster.',
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~5 min',
           },
           {
@@ -1106,6 +1197,7 @@ export const entries = [
             description:
               'Think about the conversations you have with potential clients. What do they ask before they hire you? "What actually is a chatbot?", "How much does it cost?", "Is it worth it for a small business?" Each question is a potential supporting article.',
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~15 min',
           },
           {
@@ -1113,6 +1205,7 @@ export const entries = [
             description:
               'Each article should be 500–1000 words of plain, useful content that answers one specific question. Don\'t stuff keywords — just answer the question the way you\'d explain it to a client over coffee. Use your city name naturally where it fits.',
             difficulty: 'medium',
+            audience: 'anyone',
             time: '~2 hours each',
           },
           {
@@ -1120,6 +1213,7 @@ export const entries = [
             description:
               'At the end of each article (or wherever it fits naturally), add a link back to your pillar page. Something like "If you want to see how we set this up for businesses, visit our AI services page." This tells Google that your service page is the authority on this topic.',
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~5 min each',
           },
           {
@@ -1127,6 +1221,7 @@ export const entries = [
             description:
               'Update your pillar page to mention and link to each supporting article. A section like "Learn more about AI for your business" with links to each article works well. Now Google can crawl the entire cluster from any entry point.',
             difficulty: 'easy',
+            audience: 'anyone',
             time: '~15 min',
           },
         ],
@@ -1134,12 +1229,12 @@ export const entries = [
       {
         type: 'text',
         heading: 'Why this works better than one big page',
-        body: `You might think "why not just put all this content on one long page?" Two reasons. First, Google prefers to rank pages that answer one specific question well — a 500-word article about "what is an AI chatbot" will outrank a 5000-word page that mentions chatbots in paragraph twelve. Second, each supporting article is a separate landing page that can rank for its own keyword. One page gives you one chance to appear in search results. Five pages give you five chances. The cluster doesn't split your authority — it multiplies it.`,
+        body: `Why not one long page? Because Google prefers pages that answer one specific question well. A 500-word article about "what is an AI chatbot" outranks a 5000-word page mentioning chatbots in paragraph twelve. Each article also ranks for its own keyword. Five pages = five chances to appear. The cluster multiplies your authority.`,
       },
       {
         type: 'text',
         heading: 'What changes after this',
-        body: `Your main service page starts ranking for competitive terms it couldn't reach alone. Each supporting article catches long-tail queries that bring in visitors who are actively researching your exact service. The cluster compounds — every new article you add strengthens the whole group. And Google starts treating your site differently. You're no longer a generic agency with a list of services. You're a site that clearly, demonstrably knows this topic. That's the shift from "we offer AI services" to "we are the AI services resource in Melbourne."`,
+        body: `Your main service page ranks for competitive terms it couldn't reach alone. Each article catches long-tail queries from people actively researching your service. The cluster compounds — every new article strengthens the whole group. You shift from "we offer AI services" to "we are the AI resource in Melbourne."`,
       },
       {
         type: 'next',

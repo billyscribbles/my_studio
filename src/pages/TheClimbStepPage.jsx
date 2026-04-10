@@ -4,6 +4,9 @@ import { motion } from 'framer-motion'
 import Contact from '../components/Contact'
 import IndexCheckWidget from '../components/IndexCheckWidget'
 import SitemapDiagram from '../components/SitemapDiagram'
+import BacklinkSourcesDiagram from '../components/BacklinkSourcesDiagram'
+import CaseStudyTemplateDiagram from '../components/CaseStudyTemplateDiagram'
+import ContentClusterDiagram from '../components/ContentClusterDiagram'
 import {
   chapters,
   getEntryBySlug,
@@ -140,6 +143,9 @@ export default function TheClimbStepPage() {
                       )}
                       <figure className="climb-entry__diagram">
                         {section.component === 'SitemapDiagram' && <SitemapDiagram />}
+                        {section.component === 'BacklinkSourcesDiagram' && <BacklinkSourcesDiagram />}
+                        {section.component === 'CaseStudyTemplateDiagram' && <CaseStudyTemplateDiagram />}
+                        {section.component === 'ContentClusterDiagram' && <ContentClusterDiagram />}
                         {section.caption && (
                           <figcaption className="climb-entry__diagram-caption">
                             {section.caption}
@@ -163,6 +169,13 @@ export default function TheClimbStepPage() {
                                 >
                                   {s.difficulty}
                                 </span>
+                                {s.audience && (
+                                  <span
+                                    className={`climb-entry__audience climb-entry__audience--${s.audience}`}
+                                  >
+                                    {s.audience === 'developer' ? 'Developer' : 'Anyone'}
+                                  </span>
+                                )}
                                 {s.time && (
                                   <span className="climb-entry__step-time">{s.time}</span>
                                 )}

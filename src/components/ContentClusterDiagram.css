@@ -1,0 +1,111 @@
+/* ── Content cluster hub-and-spoke ────────────────────── */
+
+.cluster-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 2.5rem 1.5rem 2rem;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-body);
+}
+
+/* ── Hub (pillar page) ───────────────────────────────── */
+
+.cluster-diagram__hub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 1rem 1.5rem;
+  background: var(--color-accent);
+  border-radius: var(--radius-md);
+  color: #fff;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cluster-diagram__hub-label {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.cluster-diagram__hub-sub {
+  font-size: 0.7rem;
+  opacity: 0.75;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ── Spokes container ────────────────────────────────── */
+
+.cluster-diagram__spokes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  max-width: 600px;
+}
+
+.cluster-diagram__spoke {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.cluster-diagram__line {
+  display: block;
+  width: 2px;
+  height: 18px;
+  background: var(--color-accent);
+}
+
+.cluster-diagram__node {
+  padding: 0.4rem 0.75rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.cluster-diagram__node-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-soft);
+  white-space: nowrap;
+}
+
+/* ── Linking arrows hint ─────────────────────────────── */
+
+.cluster-diagram__hub::after {
+  content: '← links →';
+  position: absolute;
+  bottom: -1.1rem;
+  font-size: 0.6rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Mobile ──────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+  .cluster-diagram {
+    padding: 1.5rem 1rem;
+  }
+
+  .cluster-diagram__spokes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cluster-diagram__node-label {
+    white-space: normal;
+    font-size: 0.72rem;
+  }
+}
