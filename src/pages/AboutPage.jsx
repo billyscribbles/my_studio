@@ -41,6 +41,10 @@ export default function AboutPage() {
               Tradies, café owners, shop keepers, service providers — the businesses that keep
               communities running deserve a proper online presence. That's what we do.
             </p>
+            <p className="about-page__founder">
+              I'm Billy — I started Onrai Studio after watching too many small businesses pay
+              big-agency prices for slow, generic work. This studio is the version I wish they'd had.
+            </p>
             <div className="about-page__pills">
               <span className="about-page__pill">Fast delivery</span>
               <span className="about-page__pill">No lock-in</span>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Linkedin, Instagram } from "lucide-react";
 
 // Replace with your Calendly link when ready: https://calendly.com/your-name
 const CALENDLY_URL = 'https://calendly.com/billyhuynh01/30min';
@@ -100,13 +101,33 @@ export default function Footer() {
             <a href="mailto:hello@onraistudio.com" className="footer__email">
               hello@onraistudio.com
             </a>
+            <div className="footer__socials">
+              <a
+                href="https://www.linkedin.com/company/onrai-studio"
+                className="footer__social"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Onrai Studio on LinkedIn"
+              >
+                <Linkedin size={18} strokeWidth={1.8} />
+              </a>
+              <a
+                href="https://www.instagram.com/onraistudio"
+                className="footer__social"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Onrai Studio on Instagram"
+              >
+                <Instagram size={18} strokeWidth={1.8} />
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
       <div className="footer__bottom">
         <span className="footer__copyright">
-          © 2025 Onrai Studio. Built in Australia. All rights reserved.
+          © 2025 Onrai Studio · ABN 00 000 000 000 · Built in Australia.
         </span>
         <div className="footer__legal">
           <button

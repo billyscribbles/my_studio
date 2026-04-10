@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import './About.css'
 
 const stats = [
-  { value: '50+', label: 'Projects delivered' },
+  { value: 'Lean', label: 'Real, small team' },
   { value: '48hr', label: 'Average first draft' },
   { value: '100%', label: 'AU-based team' },
   { value: '5★', label: 'Client satisfaction' },
@@ -73,13 +73,12 @@ export default function About() {
                 {/* Team row */}
                 <div className="about__dash-section-label">Active team</div>
                 <div className="about__dash-team">
-                  {['B','J','M','A','K'].map((initial, i) => (
+                  {['B','J','M'].map((initial, i) => (
                     <div key={i} className="about__dash-avatar">
                       <span>{initial}</span>
                       <div className="about__dash-status" />
                     </div>
                   ))}
-                  <div className="about__dash-avatar about__dash-avatar--more">+2</div>
                 </div>
 
                 {/* Projects progress */}
