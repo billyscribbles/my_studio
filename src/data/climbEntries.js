@@ -19,6 +19,12 @@ export const chapters = [
     subtitle:
       'Making Google — and AI models — confident about who you are, so they stop treating your brand as a typo.',
   },
+  {
+    id: 'relevance',
+    title: 'Relevance',
+    subtitle:
+      'Google knows you exist and trusts your name. Now we teach it what you actually do, and where you do it — without building ten new pages.',
+  },
 ]
 
 export const entries = [
@@ -151,6 +157,87 @@ export const entries = [
           `Create social profiles (LinkedIn, Instagram, Facebook) and link them back to the site — Google uses these as extra proof you're a real business.`,
           `Set up a Google Business Profile so we can show up on Google Maps and get a proper knowledge panel.`,
           `Come back in a few weeks and re-run the search to see if the "Did you mean?" suggestion is gone.`,
+        ],
+      },
+    ],
+  },
+  {
+    id: 3,
+    step: 3,
+    slug: '03-local-relevance',
+    chapter: 'relevance',
+    title: `Speaking Your City's Language`,
+    summary: `This is the step we're working on for our own site right now — and it's a good template for yours. If you want Melbourne customers, Google needs to see Melbourne on the pages, not just in the hidden business card. The fix isn't ten new URLs. It's sharpening the ones you already have.`,
+    sections: [
+      {
+        type: 'text',
+        heading: `What we're doing (and why it works for your site too)`,
+        body: `This entry is a live walkthrough of what we're doing to Onrai Studio's own site this week. We exist in Google, Google trusts our name — but if someone in Richmond types "melbourne web agency", we're still not in the conversation, because nothing on our actual pages says "Melbourne". The word is hiding in a piece of code (the business card we added last step), and that's not enough. Google reads what a human reads. We're about to fix that on our site, and every move we make is one you can copy onto yours in an afternoon.`,
+      },
+      {
+        type: 'text',
+        heading: `What Google means by "relevant"`,
+        body: `Relevance is just a fancy word for "matching what people actually typed". Someone searching "web agency" and someone searching "melbourne web agency" want different things, and Google picks different sites for each. When a page is generic — "we build websites" — it only shows up for the generic search, where it competes with the entire world. Add one word, "Melbourne", in the right places, and the same page starts competing only with the Melbourne web agencies. That's a fight a small business can actually win. It's the fight we're picking for ourselves here, and the exact one your site should be picking too.`,
+      },
+      {
+        type: 'text',
+        heading: `The pages we already have (and so do you)`,
+        body: `Here's a trick a lot of SEO advice skips: before you build new pages, list the ones you already have. Ours are Home, About, Services, Portfolio, AI, Contact, and The Climb. Seven pages. That's enough. Your site probably has a similar handful. The temptation is to chase every keyword with a new URL — "Melbourne Web Design", "Melbourne AI Chatbots", "Melbourne SEO" — but on a small site that just creates ten thin pages Google ignores. One strong page with the right words beats ten weak copies. So instead of multiplying, we're sharpening what's already there. Walk through the same list on your own site as you read this — every page you've got is a page we're about to show you how to fix.`,
+      },
+      {
+        type: 'steps',
+        heading: `The edits we're making to our site (do the same on yours)`,
+        items: [
+          {
+            title: 'Home — put the city in the hero',
+            description: `The homepage is the one page Google looks at hardest. Our headline today says "Your Business, Found Online" — nice, but it could belong to any agency on Earth. We're adding "Melbourne" in three visible places: the eyebrow row ("Melbourne · Australia"), the lead sentence under the headline, and the <title> tag (which becomes "Melbourne Web Design — Onrai Studio"). On your site, do the same thing with your own city. You're not rewriting the page — you're adding one city name in three spots.`,
+            difficulty: 'easy',
+            time: '~10 min',
+          },
+          {
+            title: 'Services — localise the promise',
+            description: `Our services page headline says "Everything your business needs to grow online." We're changing it to "Everything your Melbourne business needs to grow online." That's it. One word. Same promise, but now it's pointed at a specific audience, and Google treats the page completely differently when someone searches for "Melbourne" + any service. Make the same one-word edit on your own services page — drop your city in front of "business".`,
+            difficulty: 'easy',
+            time: '~5 min',
+          },
+          {
+            title: `AI — swap "Australian" for the city name`,
+            description: `Our AI page currently says "AI Features — Smarter Websites for Australian Businesses". That's broad. We're swapping in "Melbourne" (we'll keep "& Australian" to signal range). The same move applies to your own site: wherever you've written "Australian" or the name of your country, try the city instead. "Australian" is a country; "Melbourne" is a customer. Google can tell the difference.`,
+            difficulty: 'easy',
+            time: '~5 min',
+          },
+          {
+            title: 'Contact — name the city in the hero and the meta',
+            description: `We're leaving our headline ("Let's build something together") alone — it's friendly. Underneath, we're adding one line: "Based in Melbourne. Working with businesses across Australia." We're also fixing the meta description — it currently says "AU-based", which nobody types into Google. We're changing it to "Melbourne-based". On your contact page, do both: add a location line under the headline, and make sure the meta description names the city. The contact page is where local intent closes; name the city.`,
+            difficulty: 'easy',
+            time: '~5 min',
+          },
+          {
+            title: 'Portfolio — fix the meta description',
+            description: `Our portfolio page doesn't mention Melbourne at all in its meta description — it just says "Australian businesses". We're leaving the hero copy alone; the meta alone is a surprisingly cheap win. We're changing "Australian businesses" to "Melbourne and Australian businesses". Go check your portfolio page's meta description right now — if it's missing your city, that's a three-minute fix you can do before finishing this article.`,
+            difficulty: 'easy',
+            time: '~3 min',
+          },
+          {
+            title: `Audit every <title> tag for the city name`,
+            description: `Finally, we're walking every page's <title> tag one by one and making sure each one includes "Melbourne" or "Onrai Studio" (ideally both). Google compares what your pages say about themselves, and if five titles mention the city and two don't, those two look like stragglers. Do the same sweep on your site: open every page, look at the browser tab, and ask "does this title tell Google who I am and where I am?" Consistency is the whole game — a tidy set of titles is a trust signal, a messy set is a leak.`,
+            difficulty: 'medium',
+            time: '~15 min',
+          },
+        ],
+      },
+      {
+        type: 'text',
+        heading: 'What changes after this',
+        body: `None of these edits touch the design. None of them add pages. None of them change what the business does. They just tell Google the thing that was already true: we're a Melbourne business serving Melbourne customers — and, once you've done the same, so are you. Over the next couple of weeks, as Google re-crawls the site, we expect to start showing up for searches that include a city name. That's the part that actually converts. And the whole job takes about an hour, with no new URLs for Google to evaluate and no new content to maintain. When you copy this onto your own site, expect the same result on the same timeline.`,
+      },
+      {
+        type: 'next',
+        heading: 'Next on the climb',
+        items: [
+          `Set up a Google Business Profile — the single biggest local ranking lever, and it pairs with everything we just did.`,
+          `Come back in two weeks and search "melbourne web agency" from an incognito window. Note where you land. That's your new baseline.`,
+          `Only once the existing pages are doing their job should you consider adding dedicated landing pages — and then only for services where the search demand actually justifies it.`,
         ],
       },
     ],
