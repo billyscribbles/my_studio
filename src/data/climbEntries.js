@@ -37,6 +37,12 @@ export const chapters = [
     subtitle:
       'Google found you, trusts your name, and knows what you do. Now we make the plumbing fast, clean, and mistake-free.',
   },
+  {
+    id: 'authority',
+    title: 'Authority',
+    subtitle:
+      'Google trusts what other sites say about you more than what you say about yourself. This chapter is about earning those votes.',
+  },
 ]
 
 export const entries = [
@@ -835,7 +841,114 @@ export const entries = [
         items: [
           `Log into Search Console and submit your sitemap if you haven't already. Then inspect your homepage — confirm it's indexed with no errors.`,
           `Set a weekly calendar reminder to check the Performance and Pages reports. Five minutes, same day each week.`,
-          `The next step moves from infrastructure to content strategy — what to actually write about so that Google sends you the right visitors, not just any visitors.`,
+          `Next up: backlinks — getting other websites to link to yours. It's the hardest step so far, but a few real links from relevant local sites can move the needle more than anything else we've done.`,
+        ],
+      },
+    ],
+  },
+  {
+    id: 9,
+    step: 9,
+    slug: '09-earn-backlinks',
+    chapter: 'authority',
+    title: 'Create Pages That Earn Backlinks Naturally',
+    summary:
+      'A backlink is another website linking to yours. Google treats each one like a vote of confidence. For a new agency, a few real, relevant links beat dozens of junk ones.',
+    sections: [
+      {
+        type: 'text',
+        heading: 'Why this matters',
+        body: `Every step so far has been about things you control — your own site, your own schema, your own Search Console. Backlinks are different. A backlink is when someone else's website links to yours, and Google treats each one like a recommendation. The more relevant and trustworthy the site linking to you, the stronger the signal. For local service businesses, this is still one of the biggest ranking factors — and the one most small businesses never work on because it feels out of their control.`,
+      },
+      {
+        type: 'text',
+        heading: 'Why this blog exists',
+        body: `Here's the meta-moment: this blog — The Climb — is itself a backlink strategy. Every step we publish is a useful, niche page that someone might link to from their own site. A tradie reading "Best website setup for Melbourne tradies" might share it in a Facebook group. A clinic owner reading about AI chatbots might forward it to their web developer. That's not an accident. Writing genuinely useful content for a specific local audience is the most reliable way to earn links without asking for them. You're reading the strategy right now.`,
+      },
+      {
+        type: 'steps',
+        heading: 'Seven ways to earn real backlinks',
+        items: [
+          {
+            title: 'Publish 3–5 strong case studies',
+            description:
+              'Write up real projects you\'ve completed. Include the problem, what you did, and the result. Case studies are some of the most linked-to pages on service business sites because they\'re proof of real work. Other businesses in the same industry often reference them when explaining what\'s possible.',
+            difficulty: 'medium',
+            time: '~2 hours each',
+          },
+          {
+            title: 'Write local niche content',
+            description:
+              'Create pages that answer specific questions for your local market. "Best website setup for Melbourne tradies," "How Melbourne clinics can use AI chatbots," "What every Melbourne cafe needs on their website." These pages attract links from local forums, Facebook groups, and other blogs because they\'re useful to a specific audience that nobody else is writing for.',
+            difficulty: 'medium',
+            time: '~3 hours each',
+          },
+          {
+            title: 'Submit to Australian business directories',
+            description:
+              'List your business on directories that are relevant to your industry and location. Yellow Pages, True Local, Hotfrog, and industry-specific directories all count. Each listing is a backlink from a trusted Australian domain. Make sure your business name, address, and phone number are consistent across all of them.',
+            difficulty: 'easy',
+            time: '~30 min each',
+          },
+          {
+            title: 'Sponsor or collaborate with local communities',
+            description:
+              'Sponsor a local event, sports club, or community group. Most will list sponsors on their website with a link back to you. You can also collaborate with local business groups, chambers of commerce, or networking events. These are real, relevant links from sites Google already trusts in your area.',
+            difficulty: 'medium',
+            time: 'varies',
+          },
+          {
+            title: 'Guest post on local business blogs',
+            description:
+              'Reach out to complementary businesses — a web designer could write for an accountant\'s blog about why a good website saves money, or for a marketing agency\'s blog about technical SEO basics. You provide useful content, they get a free article, and you get a link back to your site from a relevant local business.',
+            difficulty: 'hard',
+            time: '~3 hours per post',
+          },
+          {
+            title: 'Get featured on client sites',
+            description:
+              'Ask clients if you can add a small "Built by [Your Business]" link in their website footer, or ask them to write a short case study about working with you. This is one of the easiest backlinks to earn because the client already knows and trusts you — you just have to ask.',
+            difficulty: 'easy',
+            time: '~10 min per client',
+          },
+          {
+            title: 'List on relevant industry directories',
+            description:
+              'Beyond general business directories, look for industry-specific ones. Web agencies can list on Clutch, DesignRush, or GoodFirms. Tradies can list on HiPages or ServiceSeeking. Find the directories where your potential customers actually look, and make sure your profile is complete.',
+            difficulty: 'easy',
+            time: '~30 min each',
+          },
+        ],
+      },
+      {
+        type: 'list',
+        heading: 'The thing you don\'t do',
+        intro: 'There are entire industries built around selling backlinks. Ignore all of them.',
+        items: [
+          'Don\'t buy links from "SEO packages" that promise 500 backlinks for $50 — these are spam farms that will get your site penalised',
+          'Don\'t do link exchanges ("I\'ll link to you if you link to me") — Google sees through these and discounts them',
+          'Don\'t use automated link-building tools that blast your URL across hundreds of low-quality sites',
+          'Don\'t pay for guest posts on sites that exist only to sell guest posts — if every article on the site is a different business plugging themselves, Google knows',
+        ],
+        outro: 'Google\'s spam team actively hunts these patterns. One penalty can undo months of legitimate work. A few real, relevant links from sites that actually matter will always beat hundreds of junk ones.',
+      },
+      {
+        type: 'text',
+        heading: 'How this blog helps you right now',
+        body: `If you've been following The Climb and doing the steps, you've already built the foundation that makes backlinks work. Your site is indexed (Step 01), Google recognises your brand (Step 02), your content is locally relevant (Steps 03–04), you look like a real business (Steps 05–06), and your technical plumbing is clean (Steps 07–08). When someone links to your site now, Google actually notices — because it already trusts you. Without those foundations, backlinks land on a site Google barely knows exists, and they don't move the needle.`,
+      },
+      {
+        type: 'text',
+        heading: 'What changes after this',
+        body: `A few genuine backlinks from relevant local sites start shifting your domain authority — a score Google uses to decide how much to trust your entire site, not just individual pages. You begin appearing for competitive keywords that were out of reach before. The compounding effect kicks in: trust signals plus useful content plus real backlinks is the full picture Google uses to decide who deserves to rank. Most of your competitors never get past Step 01. You're at Step 09.`,
+      },
+      {
+        type: 'next',
+        heading: 'Next on the climb',
+        items: [
+          'Start with the easiest win — submit your business to two or three Australian directories this week. Make sure your name, address, and phone number match everywhere.',
+          'Draft your first case study. Pick a project you\'re proud of and write up the problem, what you did, and the result.',
+          'Keep writing useful local content. Every page you publish is another page that can earn a link.',
         ],
       },
     ],
