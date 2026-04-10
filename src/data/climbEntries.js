@@ -266,6 +266,105 @@ export const entries = [
       },
     ],
   },
+  {
+    id: 4,
+    step: 4,
+    slug: '04-location-signals-done-right',
+    chapter: 'relevance',
+    title: 'Putting Your City in the Right Places (Without Overdoing It)',
+    summary: `Step 03 got the city into your page copy. This step is the other half: the placements Google actually weights — title tags, footer, your business card, testimonials, case studies — and the line you shouldn't cross. Cramming "Melbourne" into every sentence will cost you ranking, not win it.`,
+    sections: [
+      {
+        type: 'text',
+        heading: 'Why this matters',
+        body: `Last step we taught you to drop the city name into your page copy. Good start — but Google reads some places harder than body text. The browser-tab title, the footer that sits on every page, the hidden business card we built in Step 02, the names on your testimonials, the locations of the clients in your portfolio. Miss those and the copy work from Step 03 under-delivers. Worse, there's a ceiling: Google explicitly says cramming the same word in over and over makes pages rank lower, not higher. So before you go any further, you need to know where the city actually counts — and where to stop.`,
+      },
+      {
+        type: 'text',
+        heading: 'The rule: meaningful places, not every place',
+        body: `Here's the pattern. Your homepage talks about your brand and your city at a high level — once or twice, in places a human would actually read. Your service pages pair the service with the city — "Melbourne web design", not "web design (Melbourne) for Melbourne businesses by a Melbourne studio in Melbourne". Your blog posts and case studies prove it with real local examples and real local names. That's it. Three layers, each carrying the city once or twice in the spots Google trusts. Anything more than that and you cross the line into stuffing — and Google's own help docs come right out and say stuffing hurts rankings. Less is more here, and "more" is genuinely worse.`,
+      },
+      {
+        type: 'steps',
+        heading: 'The seven placements worth checking',
+        items: [
+          {
+            title: 'The browser-tab title on every page',
+            description: `Open every page on your site and look at the browser tab. That little bit of text is your <title> tag, and it's the single strongest on-page signal Google uses. Each page should mention the city once, naturally — not five times. If even one page is missing it, that page is the weak link. Walk the list: home, services, about, portfolio, contact. Fix the gaps. Don't get cute — short and clear beats clever every time.`,
+            difficulty: 'easy',
+            time: '~5 min',
+            example: {
+              before: 'Onrai Studio — Web Design & Development for Local Businesses in Australia',
+              after: 'Melbourne Web Design & Development — Onrai Studio',
+            },
+          },
+          {
+            title: 'One headline per page (not every headline)',
+            description: `Pick the main headline on each page — usually the big one at the top — and ask whether the city would fit naturally. If it would, add it. If forcing it makes the sentence clunky, leave it alone. The goal isn't to wedge "Melbourne" into every H1 and H2; the goal is one strong, honest mention per page. Friendly headlines like "Let's build something together" don't need a city — that's what the line underneath is for.`,
+            difficulty: 'easy',
+            time: '~10 min',
+          },
+          {
+            title: 'Your contact page deserves a real address line',
+            description: `On your contact page, under the friendly headline, add one short line that names your city and the area you serve. This is the most natural place on your whole site to be specific, because anyone visiting that page is already thinking about whether you're nearby. Don't overthink it — one sentence is plenty. While you're there, check your contact-page meta description in the page source. If it still says "AU-based" or "Australian", swap in the city name.`,
+            difficulty: 'easy',
+            time: '~5 min',
+            example: {
+              before: 'AU-based web design studio specialising in local business websites.',
+              after: 'Melbourne-based web design studio specialising in local business websites.',
+            },
+          },
+          {
+            title: 'The footer that sits on every page',
+            description: `The footer is special: it appears on every single page of your site, which means one mention of the city down there does more work than ten in body copy. If your footer currently says something vague like "AU-based" or just shows a country flag, that's a free win waiting to happen. Add the city. One line. Don't repeat it twice in the same footer — once is enough, and twice tips you back toward stuffing.`,
+            difficulty: 'easy',
+            time: '~3 min',
+            example: {
+              before: '🇦🇺 AU Based Studio',
+              after: '🇦🇺 Melbourne, Australia',
+            },
+          },
+          {
+            title: 'The hidden business card (your schema)',
+            description: `Remember the business card we added back in Step 02 — that piece of code that tells Google your name, location, and contact details? Open it up and check that the city, state, and country are all named explicitly, and that the "areas you serve" list mentions the city by name as well. Most templates leave this generic. A two-minute edit here gives Google a strong, structured signal that lives outside the noise of body copy.`,
+            difficulty: 'medium',
+            time: '~15 min',
+          },
+          {
+            title: 'A local testimonial in the first slot',
+            description: `Look at the testimonials on your homepage. Is the first one a customer from your city? If not, reorder them so the local one comes first. People scan testimonials top to bottom and stop early — and Google reads the names and locations as additional proof. Don't make up fake quotes to inflate the count, and don't relabel out-of-town clients as local. A genuine mix that leads with a local name is honest and effective.`,
+            difficulty: 'easy',
+            time: '~10 min',
+          },
+          {
+            title: 'Tag your portfolio projects with where the client was based',
+            description: `Walk through your portfolio or case-studies page and add a small location tag next to each project — "Melbourne", "Sydney", "Brisbane", "Remote". Two reasons. First, readers scan for "people like me" and a local tag stops them in their tracks. Second, Google reads the page and sees a cluster of local clients, which is one of the strongest local-relevance signals you can give it. If most of your work is local, this turns your portfolio into a local-proof page for free.`,
+            difficulty: 'medium',
+            time: '~15 min',
+          },
+        ],
+      },
+      {
+        type: 'text',
+        heading: `The thing you don't do`,
+        body: `Now the part most SEO advice skips. Don't stuff. Don't write "Melbourne web design for Melbourne businesses by a Melbourne team in Melbourne" — Google's own guidelines call that out by name and rank pages lower for it. Don't buy a domain like melbourne-web-design-melbourne.com.au expecting it to rank: Google has said for years that exact-match domains barely move the needle. Don't make a separate page for every suburb you serve unless each one has genuinely different content — ten thin "Richmond / Fitzroy / Carlton / Brunswick" pages will get treated as duplicates and ignored. The whole point of Step 03 and Step 04 together is this: a few strong signals, in the right places, beat dozens of weak ones. Stop when you've covered the seven placements above. Resist the urge to keep going.`,
+      },
+      {
+        type: 'text',
+        heading: 'What changes after this',
+        body: `Once your city sits in the placements that Google actually weights — title tags, footer, business card, testimonials, portfolio — your existing pages start competing for local searches without you adding a single new URL. Combined with the visible-copy work from Step 03, you've now done a full local-relevance pass on your site. No new pages to maintain. No keyword-stuffed paragraphs to embarrass you. Just a handful of small, deliberate edits in the right spots. Give Google a couple of weeks to re-crawl, then check whether searches with your city in them start surfacing your pages where they didn't before.`,
+      },
+      {
+        type: 'next',
+        heading: 'Next on the climb',
+        items: [
+          `Set up a Google Business Profile if you haven't yet — it pairs perfectly with the schema and footer changes from this step.`,
+          `Open every page of your site in an incognito window, look at the browser tab, and write down any title that doesn't carry the city. That's your fix list.`,
+          `Only after the existing pages are doing their job should you consider building dedicated landing pages — and then only for services where the search demand actually justifies it.`,
+        ],
+      },
+    ],
+  },
 ]
 
 export function getEntryBySlug(slug) {
