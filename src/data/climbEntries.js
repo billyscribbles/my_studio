@@ -798,6 +798,14 @@ export const entries = [
         ],
       },
       {
+        type: 'resource',
+        heading: 'See a real sitemap',
+        label: 'Live example',
+        title: 'onraistudio.com/sitemap.xml',
+        body: 'This is our actual sitemap — a plain XML file listing every page on the site with last-updated dates and priority hints. Yours will look similar. This is the URL you paste into Search Console under Sitemaps.',
+        href: 'https://onraistudio.com/sitemap.xml',
+      },
+      {
         type: 'list',
         heading: 'Your weekly routine',
         intro: 'Once everything is set up, Search Console takes about five minutes a week. Here\'s what to check each time you log in:',
