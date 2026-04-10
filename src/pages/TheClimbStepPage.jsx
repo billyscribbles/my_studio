@@ -170,6 +170,26 @@ export default function TheClimbStepPage() {
                     </ol>
                   )}
 
+                  {section.type === 'resource' && (
+                    <a
+                      href={section.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="climb-entry__resource"
+                    >
+                      <div className="climb-entry__resource-body">
+                        <div className="climb-entry__resource-label">
+                          {section.label ?? 'External guide'}
+                        </div>
+                        <div className="climb-entry__resource-title">{section.title}</div>
+                        {section.body && (
+                          <p className="climb-entry__resource-desc">{section.body}</p>
+                        )}
+                      </div>
+                      <span className="climb-entry__resource-arrow" aria-hidden="true">↗</span>
+                    </a>
+                  )}
+
                   {section.type === 'next' && (
                     <ul className="climb-entry__next-steps">
                       {section.items.map((item, k) => (

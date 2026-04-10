@@ -98,8 +98,8 @@ export default function Footer() {
           <div className="footer__col-title">Contact</div>
           <div className="footer__contact-info">
             <span className="footer__location">🇦🇺 Melbourne, Australia</span>
-            <a href="mailto:hello@onraistudio.com" className="footer__email">
-              hello@onraistudio.com
+            <a href="mailto:onraistudio@gmail.com" className="footer__email">
+              onraistudio@gmail.com
             </a>
             <div className="footer__socials">
               <a

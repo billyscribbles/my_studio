@@ -1296,6 +1296,76 @@
   margin-top: 0.6em;
 }
 
+/* ── Resource link card ────────────────────────────────────────────────── */
+
+.climb-entry__resource {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin: 1rem 0 0.5rem;
+  padding: 1.1rem 1.25rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--transition-base),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.climb-entry__resource:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border-strong);
+  border-left-color: var(--color-accent-dark);
+}
+
+.climb-entry__resource-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.climb-entry__resource-label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.climb-entry__resource-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.35;
+}
+
+.climb-entry__resource-desc {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  line-height: 1.55;
+  margin: 0.15rem 0 0;
+}
+
+.climb-entry__resource-arrow {
+  flex-shrink: 0;
+  font-size: 1.25rem;
+  color: var(--color-accent);
+  transition: transform var(--transition-base);
+}
+
+.climb-entry__resource:hover .climb-entry__resource-arrow {
+  transform: translate(2px, -2px);
+}
+
 /* ── Responsive ────────────────────────────────────────────────────────── */
 
 @media (max-width: 900px) {

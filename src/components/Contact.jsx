@@ -35,7 +35,7 @@ export default function Contact() {
         setSubmitted(true)
       }
     } catch {
-      alert('Something went wrong sending your message. Please email us directly at hello@onraistudio.com.')
+      alert('Something went wrong sending your message. Please email us directly at onraistudio@gmail.com.')
     } finally {
       setSubmitting(false)
     }
@@ -200,8 +200,8 @@ export default function Contact() {
           <div className="contact__info">
             <div>
               <div className="contact__email-label">Email Us Directly</div>
-              <a href="mailto:hello@onraistudio.com" className="contact__email">
-                hello@onraistudio.com
+              <a href="mailto:onraistudio@gmail.com" className="contact__email">
+                onraistudio@gmail.com
               </a>
             </div>
 

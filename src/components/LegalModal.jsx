@@ -8,7 +8,7 @@ const PRIVACY = {
   content: [
     {
       heading: '1. Who We Are',
-      body: `Onrai Studio ("we", "us", "our") is a web development studio based in Australia. We operate the website at onraistudio.com. Our contact email is hello@onraistudio.com.`,
+      body: `Onrai Studio ("we", "us", "our") is a web development studio based in Australia. We operate the website at onraistudio.com. Our contact email is onraistudio@gmail.com.`,
     },
     {
       heading: '2. What Information We Collect',
@@ -32,11 +32,11 @@ const PRIVACY = {
     },
     {
       heading: '7. Your Rights',
-      body: `Under the Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs), you have the right to:\n\n• Access the personal information we hold about you.\n• Request correction of inaccurate information.\n• Request deletion of your information (subject to our legal obligations).\n• Complain about a breach of your privacy.\n\nTo exercise any of these rights, contact us at hello@onraistudio.com. We will respond within 30 days.`,
+      body: `Under the Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs), you have the right to:\n\n• Access the personal information we hold about you.\n• Request correction of inaccurate information.\n• Request deletion of your information (subject to our legal obligations).\n• Complain about a breach of your privacy.\n\nTo exercise any of these rights, contact us at onraistudio@gmail.com. We will respond within 30 days.`,
     },
     {
       heading: '8. Complaints',
-      body: `If you believe we have breached the Australian Privacy Principles, you may contact us at hello@onraistudio.com. If you are not satisfied with our response, you may lodge a complaint with the Office of the Australian Information Commissioner (OAIC) at oaic.gov.au.`,
+      body: `If you believe we have breached the Australian Privacy Principles, you may contact us at onraistudio@gmail.com. If you are not satisfied with our response, you may lodge a complaint with the Office of the Australian Information Commissioner (OAIC) at oaic.gov.au.`,
     },
     {
       heading: '9. Changes to This Policy',
@@ -95,7 +95,7 @@ const TERMS = {
     },
     {
       heading: '12. Contact',
-      body: `Questions about these Terms? Contact us at hello@onraistudio.com.`,
+      body: `Questions about these Terms? Contact us at onraistudio@gmail.com.`,
     },
   ],
 }

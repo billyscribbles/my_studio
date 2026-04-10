@@ -399,7 +399,7 @@ export const entries = [
         items: [
           `Your real business name, spelled the same way everywhere.`,
           `A contact form that actually works — not a broken "coming soon".`,
-          `An email on your own domain, not a gmail address.`,
+          `A working contact email — ideally on your own domain, but a clean business-named Gmail (yourbusiness@gmail.com) is fine while you're starting out.`,
           `Your service area written out in plain English.`,
           `A portfolio or some recent work, even if it's three items.`,
           `Testimonials with real names and real locations.`,
@@ -480,7 +480,123 @@ export const entries = [
         items: [
           `Set up your Google Business Profile if you haven't yet — this is now the third time we've flagged it, because it's genuinely the biggest single lever left.`,
           `Once a week for the next month, search your own business name from an incognito window. Write down anything that looks off. That's your punch list.`,
-          `The next chapter moves from "being found" to "being chosen" — what actually makes a visitor pick you over a competitor on the same search results page.`,
+          `In the next step we tackle that Google Business Profile head on — who qualifies, who doesn't, and how to set one up without faking eligibility.`,
+        ],
+      },
+    ],
+  },
+  {
+    id: 6,
+    step: 6,
+    slug: '06-google-business-profile',
+    chapter: 'trust',
+    title: 'Set Up a Google Business Profile (Only If You Qualify)',
+    summary: `We've flagged Google Business Profile three times now. Here's the catch nobody mentions up front: it's not for every business. If you qualify, it's the single biggest local lever you'll ever pull. If you don't, forcing it can get you suspended. This step is the honest version — how to tell which side of the line you're on, and what to do once you're on it.`,
+    sections: [
+      {
+        type: 'text',
+        heading: 'Why this matters',
+        body: `A Google Business Profile is the box that pops up on the right side of search results with your map pin, hours, photos, and reviews. It's also what feeds the local "map pack" — the three businesses Google shows above the regular results when someone types "near me" or names a city. For a small business that qualifies, nothing else on this list moves the needle as hard. For a business that doesn't qualify, trying to force one on is the fastest way to get a profile suspended and a domain flagged. So before any of the setup advice you'll read everywhere else, we have to do the part most guides skip: working out whether you should even be doing this.`,
+      },
+      {
+        type: 'text',
+        heading: 'The eligibility question (read this before anything else)',
+        body: `Google's rule for Business Profile is short and strict. You qualify if you either meet customers face-to-face at a fixed address (a shop, a studio, a clinic), or if you travel to customers in a defined service area (a plumber, a mobile dog groomer, an in-home tutor). That's it. Purely remote businesses — agencies that only ever meet clients on Zoom, online stores with no pickup, software companies — do not qualify, full stop. The trap is that Google's setup wizard will happily let you create a profile anyway. It just gets suspended later, sometimes after you've already invested hours in it. So the first decision isn't "how do I set this up", it's "am I one of the two kinds of business this is for".`,
+      },
+      {
+        type: 'list',
+        heading: 'Where we landed (and how to land yourself)',
+        intro: `Here's the honest read on our own situation, and the same three buckets your business will fall into:`,
+        items: [
+          `Storefront businesses — you have a public address customers visit. Set up the profile with the address. Easy call.`,
+          `Service-area businesses — you travel to customers in a defined region (suburbs, a city, a radius). Set up the profile and hide the address; list the service area instead. Also a clear yes.`,
+          `Purely remote — you only ever work over the internet, with no in-person component. Skip this step entirely. Put your effort into LinkedIn, directory listings, and the trust signals from Step 05.`,
+        ],
+        outro: `For Onrai Studio specifically, we sit in the second bucket — Melbourne and surrounding service areas, occasional in-person meetings, no public storefront. So we qualify, and the steps below are the ones we're following. If you're in bucket three, the most useful thing this entry will do for you is give you permission to stop chasing this lever and go back to the others.`,
+      },
+      {
+        type: 'steps',
+        heading: 'The setup, in the right order',
+        items: [
+          {
+            title: 'Create the profile from the right Google account',
+            description: `The single decision that haunts more business owners than any other: which email to sign up with. Don't use a personal Gmail you share with family. Don't use a brand-new throwaway you'll lose track of. Best option, if you have one, is a Workspace email at your own domain — hello@yourbusiness.com.au or similar — because it's a trust signal and it stays with the business when staff change. Second-best is a dedicated Gmail in the business name (yourbusiness.studio@gmail.com) that exists only for business admin. Whichever you pick, write the password down somewhere safe and add a recovery phone — losing access to a verified profile is a months-long nightmare. Then go to google.com/business, click "Manage now", and start the profile in your business name spelled exactly the way it appears on your website and invoices.`,
+            difficulty: 'easy',
+            time: '~15 min',
+          },
+          {
+            title: 'Pick the primary category carefully',
+            description: `Google asks for one primary category and lets you add a few secondary ones. The primary category is the single biggest factor in which searches you show up for, so don't pick the broadest option you see — pick the one that best matches what you actually do. "Web designer" is more specific than "Marketing consultant" and will match better for the searches you actually want. You can change it later, but every change resets some local trust, so try to get it right the first time.`,
+            difficulty: 'medium',
+            time: '~10 min',
+          },
+          {
+            title: 'Handle the address question correctly',
+            description: `This is the bit that trips most people up. First thing to know: yes, Google asks for an address during the signup wizard, and there's no way to skip the field. The question isn't whether you enter one, it's whether the public sees it. If you have a public storefront customers visit, enter your real street address and let it show — that's the whole point of the profile. If you're a service-area business or you work from home, enter your real address (your home is fine) and tick the "I deliver goods and services to my customers" option, which hides the address from the public profile and switches you to listing service areas instead. The address you entered stays private and is only used for verification and Google's internal records. For the public service area, add the actual suburbs or cities you serve — for us that's Melbourne and the surrounding metro suburbs, not every postcode in Victoria. Google is smart enough to surface you for nearby searches inside your stated area, and over-listing looks like spam. The honest, narrow answer outranks the greedy one almost every time. What you absolutely cannot do: use a PO box (Google rejects them), a virtual office or coworking address you don't actually work from, or a friend's address. Faking the address is the fastest way to a permanent ban, and bans follow the domain after the profile is gone.`,
+            difficulty: 'easy',
+            time: '~10 min',
+          },
+          {
+            title: 'Verify the profile (this is the gate)',
+            description: `Google will ask you to verify the business before the profile goes live. Depending on your category and country, that's a postcard to your address, a video call, or a video upload showing your workspace and any signage. Whichever method you get offered, do it properly the first time — failed verifications are the most common reason a profile sits in limbo for weeks. If you're a service-area business with no public address, expect a video verification, and have your laptop, your branded materials, and a calm five minutes ready.`,
+            difficulty: 'medium',
+            time: '~20 min',
+          },
+          {
+            title: 'Upload photos that look like the real business',
+            description: `The photos slot is the first thing a human sees when your knowledge panel pops up, and it's the part most owners under-invest in. You need three things, in this order. A square logo, at least 720×720, on a clean background — this becomes your tiny circular avatar everywhere. A cover photo, landscape, that represents the work you do (a project screenshot, your workspace, a finished build) — not a stock photo, not a generic skyline, not a quote on a beige background. And three to five "additional" photos that prove you're real: recent projects, your laptop on your desk, you at a client meeting if you have permission. Take them on a phone in good light. Real and slightly imperfect beats polished and generic every single time. Avoid stock photography entirely — Google's image-matching can spot it, and so can customers.`,
+            difficulty: 'easy',
+            time: '~20 min',
+          },
+          {
+            title: 'Write a business description that sounds like a human',
+            description: `You get 750 characters. Use them. Cover four things, in plain English: what you do, who you do it for, where you do it, and one specific reason a customer would pick you. Skip the keyword soup — Google reads your whole website for keywords, and stuffing this field doesn't add to that signal, it just makes the description painful to read. Don't open with "We are a leading..." Don't list every service in a comma-separated wall. Don't use the word "synergy". Write it the way you'd describe the business to a stranger at a barbecue, then tighten it. Here's the description we wrote for our own profile — same rules apply to yours:`,
+            difficulty: 'medium',
+            time: '~20 min',
+            example: {
+              before: 'Onrai Studio is a leading provider of professional web design, web development, SEO services, AI solutions, digital marketing, branding, and online business solutions for clients across Australia and beyond.',
+              after: `Onrai Studio is a Melbourne-based web design and development studio for small and local businesses. We build fast, modern websites that help you get found on Google, look credible to first-time visitors, and turn that traffic into real customers. Every project is handled by a small team — no account managers, no handoffs. Founded by Billy, the studio works with clients across Melbourne and Australia.`,
+            },
+          },
+          {
+            title: 'Add services and hours honestly',
+            description: `Google lets you list services as separate entries with their own one-sentence descriptions. Add the three or four you actually want to be known for — not every service you've ever done. Each service entry is another small surface where Google can match you to a search, so make them specific ("Local business websites", "AI chat assistants") rather than vague ("Consulting"). For hours, set the truth even if the truth is awkward. If you're appointment-only, set "by appointment" — Google supports it. If you don't work weekends, mark them closed. Customers trust a profile that says "Closed Sundays" more than one that claims 24/7 availability for a one-person studio. And the moment your hours change, update them. A profile that lies about being open at 9pm is a profile a customer remembers for the wrong reason.`,
+            difficulty: 'easy',
+            time: '~15 min',
+          },
+          {
+            title: 'Ask real customers for real reviews',
+            description: `Reviews are the part of the profile Google watches hardest, and the part most businesses get wrong by trying to game. The rule is the same as Step 05: don't fake anything. Send a short, friendly message to clients you've actually worked with, link them straight to your profile's review page, and ask them to share what the experience was like. Don't write the review for them. Don't offer a discount in exchange. Don't post a flood of reviews in the same week — that's the single most common pattern Google flags as fake. A handful of honest reviews trickling in over months beats twenty all at once.`,
+            difficulty: 'medium',
+            time: '~20 min',
+          },
+        ],
+      },
+      {
+        type: 'resource',
+        heading: 'Where to actually click',
+        label: 'Google · official setup',
+        title: 'Google Business Profile — start here',
+        href: 'https://www.google.com/business/',
+        body: `The official setup page. Sign in with the Google account you plan to keep, click "Manage now", and follow the wizard with the rules above in mind.`,
+      },
+      {
+        type: 'text',
+        heading: `The thing you don't do`,
+        body: `Same shape as the last two chapters. Don't create a profile if you don't qualify — using a friend's address, your home address you don't actually meet clients at, or a virtual office is the fastest path to a permanent suspension, and once a profile is suspended the domain attached to it gets a black mark that's hard to clear. Don't stuff keywords into your business name field ("Onrai Studio Melbourne Web Design SEO") — Google's guidelines call it out by name and will strip the profile or suspend it. Don't buy reviews, don't trade reviews with other businesses, and don't ask staff or family to review you. The whole chapter has been about surfacing what's true. This step is the same: a real profile, for a real business, with real reviews from real customers, beats a polished fake every single time — and the fake gets caught.`,
+      },
+      {
+        type: 'text',
+        heading: 'What changes after this',
+        body: `If you qualified and set the profile up properly, three things shift over the following weeks. You start showing up in the local map pack for searches that name your city or include "near me". Your knowledge panel — that box on the right of search results — fills out with your photos, hours, and reviews, which is a huge credibility cue for first-time visitors. And the schema work from Step 02 plus the off-site profiles from Step 05 plus this new Business Profile all start corroborating each other, which is exactly the cluster of signals Google's local algorithm is built to reward. If you didn't qualify and skipped this step, you didn't lose anything — you just avoided a trap most guides walk you straight into.`,
+      },
+      {
+        type: 'next',
+        heading: 'Next on the climb',
+        items: [
+          `Search your business name from an incognito window in two weeks. The knowledge panel should be populating. If it isn't, check your verification status first — that's almost always the cause.`,
+          `Set a monthly reminder to add one new photo and respond to any new reviews. Active profiles outrank dormant ones.`,
+          `The next chapter moves from "being found" to "being chosen" — what actually makes a visitor pick you over a competitor on the same results page.`,
         ],
       },
     ],

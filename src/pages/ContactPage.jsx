@@ -39,8 +39,8 @@ export default function ContactPage() {
           >
             <div className="contact-page__info-item">
               <Mail size={18} strokeWidth={1.8} className="contact-page__info-icon" />
-              <a href="mailto:hello@onraistudio.com" className="contact-page__info-link">
-                hello@onraistudio.com
+              <a href="mailto:onraistudio@gmail.com" className="contact-page__info-link">
+                onraistudio@gmail.com
               </a>
             </div>
             <div className="contact-page__info-item">
