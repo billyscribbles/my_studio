@@ -36,7 +36,7 @@ export default function Home() {
         <link rel="canonical" href="https://onraistudio.com/" />
         <meta property="og:url" content="https://onraistudio.com/" />
         <meta property="og:title" content="Melbourne Web Design & Development — Onrai Studio" />
-        <meta property="og:description" content="We build fast, modern websites that get Melbourne businesses found on Google. Clear pricing, no lock-in contracts. Melbourne-based." />
+        <meta property="og:description" content="We build fast, modern websites that get Melbourne businesses found on Google. Melbourne-based web design studio." />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <main>

@@ -20,7 +20,7 @@ export default function AboutPage() {
         <link rel="canonical" href="https://onraistudio.com/about" />
         <meta property="og:url" content="https://onraistudio.com/about" />
         <meta property="og:title" content="About Onrai Studio — Melbourne Web Design Agency" />
-        <meta property="og:description" content="We're a lean, Melbourne-based studio that builds websites for local businesses. Senior-level work, clear pricing, no lock-in contracts." />
+        <meta property="og:description" content="We're a lean, Melbourne-based studio that builds websites for local businesses. Senior-level work, real results." />
       </Helmet>
       <main className="about-page">
       {/* Page hero */}
@@ -47,7 +47,6 @@ export default function AboutPage() {
             </p>
             <div className="about-page__pills">
               <span className="about-page__pill">Fast delivery</span>
-              <span className="about-page__pill">No lock-in</span>
               <span className="about-page__pill">AU-based team</span>
               <span className="about-page__pill">Since 2022</span>
             </div>

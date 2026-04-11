@@ -71,7 +71,7 @@
 
 .shop-card__tagline {
   font-family: var(--font-body);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -81,7 +81,7 @@
 
 .shop-card__name {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 600;
   color: var(--color-text);
   letter-spacing: -0.02em;
@@ -92,22 +92,27 @@
   color: #fff;
 }
 
-.shop-card__price {
-  font-family: var(--font-display);
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--color-text);
-  letter-spacing: -0.03em;
+.shop-card__pricing-model {
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-accent);
+  letter-spacing: 0.02em;
   margin-bottom: 12px;
+  background: rgba(12, 140, 129, 0.08);
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  display: inline-block;
 }
 
-.shop-card--featured .shop-card__price {
-  color: #fff;
+.shop-card--featured .shop-card__pricing-model {
+  color: var(--color-accent);
+  background: rgba(12, 140, 129, 0.15);
 }
 
 .shop-card__desc {
   font-family: var(--font-body);
-  font-size: 13.5px;
+  font-size: 14px;
   line-height: 1.65;
   color: var(--color-muted);
 }
@@ -135,7 +140,7 @@
   align-items: flex-start;
   gap: 10px;
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 13.5px;
   line-height: 1.5;
   color: var(--color-text-soft);
 }
@@ -156,7 +161,7 @@
   padding: 13px 24px;
   border-radius: var(--radius-full);
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 14.5px;
   font-weight: 600;
   letter-spacing: 0.02em;
   background: transparent;

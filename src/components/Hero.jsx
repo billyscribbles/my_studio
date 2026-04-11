@@ -36,7 +36,6 @@ export default function Hero() {
 
           <motion.div className="hero__trust-row" {...fadeUp(0.4)}>
             <span className="hero__trust-item">✓ Live in 2 weeks</span>
-            <span className="hero__trust-item">✓ No lock-in contracts</span>
             <span className="hero__trust-item">✓ Melbourne based</span>
           </motion.div>
         </div>

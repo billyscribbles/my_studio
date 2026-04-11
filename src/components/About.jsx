@@ -9,7 +9,6 @@ const stats = [
 ]
 
 const values = [
-  { label: 'No lock-in contracts', desc: "Month-to-month, always. You stay because we deliver results — not because you're stuck in a 12-month agreement." },
   { label: 'AU-based, always', desc: "Our whole team is here. You get real people in your timezone — not an offshore ticket system." },
   { label: 'Plain language', desc: "No jargon, no fluff. We tell you exactly what we're building and why it matters for your business." },
   { label: 'Built to convert', desc: "A site that looks great but doesn't bring in customers is just wallpaper. We build for outcomes." },

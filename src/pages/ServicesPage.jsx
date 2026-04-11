@@ -127,9 +127,8 @@ const categories = [
 const whyUs = [
   'One studio handles everything — no briefing multiple agencies',
   'Everything is on-brand and consistent across every channel',
-  'Clear pricing — no hidden fees or scope creep surprises',
+  'Transparent scoping — no surprise fees or scope creep',
   'AU-based team in your timezone, not an overseas ticket system',
-  'Month-to-month — stay because we deliver, not because you\'re locked in',
 ]
 
 export default function ServicesPage() {

@@ -213,7 +213,6 @@ export default function Contact() {
               {[
                 'Free initial consultation',
                 'Quote within 1 business day',
-                'No lock-in contracts',
                 'AU based — we\'re in your timezone',
               ].map((item) => (
                 <div key={item} className="contact__trust-item">

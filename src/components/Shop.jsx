@@ -5,8 +5,9 @@ import './Shop.css'
 const packages = [
   {
     name: 'Starter',
-    price: '$1,500',
+    pricingModel: 'Free setup + Monthly plan',
     tagline: 'Get online fast',
+    badge: 'Free Setup',
     desc: 'Perfect if you have nothing yet and just need a professional website that works.',
     features: [
       'Up to 5 pages (Home, About, Services, Contact, etc.)',
@@ -16,28 +17,29 @@ const packages = [
       'Basic on-page SEO',
       '30 days of support after launch',
     ],
-    cta: 'Get Started',
+    cta: 'Get a Quote',
     featured: false,
   },
   {
     name: 'Growth',
-    price: '$3,500',
+    pricingModel: 'One-time setup + Monthly plan',
     tagline: 'Most popular',
-    desc: 'Everything in Starter, plus AI and SEO tools to actually grow your customer base.',
+    badge: 'Most Popular',
+    desc: 'Everything in Starter, plus a custom admin dashboard, AI tools, and SEO to grow your customer base.',
     features: [
       'Everything in Starter',
+      'Custom admin dashboard',
       'AI chatbot — answers FAQs & captures leads 24/7',
       'Local SEO setup (Google Business Profile)',
-      'AI-written service page content',
       'Google Analytics & Search Console setup',
       '60 days of support after launch',
     ],
-    cta: 'Get Started',
+    cta: 'Get a Quote',
     featured: true,
   },
   {
     name: 'eCommerce',
-    price: '$6,000',
+    pricingModel: 'One-time setup + Monthly plan',
     tagline: 'Sell online',
     desc: 'A full online shop so you can take orders and payments around the clock.',
     features: [
@@ -48,14 +50,14 @@ const packages = [
       'Product page SEO',
       '90 days of support after launch',
     ],
-    cta: 'Get Started',
+    cta: 'Get a Quote',
     featured: false,
   },
   {
-    name: 'Full Studio',
-    price: 'From $10,000',
-    tagline: 'All-in-one',
-    desc: 'Custom build with ongoing AI automation, retainer support, and everything managed for you.',
+    name: 'Full Custom',
+    pricingModel: 'Custom quote',
+    tagline: 'Custom everything',
+    desc: 'Fully custom design, development, and ongoing support. Built entirely around your business.',
     features: [
       'Everything in eCommerce',
       'Custom design & development',
@@ -80,8 +82,8 @@ export default function Shop() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="section-label">Simple Packages,<br />Clear Pricing</h2>
-          <p className="section-sub">No hidden fees, no lock-in contracts. Pick a package and we'll get started.</p>
+          <h2 className="section-label">Simple Packages,<br />Built for You</h2>
+          <p className="section-sub">Every project starts with a one-time setup fee and includes an ongoing monthly plan. Pick a package and we'll scope it out.</p>
         </motion.div>
 
         <div className="shop__grid">
@@ -94,13 +96,13 @@ export default function Shop() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
             >
-              {pkg.featured && (
-                <div className="shop-card__badge">Most Popular</div>
+              {pkg.badge && (
+                <div className="shop-card__badge">{pkg.badge}</div>
               )}
               <div className="shop-card__header">
                 <div className="shop-card__tagline">{pkg.tagline}</div>
                 <div className="shop-card__name">{pkg.name}</div>
-                <div className="shop-card__price">{pkg.price}</div>
+                <div className="shop-card__pricing-model">{pkg.pricingModel}</div>
                 <p className="shop-card__desc">{pkg.desc}</p>
               </div>
 
@@ -130,7 +132,7 @@ export default function Shop() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          All prices are in AUD and exclude GST. Need something custom? <a href="#contact">Get in touch</a> and we'll tailor a quote.
+          Every project is scoped individually. <a href="#contact">Get in touch</a> and we'll put together a proposal.
         </motion.p>
       </div>
     </section>
