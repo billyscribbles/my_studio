@@ -6,12 +6,21 @@
 .pkg__hero {
   background: var(--color-text);
   padding: 5rem 2rem 4rem;
+  overflow: hidden;
 }
 
 .pkg__hero-inner {
-  max-width: 800px;
+  max-width: 1100px;
   margin: 0 auto;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 4rem;
+  align-items: center;
+}
+
+.pkg__hero-left {
+  display: flex;
+  flex-direction: column;
 }
 
 .pkg__hero-eyebrow {
@@ -56,12 +65,11 @@
   line-height: 1.75;
   color: rgba(255,255,255,0.6);
   max-width: 600px;
-  margin: 0 auto 2.5rem;
+  margin: 0 0 2.5rem;
 }
 
 .pkg__hero-nav {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
 }
@@ -86,6 +94,199 @@
   background: rgba(255,255,255,0.12);
   border-color: var(--tier-color, rgba(255,255,255,0.3));
   color: #fff;
+}
+
+/* ── Hero right — pipeline illustration ── */
+.pkg__hero-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pkg__art {
+  position: relative;
+  width: 280px;
+  height: 280px;
+}
+
+/* SVG path behind the nodes */
+.pkg__art-path {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 2x2 grid positioning — icon center aligns with path coords (42, 238) */
+.pkg__art-step {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  transform: translateX(-50%);
+}
+
+.pkg__art-step--1 { top: 14px;  left: 42px;  }   /* top-left */
+.pkg__art-step--2 { top: 14px;  left: 238px; }   /* top-right */
+.pkg__art-step--3 { left: 238px; top: 210px; }   /* bottom-right */
+.pkg__art-step--4 { left: 42px;  top: 210px; }   /* bottom-left */
+
+.pkg__art-label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+}
+
+/* Base icon circle */
+.pkg__art-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Step 1: Code brackets */
+.pkg__art-bracket {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+/* Step 2: Screen/computer */
+.pkg__art-icon--screen {
+  border-radius: var(--radius-sm);
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.pkg__art-screen-bar {
+  width: 100%;
+  height: 11px;
+  background: rgba(13,148,136,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  gap: 3px;
+}
+
+.pkg__art-screen-bar::before,
+.pkg__art-screen-bar::after {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+}
+
+.pkg__art-screen-body {
+  flex: 1;
+  padding: 6px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+}
+
+.pkg__art-screen-line {
+  height: 2px;
+  width: 100%;
+  background: rgba(13,148,136,0.3);
+  border-radius: 1px;
+}
+
+.pkg__art-screen-line--short {
+  width: 60%;
+}
+
+/* Step 3: Globe (deploy) */
+.pkg__art-icon--globe {
+  background: linear-gradient(135deg, rgba(13,148,136,0.15), rgba(13,148,136,0.05));
+  border-color: rgba(13,148,136,0.3);
+  box-shadow: 0 0 24px rgba(13,148,136,0.15);
+}
+
+.pkg__art-globe-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(13,148,136,0.35);
+}
+
+.pkg__art-globe-ring--h {
+  width: 80%;
+  height: 100%;
+  left: 10%;
+  top: 0;
+}
+
+.pkg__art-globe-ring--v {
+  width: 40%;
+  height: 100%;
+  left: 30%;
+  top: 0;
+}
+
+.pkg__art-globe-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 8px rgba(13,148,136,0.6);
+}
+
+/* Step 4: Package box (yours) */
+.pkg__art-icon--box {
+  border-radius: var(--radius-sm);
+  flex-direction: column;
+  overflow: hidden;
+  gap: 0;
+}
+
+.pkg__art-box-flap {
+  width: 100%;
+  height: 16px;
+  background: rgba(13,148,136,0.25);
+  border-bottom: 1px solid rgba(13,148,136,0.35);
+  position: relative;
+}
+
+.pkg__art-box-flap::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border: 2px solid rgba(255,255,255,0.25);
+  border-radius: 50%;
+}
+
+.pkg__art-box-body {
+  flex: 1;
+  background: rgba(255,255,255,0.03);
+  position: relative;
+}
+
+.pkg__art-box-body::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(13,148,136,0.2);
+  transform: translateX(-50%);
 }
 
 /* ── Tier sections ── */
@@ -495,6 +696,15 @@
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
+  .pkg__hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .pkg__hero-right {
+    display: none;
+  }
+
   .pkg__features-grid {
     grid-template-columns: repeat(2, 1fr);
   }

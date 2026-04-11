@@ -250,6 +250,7 @@ export default function PackagesPage() {
         <section className="pkg__hero">
           <div className="pkg__hero-inner">
             <motion.div
+              className="pkg__hero-left"
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -272,6 +273,83 @@ export default function PackagesPage() {
                     {t.name}
                   </a>
                 ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="pkg__hero-right"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+            >
+              <div className="pkg__art">
+                {/* SVG path connecting the 4 nodes in an S-shape */}
+                <svg className="pkg__art-path" viewBox="0 0 280 280" fill="none">
+                  <path
+                    d="M 42 42 L 238 42 L 238 238 L 42 238 Z"
+                    stroke="rgba(255,255,255,0.08)"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    fill="none"
+                  />
+                  {/* Animated dot traveling the path */}
+                  <circle r="4" fill="#0c8c81" filter="url(#glow)">
+                    <animateMotion
+                      dur="4.5s"
+                      repeatCount="indefinite"
+                      path="M 42 42 L 238 42 L 238 238 L 42 238 Z"
+                    />
+                  </circle>
+                  <defs>
+                    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                      <feGaussianBlur stdDeviation="4" result="blur" />
+                      <feMerge>
+                        <feMergeNode in="blur" />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
+                  </defs>
+                </svg>
+
+                {/* Step 1: Code — top left */}
+                <div className="pkg__art-step pkg__art-step--1">
+                  <div className="pkg__art-icon">
+                    <span className="pkg__art-bracket">&lt;/&gt;</span>
+                  </div>
+                  <span className="pkg__art-label">Code</span>
+                </div>
+
+                {/* Step 2: Build — top right (package box) */}
+                <div className="pkg__art-step pkg__art-step--2">
+                  <div className="pkg__art-icon pkg__art-icon--box">
+                    <div className="pkg__art-box-flap" />
+                    <div className="pkg__art-box-body" />
+                  </div>
+                  <span className="pkg__art-label">Build</span>
+                </div>
+
+                {/* Step 3: Deploy — bottom right (globe) */}
+                <div className="pkg__art-step pkg__art-step--3">
+                  <div className="pkg__art-icon pkg__art-icon--globe">
+                    <div className="pkg__art-globe-ring pkg__art-globe-ring--h" />
+                    <div className="pkg__art-globe-ring pkg__art-globe-ring--v" />
+                    <div className="pkg__art-globe-dot" />
+                  </div>
+                  <span className="pkg__art-label">Deploy</span>
+                </div>
+
+                {/* Step 4: Yours — bottom left (screen) */}
+                <div className="pkg__art-step pkg__art-step--4">
+                  <div className="pkg__art-icon pkg__art-icon--screen">
+                    <div className="pkg__art-screen-bar" />
+                    <div className="pkg__art-screen-body">
+                      <div className="pkg__art-screen-line" />
+                      <div className="pkg__art-screen-line pkg__art-screen-line--short" />
+                    </div>
+                  </div>
+                  <span className="pkg__art-label">Yours</span>
+                </div>
               </div>
             </motion.div>
           </div>
