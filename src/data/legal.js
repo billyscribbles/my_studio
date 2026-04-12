@@ -1,8 +1,4 @@
-import { useEffect } from 'react'
-import { X } from 'lucide-react'
-import './LegalModal.css'
-
-const PRIVACY = {
+export const PRIVACY = {
   title: 'Privacy Policy',
   updated: '8 April 2025',
   content: [
@@ -45,7 +41,7 @@ const PRIVACY = {
   ],
 }
 
-const TERMS = {
+export const TERMS = {
   title: 'Terms of Service',
   updated: '8 April 2025',
   content: [
@@ -98,47 +94,4 @@ const TERMS = {
       body: `Questions about these Terms? Contact us at onraistudio@gmail.com.`,
     },
   ],
-}
-
-export default function LegalModal({ type, onClose }) {
-  const doc = type === 'privacy' ? PRIVACY : TERMS
-
-  useEffect(() => {
-    document.body.style.overflow = 'hidden'
-    const handleKey = (e) => { if (e.key === 'Escape') onClose() }
-    window.addEventListener('keydown', handleKey)
-    return () => {
-      document.body.style.overflow = ''
-      window.removeEventListener('keydown', handleKey)
-    }
-  }, [onClose])
-
-  return (
-    <div className="legal-overlay" onClick={onClose} role="dialog" aria-modal="true" aria-label={doc.title}>
-      <div className="legal-modal" onClick={(e) => e.stopPropagation()}>
-        <div className="legal-modal__header">
-          <div>
-            <h2 className="legal-modal__title">{doc.title}</h2>
-            <p className="legal-modal__updated">Last updated: {doc.updated}</p>
-          </div>
-          <button className="legal-modal__close" onClick={onClose} aria-label="Close">
-            <X size={20} strokeWidth={2} />
-          </button>
-        </div>
-
-        <div className="legal-modal__body">
-          {doc.content.map((section) => (
-            <div key={section.heading} className="legal-modal__section">
-              <h3 className="legal-modal__section-heading">{section.heading}</h3>
-              <div className="legal-modal__section-body">
-                {section.body.split('\n\n').map((para, i) => (
-                  <p key={i} dangerouslySetInnerHTML={{ __html: para.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br/>') }} />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  )
 }

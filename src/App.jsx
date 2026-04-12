@@ -4,15 +4,40 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 
-const AboutPage = lazy(() => import('./pages/AboutPage'))
-const ServicesPage = lazy(() => import('./pages/ServicesPage'))
-const PortfolioPage = lazy(() => import('./pages/PortfolioPage'))
-const ContactPage = lazy(() => import('./pages/ContactPage'))
-const AIPage = lazy(() => import('./pages/AIPage'))
-const PackagesPage = lazy(() => import('./pages/PackagesPage'))
-const TheClimbPage = lazy(() => import('./pages/TheClimbPage'))
-const TheClimbStepPage = lazy(() => import('./pages/TheClimbStepPage'))
-const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
+// Retry a lazy import once, then force a full reload if the chunk is gone.
+// Prevents white-page on stale tabs after a redeploy (ChunkLoadError).
+const RELOAD_KEY = 'onrai:chunk-reloaded'
+function lazyWithRetry(factory) {
+  return lazy(() =>
+    factory().catch((err) => {
+      const alreadyReloaded = sessionStorage.getItem(RELOAD_KEY) === '1'
+      if (!alreadyReloaded) {
+        sessionStorage.setItem(RELOAD_KEY, '1')
+        window.location.reload()
+        return new Promise(() => {}) // suspend until reload
+      }
+      sessionStorage.removeItem(RELOAD_KEY)
+      throw err
+    })
+  )
+}
+
+if (typeof window !== 'undefined') {
+  window.addEventListener('load', () => {
+    sessionStorage.removeItem(RELOAD_KEY)
+  })
+}
+
+const AboutPage = lazyWithRetry(() => import('./pages/AboutPage'))
+const ServicesPage = lazyWithRetry(() => import('./pages/ServicesPage'))
+const PortfolioPage = lazyWithRetry(() => import('./pages/PortfolioPage'))
+const ContactPage = lazyWithRetry(() => import('./pages/ContactPage'))
+const AIPage = lazyWithRetry(() => import('./pages/AIPage'))
+const PackagesPage = lazyWithRetry(() => import('./pages/PackagesPage'))
+const TheClimbPage = lazyWithRetry(() => import('./pages/TheClimbPage'))
+const TheClimbStepPage = lazyWithRetry(() => import('./pages/TheClimbStepPage'))
+const LegalPage = lazyWithRetry(() => import('./pages/LegalPage'))
+const NotFoundPage = lazyWithRetry(() => import('./pages/NotFoundPage'))
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -43,6 +68,8 @@ export default function App() {
           <Route path="/packages" element={<PackagesPage />} />
           <Route path="/the-climb" element={<TheClimbPage />} />
           <Route path="/the-climb/:slug" element={<TheClimbStepPage />} />
+          <Route path="/privacy" element={<LegalPage type="privacy" />} />
+          <Route path="/terms" element={<LegalPage type="terms" />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>

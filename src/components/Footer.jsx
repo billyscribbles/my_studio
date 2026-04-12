@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Linkedin, Instagram } from "lucide-react";
 
@@ -18,7 +17,6 @@ function openCalendly() {
   script.onload = () => window.Calendly?.initPopupWidget({ url: CALENDLY_URL });
   document.head.appendChild(script);
 }
-import LegalModal from "./LegalModal";
 import "./Footer.css";
 
 const navLinks = [
@@ -30,8 +28,6 @@ const navLinks = [
 ];
 
 export default function Footer() {
-  const [legal, setLegal] = useState(null);
-
   return (
     <footer className="footer">
       <div className="footer__cta-strip">
@@ -144,22 +140,14 @@ export default function Footer() {
           © 2025 Onrai Studio · ABN 77 808 784 890 · Built in Australia.
         </span>
         <div className="footer__legal">
-          <button
-            onClick={() => setLegal("privacy")}
-            className="footer__legal-btn"
-          >
+          <Link to="/privacy" className="footer__legal-btn">
             Privacy Policy
-          </button>
-          <button
-            onClick={() => setLegal("terms")}
-            className="footer__legal-btn"
-          >
+          </Link>
+          <Link to="/terms" className="footer__legal-btn">
             Terms
-          </button>
+          </Link>
         </div>
       </div>
-
-      {legal && <LegalModal type={legal} onClose={() => setLegal(null)} />}
     </footer>
   );
 }
