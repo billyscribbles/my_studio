@@ -110,7 +110,7 @@ export default function PortfolioPage() {
             <p className="portfolio-page__eyebrow">Our Work</p>
             <h1 className="portfolio-page__title">Projects we're proud of.</h1>
             <p className="portfolio-page__subtitle">
-              From Melbourne tradies to Australian SaaS startups — a selection of websites and digital experiences we've built and shipped.
+              Real builds for real businesses — starting with our latest case study for Melbourne's Honda performance specialists, Elusive Racing.
             </p>
           </motion.div>
 
@@ -154,6 +154,63 @@ export default function PortfolioPage() {
                     </div>
                   ))}
                 </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Featured Case Study */}
+      <section className="portfolio-page__featured">
+        <div className="portfolio-page__featured-inner">
+          <motion.div
+            className="portfolio-page__featured-card"
+            initial={{ opacity: 0, y: 32 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <Link to="/portfolio/elusive-racing" className="portfolio-page__featured-media" aria-label="View Elusive Racing case study">
+              <img
+                src="/images/portfolio/elusive-racing/home-hero.png"
+                alt="Elusive Racing homepage — Honda Performance Specialists"
+                loading="eager"
+              />
+              <span className="portfolio-page__featured-badge">Featured Case Study</span>
+            </Link>
+            <div className="portfolio-page__featured-body">
+              <p className="portfolio-page__featured-eyebrow">
+                <span className="portfolio-page__featured-dot" />
+                Latest Work · Melbourne, VIC
+              </p>
+              <h2 className="portfolio-page__featured-title">Elusive Racing</h2>
+              <p className="portfolio-page__featured-desc">
+                An end-to-end build for Melbourne's Honda performance specialists — retail eshop,
+                wholesale portal, and workshop booking unified under one brand.
+              </p>
+              <div className="portfolio-page__featured-stats">
+                <div><strong>150+</strong><span>Brands</span></div>
+                <div><strong>4,600+</strong><span>Products</span></div>
+                <div><strong>B2C + B2B</strong><span>Channels</span></div>
+              </div>
+              <div className="portfolio-page__featured-pills">
+                <span>eCommerce</span>
+                <span>Wholesale Portal</span>
+                <span>Workshop Booking</span>
+                <span>Mobile-First</span>
+              </div>
+              <div className="portfolio-page__featured-ctas">
+                <Link to="/portfolio/elusive-racing" className="portfolio-page__featured-btn">
+                  View Case Study →
+                </Link>
+                <a
+                  href="https://elusive-racing-production-d535.up.railway.app/"
+                  className="portfolio-page__featured-btn portfolio-page__featured-btn--ghost"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live Site ↗
+                </a>
               </div>
             </div>
           </motion.div>
