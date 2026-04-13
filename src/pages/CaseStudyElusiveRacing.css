@@ -147,7 +147,8 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.case-elusive__shot-inner img {
+.case-elusive__shot-inner img,
+.case-elusive__shot-inner video {
   display: block;
   width: 100%;
   height: auto;

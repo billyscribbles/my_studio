@@ -171,12 +171,17 @@ export default function PortfolioPage() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
             <Link to="/portfolio/elusive-racing" className="portfolio-page__featured-media" aria-label="View Elusive Racing case study">
-              <img
-                src="/images/portfolio/elusive-racing/home-hero.png"
-                alt="Elusive Racing homepage — Honda Performance Specialists"
-                loading="eager"
+              <video
+                src="/images/portfolio/elusive-racing/hero-loop.mp4"
+                poster="/images/portfolio/elusive-racing/home-hero.png"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                aria-label="Elusive Racing homepage — Honda Performance Specialists"
               />
-              <span className="portfolio-page__featured-badge">Featured Case Study</span>
+              <span className="portfolio-page__featured-badge">Featured Work</span>
             </Link>
             <div className="portfolio-page__featured-body">
               <p className="portfolio-page__featured-eyebrow">

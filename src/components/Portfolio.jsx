@@ -4,18 +4,32 @@ import './Portfolio.css'
 
 const projects = [
   {
-    tag: 'eCommerce · Case Study',
+    tag: 'eCommerce · Featured Work',
     name: 'Elusive Racing',
-    description: "Melbourne's Honda performance specialists — retail eshop, wholesale portal, and workshop booking.",
+    description: "Melbourne's Honda performance specialists — retail eshop, wholesale portal, and workshop booking, all unified under one brand.",
     to: '/portfolio/elusive-racing',
-    image: '/images/portfolio/elusive-racing/home-hero.png',
+    video: '/images/portfolio/elusive-racing/hero-loop.mp4',
+    poster: '/images/portfolio/elusive-racing/home-hero.png',
     featured: true,
   },
-  { tag: 'SaaS', name: 'Startup MVP', to: '/portfolio' },
-  { tag: 'Trade', name: 'Service Business Site', to: '/portfolio' },
-  { tag: 'Healthcare', name: 'Clinic Booking Platform', to: '/portfolio' },
-  { tag: 'Hospitality', name: 'Restaurant & Events', to: '/portfolio' },
-  { tag: 'Consulting', name: 'Professional Services Portal', to: '/portfolio' },
+  {
+    tag: 'SaaS',
+    name: 'Northwind Analytics',
+    description: 'B2B analytics dashboard with real-time reporting and onboarding flow.',
+    to: '/portfolio',
+  },
+  {
+    tag: 'Trade',
+    name: 'Apex Plumbing Co.',
+    description: 'Lead-gen site for a Melbourne tradie with Google Business and instant booking.',
+    to: '/portfolio',
+  },
+  {
+    tag: 'Hospitality',
+    name: 'Marlowe & Vine',
+    description: 'Showcase site for a restaurant group with reservations and event enquiries.',
+    to: '/portfolio',
+  },
 ]
 
 export default function Portfolio() {
@@ -42,18 +56,34 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
-              style={p.image ? { backgroundImage: `linear-gradient(180deg, rgba(17,17,19,0.15) 0%, rgba(17,17,19,0.85) 100%), url(${p.image})` } : undefined}
             >
               <Link to={p.to} className="portfolio-card__link" aria-label={`View ${p.name}`}>
-                <div className="portfolio-card__tag">{p.tag}</div>
-                <div className="portfolio-card__bottom">
-                  <div>
-                    <span className="portfolio-card__name">{p.name}</span>
-                    {p.description && (
-                      <p className="portfolio-card__desc">{p.description}</p>
-                    )}
+                {p.featured && p.video && (
+                  <div className="portfolio-card__media">
+                    <video
+                      src={p.video}
+                      poster={p.poster}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
+                      aria-label={`${p.name} preview`}
+                    />
+                    <span className="portfolio-card__badge">Featured Work</span>
                   </div>
-                  <span className="portfolio-card__arrow">→</span>
+                )}
+                <div className="portfolio-card__content">
+                  <div className="portfolio-card__tag">{p.tag}</div>
+                  <div className="portfolio-card__bottom">
+                    <div>
+                      <span className="portfolio-card__name">{p.name}</span>
+                      {p.description && (
+                        <p className="portfolio-card__desc">{p.description}</p>
+                      )}
+                    </div>
+                    <span className="portfolio-card__arrow">→</span>
+                  </div>
                 </div>
               </Link>
             </motion.div>

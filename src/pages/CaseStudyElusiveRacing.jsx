@@ -124,10 +124,16 @@ export default function CaseStudyElusiveRacing() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7, ease: EASE }}
         >
-          <img
-            src="/images/portfolio/elusive-racing/home-hero.png"
-            alt="Elusive Racing homepage hero — Honda Performance Specialists"
-            loading="eager"
+          <video
+            className="case-elusive__hero-video"
+            src="/images/portfolio/elusive-racing/hero-loop.mp4"
+            poster="/images/portfolio/elusive-racing/home-hero.png"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label="Elusive Racing homepage hero — Honda Performance Specialists"
           />
         </motion.div>
       </section>
