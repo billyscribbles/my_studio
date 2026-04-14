@@ -34,7 +34,10 @@
 }
 
 html {
-  /* overflow-x must stay unset so position: sticky on the navbar works */
+  /* clip (not hidden) — blocks horizontal scroll from off-screen Framer Motion
+     initial transforms (x: 40, etc.) without creating a scroll container,
+     so position: sticky on the navbar still works. */
+  overflow-x: clip;
 }
 
 @media (prefers-reduced-motion: no-preference) {
