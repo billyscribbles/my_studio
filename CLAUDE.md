@@ -5,6 +5,12 @@
 React + Vite + Framer Motion landing site for Onrai Studio (AU web agency).
 Routes: `/`, `/services`, `/portfolio`, `/ai`, `/about`, `/contact`
 
+### What the business does
+
+- **AI-accelerated web builds.** We design and ship real, production code websites fast by using AI tooling across both design and development — not templates, not page builders.
+- **Custom AI & feature integration.** Any feature, interaction, or design you want is built as custom code, including embedded AI (chat, automation, content, search, internal tools).
+- **Fast, reliable, fairly priced, experienced.** Short turnaround, dependable delivery, honest pricing, and years of hands-on engineering experience behind every build.
+
 ---
 
 ## CSS Design System
