@@ -19,6 +19,7 @@ const projects = [
     to: '/portfolio/soft-florals',
     image: '/images/portfolio/soft-florals/home-hero.png',
     featured: true,
+    stacked: true,
   },
   {
     tag: 'Trade',
@@ -53,7 +54,7 @@ export default function Portfolio() {
           {projects.map((p, i) => (
             <motion.div
               key={p.name}
-              className={`portfolio-card${p.featured ? ' portfolio-card--featured' : ''}`}
+              className={`portfolio-card${p.featured ? ' portfolio-card--featured' : ''}${p.stacked ? ' portfolio-card--stacked' : ''}`}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

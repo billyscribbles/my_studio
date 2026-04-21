@@ -66,6 +66,22 @@
   align-items: center;
 }
 
+.portfolio-card--featured.portfolio-card--stacked .portfolio-card__link {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.portfolio-card--stacked .portfolio-card__media {
+  aspect-ratio: 16 / 10;
+}
+
+.portfolio-card--stacked .portfolio-card__content {
+  gap: 12px;
+  padding: 0 4px 4px;
+}
+
 .portfolio-card__media {
   position: relative;
   display: block;
