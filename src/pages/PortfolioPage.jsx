@@ -7,6 +7,7 @@ import './PortfolioPage.css'
 const projects = [
   {
     id: 1,
+    isCategory: true,
     tag: 'eCommerce',
     name: 'Headless Shopify Rebuild',
     description: 'Full storefront rebuild with headless Shopify, custom cart UX, and 40% faster load times.',
@@ -18,7 +19,34 @@ const projects = [
     dark: true,
   },
   {
+    id: 7,
+    tag: 'eCommerce',
+    name: 'Elusive Racing',
+    description: "Melbourne's Honda performance specialists — retail + wholesale + workshop booking in one build.",
+    services: ['Web Design', 'Development', 'eCommerce'],
+    year: '2024',
+    location: 'Melbourne, VIC',
+    color: '#0c8c81',
+    bg: 'var(--color-bg-card)',
+    dark: false,
+    link: '/portfolio/elusive-racing',
+  },
+  {
+    id: 8,
+    tag: 'eCommerce',
+    name: 'Soft Florals',
+    description: 'Editorial storefront for a handmade forever-flower studio — brand, collection, care guide, custom orders.',
+    services: ['Web Design', 'Development', 'eCommerce'],
+    year: '2024',
+    location: 'Melbourne, VIC',
+    color: '#0c8c81',
+    bg: 'var(--color-accent-light)',
+    dark: false,
+    link: '/portfolio/soft-florals',
+  },
+  {
     id: 2,
+    isCategory: true,
     tag: 'SaaS',
     name: 'Startup MVP',
     description: 'End-to-end MVP for a B2B SaaS startup — from landing page to dashboard onboarding flow.',
@@ -31,6 +59,7 @@ const projects = [
   },
   {
     id: 3,
+    isCategory: true,
     tag: 'Trade',
     name: 'Service Business Site',
     description: 'Lead-gen website for a local tradie with Google Business integration and booking form.',
@@ -43,6 +72,7 @@ const projects = [
   },
   {
     id: 4,
+    isCategory: true,
     tag: 'Healthcare',
     name: 'Clinic Booking Platform',
     description: 'Patient-facing booking platform for a multi-location allied health clinic.',
@@ -55,6 +85,7 @@ const projects = [
   },
   {
     id: 5,
+    isCategory: true,
     tag: 'Hospitality',
     name: 'Restaurant & Events',
     description: 'Showcase site for a restaurant group with integrated reservations and event enquiry flow.',
@@ -67,6 +98,7 @@ const projects = [
   },
   {
     id: 6,
+    isCategory: true,
     tag: 'Consulting',
     name: 'Professional Services Portal',
     description: 'Corporate website with resource library, team pages, and gated content download forms.',
@@ -77,15 +109,47 @@ const projects = [
     bg: 'var(--color-accent)',
     dark: true,
   },
+  {
+    id: 9,
+    isCategory: true,
+    tag: 'Manufacturing',
+    name: 'Product Catalogue & Dealer Portal',
+    description: 'B2B product catalogues with spec sheets, dealer locators, and enquiry forms for Australian manufacturers.',
+    services: ['Web Design', 'Development'],
+    year: '2024',
+    location: 'Melbourne, VIC',
+    color: '#475569',
+    bg: '#e2e8f0',
+    dark: false,
+  },
+  {
+    id: 10,
+    tag: 'Manufacturing',
+    name: 'Sahara Caravans',
+    description: "Rugged marketing site for a Campbellfield caravan manufacturer — four decades of Australian-made craftsmanship.",
+    services: ['Web Design', 'Development', 'Brand'],
+    year: '2024',
+    location: 'Campbellfield, VIC',
+    color: '#475569',
+    bg: 'var(--color-bg-card)',
+    dark: false,
+    link: '/portfolio/sahara-caravans',
+  },
+  { id: 101, tag: 'SaaS', isComingSoon: true },
+  { id: 102, tag: 'Trade', isComingSoon: true },
+  { id: 103, tag: 'Healthcare', isComingSoon: true },
+  { id: 104, tag: 'Hospitality', isComingSoon: true },
+  { id: 105, tag: 'Consulting', isComingSoon: true },
+  { id: 106, tag: 'Manufacturing', isComingSoon: true },
 ]
 
-const categories = ['All', 'eCommerce', 'SaaS', 'Trade', 'Healthcare', 'Hospitality', 'Consulting']
+const categories = ['All', 'eCommerce', 'SaaS', 'Trade', 'Healthcare', 'Hospitality', 'Consulting', 'Manufacturing']
 
 export default function PortfolioPage() {
   const [activeFilter, setActiveFilter] = useState('All')
 
   const filtered = activeFilter === 'All'
-    ? projects
+    ? projects.filter((p) => p.isCategory)
     : projects.filter((p) => p.tag === activeFilter)
 
   return (
@@ -285,36 +349,90 @@ export default function PortfolioPage() {
           </motion.div>
 
           <div className="portfolio-page__grid">
-            {filtered.map((p) => (
-              <div
-                key={p.id}
-                className="pf-card"
-                style={{ background: p.bg }}
-              >
-                <div className="pf-card__top">
-                  <span className="pf-card__tag" style={{ color: p.dark ? '#5eead4' : p.color, background: p.dark ? 'rgba(13,148,136,0.2)' : undefined }}>
-                    {p.tag}
-                  </span>
-                </div>
-                <div className="pf-card__body">
-                  <h3 className={`pf-card__name${p.dark ? ' pf-card__name--dark' : ''}`}>{p.name}</h3>
-                  <p className={`pf-card__desc${p.dark ? ' pf-card__desc--dark' : ''}`}>{p.description}</p>
-                </div>
-                <div className="pf-card__footer">
-                  <div className="pf-card__services">
-                    {p.services.map((s) => (
-                      <span key={s} className={`pf-card__service-tag${p.dark ? ' pf-card__service-tag--dark' : ''}`}>{s}</span>
-                    ))}
+            {filtered.map((p) => {
+              if (p.isComingSoon) {
+                return (
+                  <div key={p.id} className="pf-card pf-card--coming-soon">
+                    <div className="pf-card__top">
+                      <span className="pf-card__tag">{p.tag}</span>
+                    </div>
+                    <div className="pf-card__coming-soon-body">
+                      <span className="pf-card__coming-soon-icon" aria-hidden="true">✦</span>
+                      <h3 className="pf-card__coming-soon-title">Coming soon</h3>
+                      <p className="pf-card__coming-soon-desc">
+                        Be our first {p.tag} project.
+                      </p>
+                    </div>
                   </div>
-                  <div className="pf-card__meta">
-                    {p.location && (
-                      <span className={`pf-card__location${p.dark ? ' pf-card__location--dark' : ''}`}>{p.location}</span>
-                    )}
-                    <span className={`pf-card__year${p.dark ? ' pf-card__year--dark' : ''}`}>{p.year}</span>
+                )
+              }
+
+              const inner = (
+                <>
+                  <div className="pf-card__top">
+                    <span className="pf-card__tag" style={{ color: p.dark ? '#5eead4' : p.color, background: p.dark ? 'rgba(13,148,136,0.2)' : undefined }}>
+                      {p.tag}
+                    </span>
                   </div>
+                  <div className="pf-card__body">
+                    <h3 className={`pf-card__name${p.dark ? ' pf-card__name--dark' : ''}`}>{p.name}</h3>
+                    <p className={`pf-card__desc${p.dark ? ' pf-card__desc--dark' : ''}`}>{p.description}</p>
+                  </div>
+                  <div className="pf-card__footer">
+                    <div className="pf-card__services">
+                      {p.services.map((s) => (
+                        <span key={s} className={`pf-card__service-tag${p.dark ? ' pf-card__service-tag--dark' : ''}`}>{s}</span>
+                      ))}
+                    </div>
+                    <div className="pf-card__meta">
+                      {p.location && (
+                        <span className={`pf-card__location${p.dark ? ' pf-card__location--dark' : ''}`}>{p.location}</span>
+                      )}
+                      <span className={`pf-card__year${p.dark ? ' pf-card__year--dark' : ''}`}>{p.year}</span>
+                    </div>
+                  </div>
+                </>
+              )
+
+              if (p.link) {
+                return (
+                  <Link
+                    key={p.id}
+                    to={p.link}
+                    className="pf-card pf-card--linked"
+                    style={{ background: p.bg }}
+                    aria-label={`View ${p.name} project`}
+                  >
+                    {inner}
+                  </Link>
+                )
+              }
+
+              if (p.isCategory) {
+                return (
+                  <button
+                    key={p.id}
+                    type="button"
+                    className="pf-card pf-card--filter"
+                    style={{ background: p.bg }}
+                    onClick={() => setActiveFilter(p.tag)}
+                    aria-label={`Filter portfolio by ${p.tag}`}
+                  >
+                    {inner}
+                  </button>
+                )
+              }
+
+              return (
+                <div
+                  key={p.id}
+                  className="pf-card"
+                  style={{ background: p.bg }}
+                >
+                  {inner}
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>

@@ -20,12 +20,16 @@ const projects = [
     image: '/images/portfolio/soft-florals/home-hero.png',
     featured: true,
     stacked: true,
+    badge: 'E-commerce',
   },
   {
-    tag: 'Trade',
-    name: 'Apex Plumbing Co.',
-    description: 'Lead-gen site for a Melbourne tradie with Google Business and instant booking.',
-    to: '/portfolio',
+    tag: 'Manufacturing · Project',
+    name: 'Sahara Caravans',
+    description: 'Brand-led site for an Australian caravan builder — model showcase, spec details, and enquiry flow.',
+    to: '/portfolio/sahara-caravans',
+    image: '/images/portfolio/sahara-caravans/home-hero.png',
+    featured: true,
+    stacked: true,
   },
   {
     tag: 'Hospitality',
@@ -81,7 +85,7 @@ export default function Portfolio() {
                         loading="lazy"
                       />
                     )}
-                    <span className="portfolio-card__badge">Featured Work</span>
+                    <span className="portfolio-card__badge">{p.badge || 'Featured Work'}</span>
                   </div>
                 )}
                 <div className="portfolio-card__content">
