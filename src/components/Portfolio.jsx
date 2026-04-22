@@ -20,7 +20,7 @@ const projects = [
     image: '/images/portfolio/soft-florals/home-hero.png',
     featured: true,
     stacked: true,
-    badge: 'E-commerce',
+    bordered: true,
   },
   {
     tag: 'Manufacturing · Project',
@@ -87,7 +87,7 @@ export default function Portfolio() {
             >
               <Link to={p.to} className="portfolio-card__link" aria-label={`View ${p.name}`}>
                 {p.featured && (p.video || p.image) && (
-                  <div className="portfolio-card__media">
+                  <div className={`portfolio-card__media${p.bordered ? ' portfolio-card__media--bordered' : ''}`}>
                     {p.video ? (
                       <video
                         src={p.video}
@@ -106,7 +106,6 @@ export default function Portfolio() {
                         loading="lazy"
                       />
                     )}
-                    <span className="portfolio-card__badge">{p.badge || 'Featured Work'}</span>
                   </div>
                 )}
                 <div className="portfolio-card__content">

@@ -93,6 +93,11 @@
   flex-shrink: 0;
 }
 
+.portfolio-card__media--bordered {
+  outline: 0.5px solid rgba(24, 24, 27, 0.08);
+  outline-offset: -0.5px;
+}
+
 .portfolio-card__media video,
 .portfolio-card__media img {
   display: block;

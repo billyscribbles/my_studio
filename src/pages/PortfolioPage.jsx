@@ -238,7 +238,6 @@ export default function PortfolioPage() {
                 preload="metadata"
                 aria-label="Elusive Racing homepage — Honda Performance Specialists"
               />
-              <span className="portfolio-page__featured-badge">Featured Work</span>
             </Link>
             <div className="portfolio-page__featured-body">
               <p className="portfolio-page__featured-eyebrow">
@@ -278,13 +277,12 @@ export default function PortfolioPage() {
           </div>
 
           <div className="portfolio-page__featured-card">
-            <Link to="/portfolio/soft-florals" className="portfolio-page__featured-media" aria-label="View Soft Florals project">
+            <Link to="/portfolio/soft-florals" className="portfolio-page__featured-media portfolio-page__featured-media--bordered" aria-label="View Soft Florals project">
               <img
                 src="/images/portfolio/soft-florals/home-hero.png"
                 alt="Soft Florals homepage — handmade forever flowers"
                 loading="lazy"
               />
-              <span className="portfolio-page__featured-badge">Project</span>
             </Link>
             <div className="portfolio-page__featured-body">
               <p className="portfolio-page__featured-eyebrow">

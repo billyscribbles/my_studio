@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import './Stats.css'
 
 const stats = [
-  { value: '50+', label: 'Local Businesses Online' },
+  { value: '5+', label: 'Local Businesses Online' },
   { value: 'Top 3', label: 'Google Rankings Achieved' },
   { value: '2 Weeks', label: 'Average Launch Time' },
   { value: 'AU', label: 'Based & Operated' },
