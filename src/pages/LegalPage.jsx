@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Helmet } from 'react-helmet-async'
 import { PRIVACY, TERMS, AGREEMENT } from '../data/legal'
@@ -34,6 +36,16 @@ function renderParagraph(para, i) {
 export default function LegalPage({ type }) {
   const doc = type === 'privacy' ? PRIVACY : type === 'agreement' ? AGREEMENT : TERMS
   const meta = META[type]
+  const { hash } = useLocation()
+
+  useEffect(() => {
+    if (hash) {
+      const el = document.getElementById(hash.slice(1))
+      if (el) {
+        setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100)
+      }
+    }
+  }, [hash])
 
   return (
     <main className="legal-page">
@@ -64,7 +76,7 @@ export default function LegalPage({ type }) {
         <article className="legal-page__article">
           {doc.content.map((section) => (
             <div key={section.heading} className="legal-page__block">
-              <h2 className="legal-page__heading">{section.heading}</h2>
+              <h2 id={section.slug} className="legal-page__heading">{section.heading}</h2>
               <div className="legal-page__body">
                 {section.body.split('\n\n').map(renderParagraph)}
               </div>
