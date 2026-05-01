@@ -18,32 +18,32 @@ const features = [
   {
     icon: '⚡',
     title: 'Full-Stack eShop',
-    body: 'Search, multi-level filtering, live stock, variants, cart, and checkout with Afterpay, Apple Pay, Google Pay, and Zip — built from the ground up.',
+    body: 'Search, filtering, live stock, variants, and checkout with Afterpay, Apple Pay, Google Pay, and Zip.',
   },
   {
     icon: '🔐',
     title: 'Wholesale Portal',
-    body: 'Separate B2B channel with its own registration and login flow, sitting alongside retail without leaking pricing or stock rules between them.',
+    body: 'Separate B2B channel with its own login, pricing, and stock rules.',
   },
   {
     icon: '🔧',
     title: 'Services + Booking',
-    body: 'Three workshop service tiers with detailed scope, FAQs, and a calendar-based booking flow routed straight to the workshop.',
+    body: 'Three workshop tiers with detailed scope and a calendar booking flow.',
   },
   {
     icon: '📦',
     title: 'Product Depth',
-    body: 'Every product page includes SKU, live stock, variants, included/optional/required parts, shipping dimensions, vehicle fitment, and related parts.',
+    body: 'SKU, live stock, variants, fitment, shipping dimensions, and related parts on every page.',
   },
   {
     icon: '🏁',
     title: 'Vehicle Finder',
-    body: 'Make / model / year lookup on the homepage and shop, so enthusiasts land on parts that actually fit their build.',
+    body: 'Make / model / year lookup so buyers land on parts that fit.',
   },
   {
     icon: '📱',
     title: 'Mobile-First',
-    body: 'Every template — hero, shop grid, product detail, services, booking — verified end-to-end at phone widths, because that is where the buyers are.',
+    body: 'Every template verified end-to-end at phone widths.',
   },
 ]
 
@@ -55,7 +55,7 @@ const gallery = [
   { src: '/images/portfolio/elusive-racing/services-page.png', caption: 'Services page — detailed scope and booking CTA.' },
   { src: '/images/portfolio/elusive-racing/brands-grid.png', caption: '150+ brand directory, linked to filtered shop.' },
   { src: '/images/portfolio/elusive-racing/about.png', caption: 'About page — brand story and workshop identity.' },
-  { src: '/images/portfolio/elusive-racing/contact.png', caption: 'Contact form with category routing to the right team.' },
+  { src: '/images/portfolio/elusive-racing/contact.png', caption: 'Contact form routed to the right team.' },
 ]
 
 const techHighlights = [
@@ -70,27 +70,27 @@ const techHighlights = [
 const adminGallery = [
   {
     src: '/images/portfolio/elusive-racing/admin-dashboard.png',
-    caption: 'One dashboard for the whole business — 4,700+ products, live stock and status, no WooCommerce in sight.',
+    caption: 'One dashboard, 4,700+ products, live stock and status.',
   },
   {
     src: '/images/portfolio/elusive-racing/admin-light.png',
-    caption: '22,000+ orders searchable and filterable — staff can find any customer, status, or payment in seconds.',
+    caption: '22,000+ orders, searchable and filterable in seconds.',
   },
   {
     src: '/images/portfolio/elusive-racing/admin-dark.png',
-    caption: 'Built-in dark mode for late-night listings, restocks, and wholesale nights — one click and the whole admin flips.',
+    caption: 'Built-in dark mode for late nights — one click flips the admin.',
   },
   {
     src: '/images/portfolio/elusive-racing/admin-add-product.png',
-    caption: 'Editing a product — brand, SKU, fitment, categories, pricing, and inventory all on one screen.',
+    caption: 'Brand, SKU, fitment, categories, and pricing on one screen.',
   },
   {
     src: '/images/portfolio/elusive-racing/admin-order-detail.png',
-    caption: 'Opening an order: line items, customer, billing, status, notes, and shipment tracking in one tray.',
+    caption: 'Line items, customer, billing, status, and tracking in one tray.',
   },
   {
     src: '/images/portfolio/elusive-racing/admin-promo-banner.png',
-    caption: 'Scheduling a promo banner — staff ship storewide campaigns without touching code or calling a developer.',
+    caption: 'Schedule storewide promos without touching code.',
   },
 ]
 
@@ -128,9 +128,8 @@ export default function CaseStudyElusiveRacing() {
             </p>
             <h1 className="case-elusive__title">Elusive Racing</h1>
             <p className="case-elusive__lead">
-              An end-to-end build for Melbourne's Honda performance specialists — retail eshop, wholesale
-              portal, and workshop booking unified under one brand. Ten years of real-world workshop
-              expertise, now running on a site that can keep up.
+              End-to-end build for Melbourne's Honda performance specialists — retail eshop, wholesale
+              portal, and workshop booking, unified.
             </p>
             <div className="case-elusive__hero-ctas">
               <a href={LIVE_URL} className="case-elusive__btn-primary" target="_blank" rel="noopener noreferrer">
@@ -181,32 +180,6 @@ export default function CaseStudyElusiveRacing() {
               <div className="case-elusive__stat-label">{s.label}</div>
             </motion.div>
           ))}
-        </div>
-      </section>
-
-      {/* The Brief */}
-      <section className="case-elusive__section">
-        <div className="case-elusive__section-inner">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, ease: EASE }}
-          >
-            <p className="case-elusive__section-eyebrow">The Brief</p>
-            <h2 className="case-elusive__section-title">Ten years of expertise, one unified storefront.</h2>
-            <p className="case-elusive__copy">
-              Elusive Racing has been Melbourne's Honda performance specialists for over a decade — 150+ brand
-              partnerships, an enormous parts catalogue, an in-house workshop, and a loyal community of builders
-              who know exactly what they want. They needed a site that could carry all of that weight: retail
-              buyers, wholesale accounts, workshop bookings, and enthusiasts researching their next build.
-            </p>
-            <p className="case-elusive__copy">
-              The goal wasn't a template skin. It was a purpose-built platform that could showcase the range,
-              respect the technical depth of the audience, and route every enquiry to the right place — all while
-              staying fast and usable on a phone from the pit lane.
-            </p>
-          </motion.div>
         </div>
       </section>
 
@@ -284,9 +257,8 @@ export default function CaseStudyElusiveRacing() {
             <p className="case-elusive__section-eyebrow case-elusive__section-eyebrow--on-dark">What's Under the Hood</p>
             <h2 className="case-elusive__section-title case-elusive__section-title--on-dark">The staff dashboard that runs the business.</h2>
             <p className="case-elusive__copy case-elusive__copy--on-dark">
-              Elusive Racing doesn't log into WooCommerce anymore. Every product, order, customer, and
-              promo is controlled from a custom admin we built specifically for the way their team works —
-              clean, fast, and friendly enough that every staff member uses it without a manual.
+              Every product, order, customer, and promo runs through a custom admin built for the way the
+              team actually works.
             </p>
           </motion.div>
 
@@ -321,8 +293,7 @@ export default function CaseStudyElusiveRacing() {
             <p className="case-elusive__section-eyebrow">Built for Enthusiasts</p>
             <h2 className="case-elusive__section-title">Engineered for enthusiasts.</h2>
             <p className="case-elusive__copy">
-              Every detail was built for a buyer who already knows the part number. Fast search, deep product
-              data, accurate fitment, and a checkout that doesn't get in the way.
+              Built for a buyer who already knows the part number.
             </p>
             <ul className="case-elusive__list">
               {techHighlights.map((t) => (

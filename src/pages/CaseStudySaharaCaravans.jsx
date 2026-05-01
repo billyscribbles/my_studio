@@ -18,43 +18,43 @@ const features = [
   {
     icon: '🛻',
     title: 'Editorial Brand Hero',
-    body: 'A confident headline, a desert-sunset photograph, and a four-pillar trust strip — 30+ years, family-owned, Australian-made, built in Victoria. The first scroll says everything before a buyer needs a brochure.',
+    body: 'Headline, sunset photograph, and a four-pillar trust strip — the first scroll does the brochure\'s job.',
   },
   {
     icon: '🗺️',
     title: 'Four-Model Range',
-    body: 'Distinct cards for X-Master (off-road), Mirage (on-road), Dune (semi-off-road), and Horizon (family). Each card chip-tags amenities so the differences are scannable in a second.',
+    body: 'Distinct cards for X-Master, Mirage, Dune, and Horizon — chip-tagged amenities make the range scannable.',
   },
   {
     icon: '🛠️',
     title: 'Build Philosophy',
-    body: 'A numbered breakdown of chassis, suspension, water & power, and interior fit-out — the spec talk written for buyers who care, without the brochure-speak.',
+    body: 'Chassis, suspension, water & power, and fit-out — spec talk without the brochure-speak.',
   },
   {
     icon: '🔍',
     title: 'Model Detail Pages',
-    body: 'Per-model pages with Standard / Slide-Out variants, six size tabs, a layout floor plan, category-tabbed feature highlights, and a full technical spec sheet.',
+    body: 'Variants, size tabs, floor plans, feature highlights, and a full spec sheet per model.',
   },
   {
     icon: '📍',
     title: 'Dealer Finder',
-    body: 'Australia-map view of the VIC and WA partner network — see a van up close, or jump through to the full dealer list in one click.',
+    body: 'Australia-map view of the VIC and WA partner network.',
   },
   {
     icon: '📨',
     title: 'Enquiry Flow',
-    body: 'Name, email, phone, state, and model-of-interest, routed to the studio inbox. Formspree-ready (`VITE_FORMSPREE_ID`) the moment the team is ready to take live leads.',
+    body: 'Name, email, phone, state, and model-of-interest, routed to the studio inbox.',
   },
 ]
 
 const gallery = [
   {
     src: '/images/portfolio/sahara-caravans/home-range.png',
-    caption: 'Four vans, one standard of build — chip-tagged amenities make the differences scannable in seconds.',
+    caption: 'Four vans, one standard of build.',
   },
   {
     src: '/images/portfolio/sahara-caravans/model-xmaster.png',
-    caption: 'Model detail page — every variant gets its own hero, story, and full spec table.',
+    caption: 'Model detail — variants, story, and full spec table.',
   },
 ]
 
@@ -111,9 +111,7 @@ export default function CaseStudySaharaCaravans() {
             <h1 className="case-sahara__title">Sahara Caravans</h1>
             <p className="case-sahara__lead">
               A rugged, editorial marketing site for a Campbellfield off-road caravan manufacturer
-              with four decades of chassis-building behind every build. On-road, off-road, or
-              somewhere in between — the site had to carry the brand as confidently as the van
-              carries its owners.
+              with four decades of chassis-building behind every build.
             </p>
             <div className="case-sahara__hero-ctas">
               <a
@@ -165,36 +163,6 @@ export default function CaseStudySaharaCaravans() {
               <div className="case-sahara__stat-label">{s.label}</div>
             </motion.div>
           ))}
-        </div>
-      </section>
-
-      {/* The Brief */}
-      <section className="case-sahara__section">
-        <div className="case-sahara__section-inner">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, ease: EASE }}
-          >
-            <p className="case-sahara__section-eyebrow">The Brief</p>
-            <h2 className="case-sahara__section-title">
-              A manufacturer's story, told the way the van drives.
-            </h2>
-            <p className="case-sahara__copy">
-              Sahara has been building off-road caravans out of Campbellfield for more than three
-              decades. The job was to translate that heritage into a digital storefront that felt
-              just as confident as the chassis under the van — a site that sells the range, routes
-              people to a dealer, and backs every page with the family-owned, Australian-made story.
-            </p>
-            <p className="case-sahara__copy">
-              We built an editorial, photography-led marketing site with four model pages, a
-              build-philosophy walk-through, a dealer finder, and an enquiry flow that drops
-              straight into the studio inbox. Every layout was designed mobile-first and verified at
-              375px — because that's where most caravan buyers do their first homework, on the
-              couch, before they ever ring the workshop.
-            </p>
-          </motion.div>
         </div>
       </section>
 
@@ -272,9 +240,8 @@ export default function CaseStudySaharaCaravans() {
             <p className="case-sahara__section-eyebrow">Built for the Phone</p>
             <h2 className="case-sahara__section-title">Reads as well at 375 pixels.</h2>
             <p className="case-sahara__copy">
-              Caravan buyers do most of their first research from the couch, not the desk. Every
-              section — hero, range, build, dealers, contact — was designed and tested mobile-first,
-              with the desktop layout composed around it.
+              Buyers do their first research from the couch, not the desk — every section was
+              designed mobile-first.
             </p>
             <ul className="case-sahara__list">
               {techHighlights.map((t) => (
