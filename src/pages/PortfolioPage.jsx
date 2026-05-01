@@ -276,47 +276,59 @@ export default function PortfolioPage() {
             </div>
           </div>
 
-          <div className="portfolio-page__featured-card">
-            <Link to="/portfolio/soft-florals" className="portfolio-page__featured-media portfolio-page__featured-media--bordered" aria-label="View Soft Florals project">
-              <img
-                src="/images/portfolio/soft-florals/home-hero.png"
-                alt="Soft Florals homepage — handmade forever flowers"
-                loading="lazy"
-              />
+          <div className="portfolio-page__secondary-grid">
+            <Link to="/portfolio/soft-florals" className="portfolio-page__secondary-card" aria-label="View Soft Florals project">
+              <div className="portfolio-page__secondary-media portfolio-page__secondary-media--bordered">
+                <img
+                  src="/images/portfolio/soft-florals/home-hero.png"
+                  alt="Soft Florals homepage — handmade forever flowers"
+                  loading="lazy"
+                />
+              </div>
+              <div className="portfolio-page__secondary-content">
+                <span className="portfolio-page__secondary-tag">eCommerce · Project</span>
+                <div className="portfolio-page__secondary-bottom">
+                  <div>
+                    <span className="portfolio-page__secondary-name">Soft Florals</span>
+                    <p className="portfolio-page__secondary-desc">
+                      Melbourne's handmade forever-flower studio — a calm, editorial storefront with collection, brand story, care guide, and custom orders.
+                    </p>
+                  </div>
+                  <span className="portfolio-page__secondary-arrow">→</span>
+                </div>
+              </div>
             </Link>
-            <div className="portfolio-page__featured-body">
-              <p className="portfolio-page__featured-eyebrow">
-                <span className="portfolio-page__featured-dot" />
-                Recent Work · Melbourne, VIC
-              </p>
-              <h2 className="portfolio-page__featured-title">Soft Florals</h2>
-              <p className="portfolio-page__featured-desc">
-                A calm, editorial storefront for Melbourne's handmade forever-flower studio —
-                collection, brand story, care guide, and custom orders in one mobile-first build.
-              </p>
-              <div className="portfolio-page__featured-stats">
-                <div><strong>Handmade</strong><span>1-of-1 SKUs</span></div>
-                <div><strong>Australia-Wide</strong><span>Shipping</span></div>
-                <div><strong>Custom</strong><span>Orders Flow</span></div>
+
+            <Link to="/portfolio/sahara-caravans" className="portfolio-page__secondary-card" aria-label="View Sahara Caravans project">
+              <div className="portfolio-page__secondary-media">
+                <img
+                  src="/images/portfolio/sahara-caravans/home-hero.png"
+                  alt="Sahara Caravans homepage — Australian-made caravans"
+                  loading="lazy"
+                />
               </div>
-              <div className="portfolio-page__featured-pills">
-                <span>eCommerce</span>
-                <span>Brand Story</span>
-                <span>Care Guide</span>
-                <span>Mobile-First</span>
+              <div className="portfolio-page__secondary-content">
+                <span className="portfolio-page__secondary-tag">Manufacturing · Project</span>
+                <div className="portfolio-page__secondary-bottom">
+                  <div>
+                    <span className="portfolio-page__secondary-name">Sahara Caravans</span>
+                    <p className="portfolio-page__secondary-desc">
+                      Brand-led site for an Australian caravan builder — model showcase, spec details, and enquiry flow.
+                    </p>
+                  </div>
+                  <span className="portfolio-page__secondary-arrow">→</span>
+                </div>
               </div>
-              <div className="portfolio-page__featured-ctas">
-                <Link to="/portfolio/soft-florals" className="portfolio-page__featured-btn">
-                  View Project →
-                </Link>
-                <a
-                  href="https://www.softflorals.com/"
-                  className="portfolio-page__featured-btn portfolio-page__featured-btn--ghost"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Live Site ↗
-                </a>
+            </Link>
+
+            <div className="portfolio-page__secondary-card portfolio-page__secondary-card--coming-soon">
+              <span className="portfolio-page__secondary-tag">Hospitality</span>
+              <div className="portfolio-page__secondary-coming-soon-body">
+                <span className="portfolio-page__secondary-coming-soon-icon" aria-hidden="true">✦</span>
+                <h3 className="portfolio-page__secondary-coming-soon-title">Coming soon</h3>
+                <p className="portfolio-page__secondary-coming-soon-desc">
+                  Be our first Hospitality project.
+                </p>
               </div>
             </div>
           </div>
