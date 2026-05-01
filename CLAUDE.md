@@ -134,6 +134,66 @@ Formspree endpoint uses `VITE_FORMSPREE_ID` env variable. The `<Contact />` comp
 
 ---
 
+## Case Study Format & Style
+
+Each case study is a self-contained page in `src/pages/CaseStudy*.jsx` with its own `CaseStudy*.css`. Route pattern: `/portfolio/<slug>`. New case studies must follow this exact structure and copy discipline.
+
+### Section order (no Brief)
+
+1. **Hero** — crumbs, eyebrow with animated dot, title, 1-sentence lead, two CTAs (`Visit Live Site ↗` + `← Back to Work`).
+2. **Hero screenshot/video** — `home-hero.png`, or `hero-loop.mp4` with the PNG as poster.
+3. **Stats** — exactly 4 stat cards.
+4. **What We Built** — eyebrow + section title + grid of 6 feature cards.
+5. **Gallery** — eyebrow `Inside the Build`, title `Screens from the shipped site.`, then `<motion.figure>` cards with image + caption.
+6. **(Optional) Dark deep-dive** — only when there's a significant secondary surface to show (e.g. Elusive's admin dashboard). Use `--section--dark` modifier.
+7. **Tech highlights + mobile** — split layout: eyebrow + title + 1-sentence intro + checklist (`techHighlights` array) on the left, two phone mockups on the right.
+8. **Final CTA** — `See it live.` heading, one-line sub, large primary button to live URL.
+9. **`<Contact />`** — always last.
+
+Do **not** add a "The Brief" section. The hero already establishes who the client is and what was built.
+
+### Copy length rules
+
+The site favours scannable, fragment-style copy over paragraphs. When in doubt, cut.
+
+| Section | Limit |
+| ------- | ----- |
+| Hero lead | **1 sentence**, max 2 short clauses |
+| Stat label | 2–3 words |
+| Feature card body | **1 short line** (~10–15 words). No 2-sentence cards. |
+| Gallery caption | Sentence fragment or one short clause. No "—…—…" double-clauses. |
+| Tech-highlights intro paragraph | **1 sentence** |
+| Tech-highlights checklist item | One short line each |
+| Dark deep-dive intro | **1 sentence** |
+| Dark deep-dive captions | Same rule as gallery captions |
+| Final CTA sub | One short line |
+
+### Voice
+
+- Concrete nouns. Active voice. No brochure-speak.
+- Lead with the outcome ("Built for a buyer who already knows the part number."), not the process.
+- Drop filler clauses like "because that is where the buyers are" or "the moment the team is ready to take live leads".
+- Em-dashes are fine for one pivot per line, not two.
+
+### Tone examples
+
+> ❌ "Real production code, no page-builder bloat. Every template verified at phone widths, where gift and lifestyle buyers actually shop."
+>
+> ✅ "Production code, no page-builder bloat — verified at phone widths."
+
+> ❌ "Scheduling a promo banner — staff ship storewide campaigns without touching code or calling a developer."
+>
+> ✅ "Schedule storewide promos without touching code."
+
+### File pattern
+
+- JSX: `src/pages/CaseStudy<Name>.jsx` — top-level constants `LIVE_URL`, `EASE = [0.22, 1, 0.36, 1]`, plus `stats`, `features`, `gallery`, `techHighlights` arrays.
+- CSS: `src/pages/CaseStudy<Name>.css` — BEM classes prefixed with the project slug (`.case-elusive__*`, `.case-softflorals__*`, `.case-sahara__*`).
+- Route: register in `src/App.jsx`. Portfolio card: link from `src/pages/PortfolioPage.jsx`. Sitemap: add to `public/sitemap.xml`.
+- Helmet meta: `title`, `description`, canonical URL, and OG tags (title/description/url/image) — required.
+
+---
+
 ## The Climb — Blog Style Guide
 
 The Climb (`/the-climb`) is the public log of Onrai Studio's journey from invisible to found everywhere. Each entry is a **step on a climb**, not a dated blog post. The audience is everyday small-business owners with zero tech background. Every entry must follow these rules.
