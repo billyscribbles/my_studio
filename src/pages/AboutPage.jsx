@@ -42,8 +42,8 @@ export default function AboutPage() {
               communities running deserve a proper online presence. That's what we do.
             </p>
             <p className="about-page__founder">
-              I'm Billy — I started Onrai Studio after watching too many small businesses pay
-              big-agency prices for slow, generic work. This studio is the version I wish they'd had.
+              We started Onrai Studio after watching too many small businesses pay big-agency
+              prices for slow, generic work. This studio is the version we wish they'd had.
             </p>
             <div className="about-page__pills">
               <span className="about-page__pill">Fast delivery</span>
