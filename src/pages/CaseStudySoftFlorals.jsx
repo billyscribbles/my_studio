@@ -9,7 +9,7 @@ const EASE = [0.22, 1, 0.36, 1]
 
 const stats = [
   { value: '1-of-1', label: 'Hand-Twisted SKUs' },
-  { value: '8+', label: 'Collection Pieces' },
+  { value: '4', label: 'Collection Pieces' },
   { value: 'Ships', label: 'Australia-Wide' },
   { value: 'Custom', label: 'Orders Flow' },
 ]
@@ -50,15 +50,15 @@ const features = [
 const gallery = [
   {
     src: '/images/portfolio/soft-florals/home-collection.png',
-    caption: 'Collection grid — eight hand-twisted pieces with inline add-to-cart.',
+    caption: 'Collection grid — four hand-twisted pieces with inline add-to-cart.',
   },
   {
     src: '/images/portfolio/soft-florals/product-detail.png',
-    caption: 'Product page with cart drawer and live subtotal.',
+    caption: 'Cart drawer with two pieces queued and live subtotal.',
   },
   {
-    src: '/images/portfolio/soft-florals/product-selected.png',
-    caption: 'Add-ons flip active and roll into the cart total.',
+    src: '/images/portfolio/soft-florals/about.png',
+    caption: 'About page — founder story and the studio behind every bouquet.',
   },
   {
     src: '/images/portfolio/soft-florals/checkout.png',
@@ -69,8 +69,8 @@ const gallery = [
 const techHighlights = [
   'Soft, editorial art direction tuned to a boutique, gift-lifestyle audience',
   'Production-grade custom code — no page-builder bloat, no template skin',
-  'Single-page storefront with collection, story, care guide, and custom orders',
-  'Mobile-first layouts verified at 375px where most gift buyers actually land',
+  'Editorial storefront with collection, story, care guide, and custom orders',
+  'Mobile-first layouts verified at 375px',
   'Inbound custom-orders form routed to the studio inbox',
   'SEO foundations — Helmet meta, Open Graph, canonical URLs, image alt text',
 ]
@@ -82,13 +82,13 @@ export default function CaseStudySoftFlorals() {
         <title>Soft Florals — Project | Onrai Studio</title>
         <meta
           name="description"
-          content="How Onrai Studio built a calm, editorial-style storefront for Soft Florals — Melbourne's handmade forever-flower studio. Collection, brand story, care guide, and custom orders in one mobile-first build."
+          content="An editorial storefront for Soft Florals — Melbourne's handmade forever-flower studio. Collection, story, care guide, and custom orders in one build."
         />
         <link rel="canonical" href="https://onraistudio.com/portfolio/soft-florals" />
         <meta property="og:title" content="Soft Florals — Project | Onrai Studio" />
         <meta
           property="og:description"
-          content="An editorial storefront for Melbourne's handmade forever-flower studio — collection, brand story, care guide, and custom orders."
+          content="An editorial storefront for Melbourne's handmade forever-flower studio — collection, story, care guide, and custom orders."
         />
         <meta property="og:url" content="https://onraistudio.com/portfolio/soft-florals" />
         <meta
@@ -118,8 +118,8 @@ export default function CaseStudySoftFlorals() {
             </p>
             <h1 className="case-softflorals__title">Soft Florals</h1>
             <p className="case-softflorals__lead">
-              A calm, editorial storefront for Melbourne's handmade forever-flower studio — collection,
-              story, care guide, and custom orders, ready to ship Australia-wide.
+              An editorial storefront for Melbourne's handmade forever-flower studio — collection,
+              story, care guide, and custom orders in one mobile-first build.
             </p>
             <div className="case-softflorals__hero-ctas">
               <a

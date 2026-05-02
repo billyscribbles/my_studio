@@ -192,6 +192,15 @@ The site favours scannable, fragment-style copy over paragraphs. When in doubt, 
 - Route: register in `src/App.jsx`. Portfolio card: link from `src/pages/PortfolioPage.jsx`. Sitemap: add to `public/sitemap.xml`.
 - Helmet meta: `title`, `description`, canonical URL, and OG tags (title/description/url/image) — required.
 
+### Image dimension rules
+
+Image heights must stay consistent within each context. The mobile-mockup row and the desktop gallery both render images at a fixed width with `height: auto`, so any pixel-height variation between source files becomes a visible mismatch on the page.
+
+- **Mobile phone mockups** (`mobile-*.png`): every phone screenshot in a single case study must share the **same pixel dimensions** (e.g. 1000 × 1688). When the source capture is taller, crop from the top so the bottom looks like a natural scroll cutoff — never leave one phone visibly longer than its sibling.
+- **Desktop gallery shots** (`home-collection.png`, `product-detail.png`, `checkout.png`, etc.): all gallery images in a single case study should share the **same aspect ratio** so the grid stays even. Crop from the top if a capture is too tall.
+- Use `python3` + PIL to crop: `Image.open(path).crop((0, 0, w, target_h)).save(path, optimize=True)`.
+- After replacing or cropping, verify with `sips -g pixelWidth -g pixelHeight <files>` before committing.
+
 ---
 
 ## The Climb — Blog Style Guide
