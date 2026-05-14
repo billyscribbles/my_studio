@@ -135,7 +135,20 @@ const projects = [
     dark: false,
     link: '/portfolio/sahara-caravans',
   },
-  { id: 101, tag: 'SaaS', isComingSoon: true },
+  {
+    id: 11,
+    tag: 'SaaS',
+    name: 'Placr',
+    description: 'A custom recruitment SaaS for finding, unlocking, and contacting candidates at competitor firms — find, place, grow.',
+    services: ['Web Design', 'Development', 'SaaS'],
+    year: '2026',
+    location: 'Melbourne, VIC',
+    color: '#0c8c81',
+    bg: 'var(--color-bg-card)',
+    dark: false,
+    link: '/portfolio/placr',
+  },
+
   { id: 102, tag: 'Trade', isComingSoon: true },
   { id: 103, tag: 'Healthcare', isComingSoon: true },
   { id: 104, tag: 'Hospitality', isComingSoon: true },
@@ -321,16 +334,27 @@ export default function PortfolioPage() {
               </div>
             </Link>
 
-            <div className="portfolio-page__secondary-card portfolio-page__secondary-card--coming-soon">
-              <span className="portfolio-page__secondary-tag">Hospitality</span>
-              <div className="portfolio-page__secondary-coming-soon-body">
-                <span className="portfolio-page__secondary-coming-soon-icon" aria-hidden="true">✦</span>
-                <h3 className="portfolio-page__secondary-coming-soon-title">Coming soon</h3>
-                <p className="portfolio-page__secondary-coming-soon-desc">
-                  Be our first Hospitality project.
-                </p>
+            <Link to="/portfolio/placr" className="portfolio-page__secondary-card" aria-label="View Placr project">
+              <div className="portfolio-page__secondary-media portfolio-page__secondary-media--bordered">
+                <img
+                  src="/images/portfolio/placr/home-hero.png"
+                  alt="Placr dashboard — recruitment SaaS overview"
+                  loading="lazy"
+                />
               </div>
-            </div>
+              <div className="portfolio-page__secondary-content">
+                <span className="portfolio-page__secondary-tag">SaaS · Project</span>
+                <div className="portfolio-page__secondary-bottom">
+                  <div>
+                    <span className="portfolio-page__secondary-name">Placr</span>
+                    <p className="portfolio-page__secondary-desc">
+                      A custom recruitment SaaS for finding, unlocking, and contacting candidates at competitor firms — find, place, grow.
+                    </p>
+                  </div>
+                  <span className="portfolio-page__secondary-arrow">→</span>
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>

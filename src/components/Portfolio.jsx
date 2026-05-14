@@ -32,8 +32,14 @@ const projects = [
     stacked: true,
   },
   {
-    tag: 'Hospitality',
-    isComingSoon: true,
+    tag: 'SaaS · Project',
+    name: 'Placr',
+    description: 'A custom recruitment SaaS for finding, unlocking, and contacting candidates at competitor firms — find, place, grow.',
+    to: '/portfolio/placr',
+    image: '/images/portfolio/placr/home-hero.png',
+    featured: true,
+    stacked: true,
+    bordered: true,
   },
 ]
 
